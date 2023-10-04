@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import SwiftData
+import SwiftUI
 
 @MainActor
 final class ReminderSettingsListViewModel: ObservableObject {
+    @Environment(\.modelContext) private var context
     @Published var intervalsDictionary: [IntervalSection: [IntervalItem]] = [:]
     @Published var repeatIntervalModelList: [IntervalSection] = []
     @Published var intervalItems: [IntervalItem] = []
@@ -18,7 +21,7 @@ final class ReminderSettingsListViewModel: ObservableObject {
     @Published var reminder: ReminderModel?
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
-    
+
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
     }
@@ -35,13 +38,13 @@ final class ReminderSettingsListViewModel: ObservableObject {
 
     func loadOptions() {
         for sectionHeader in DailyInterval.allCases {
-            intervalItems.append(IntervalItem(sectionHeader: sectionHeader))
+            intervalItems.append(IntervalItem(id: sectionHeader.id, sectionHeader: sectionHeader))
         }
         for sectionHeader in MonthlyInterval.allCases {
-            intervalItems.append(IntervalItem(sectionHeader: sectionHeader))
+            intervalItems.append(IntervalItem(id: sectionHeader.id, sectionHeader: sectionHeader))
         }
         for sectionHeader in OnceInterval.allCases {
-            intervalItems.append(IntervalItem(sectionHeader: sectionHeader))
+            intervalItems.append(IntervalItem(id: sectionHeader.id, sectionHeader: sectionHeader))
         }
     }
 
@@ -66,15 +69,34 @@ final class ReminderSettingsListViewModel: ObservableObject {
 
     func setSelectedIntervalSectionHeader(selectedSection: IntervalSection) {
         self.selectedSection = selectedSection
-        self.showDate = selectedSection.repeatInterval == RepeatIntervals.once
+        showDate = selectedSection.repeatInterval == RepeatIntervals.once
     }
 
-    func getSelectedItems() throws -> [IntervalItem] {
-        guard let selectedSection = selectedSection else{throw ReminderSettingsError.sectionNotSelected}
+    func getCheckedItemsOfSelectedSection() throws -> [IntervalItem] {
+        guard let selectedSection = selectedSection else { throw ReminderSettingsError.sectionNotSelected }
         let selectionItems = intervalsDictionary[selectedSection]?.filter { $0.checked == true }
-        guard let selectionItems = selectionItems,  !selectionItems.isEmpty else{
+        guard let selectionItems = selectionItems, !selectionItems.isEmpty else {
             throw ReminderSettingsError.itemNotSelected
         }
         return selectionItems
+    }
+
+    private func createReminder() throws -> ReminderModel? {
+        guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw ReminderSettingsError.sectionNotSelected }
+        let selectedItems = try getCheckedItemsOfSelectedSection().map { $0.id }
+        if selectedSection?.repeatInterval == RepeatIntervals.daily || selectedSection?.repeatInterval == RepeatIntervals.monthly {
+            return ReminderModel(title: title, body: body, repeatIntervalId: intervalId, intervals: selectedItems, date: nil, time: selectedDate)
+        } else {
+            return ReminderModel(title: title, body: body, repeatIntervalId: intervalId, intervals: nil, date: selectedDate, time: nil)
+        }
+        return nil
+    }
+
+    func saveReminder() throws {
+        guard let reminder = try createReminder() else {
+            throw ReminderSettingsError.unknownError
+        }
+        context.insert(reminder)
+        try context.save()
     }
 }

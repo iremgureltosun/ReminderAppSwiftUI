@@ -8,11 +8,12 @@
 import SwiftUI
 
 final class IntervalItem: ObservableObject, Identifiable {
-    var id: UUID = UUID()
+    var id: Int
     var sectionHeader: any IntervalProtocol
     @Published var checked: Bool = false
-    
-    init(sectionHeader: any IntervalProtocol) {
+
+    init(id: Int, sectionHeader: any IntervalProtocol) {
+        self.id = id
         self.sectionHeader = sectionHeader
     }
 }

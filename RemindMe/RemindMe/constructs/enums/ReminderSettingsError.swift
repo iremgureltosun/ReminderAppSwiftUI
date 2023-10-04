@@ -10,6 +10,7 @@ import Foundation
 enum ReminderSettingsError: Error{
     case sectionNotSelected
     case itemNotSelected
+    case unknownError
     
     var description: String{
         switch self {
@@ -17,6 +18,8 @@ enum ReminderSettingsError: Error{
             "Please select a section."
         case .itemNotSelected:
             "Please select at least one interval."
+        case .unknownError:
+            "Error occured"
         }
     }
 }

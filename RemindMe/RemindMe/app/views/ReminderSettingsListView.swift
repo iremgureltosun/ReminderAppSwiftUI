@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReminderSettingsListView: View {
     @StateObject var viewModel = ReminderSettingsListViewModel()
+    @State private var showSuccess = false
     @State private var showAlert = false
     @State private var errorMessage = "An undefined error occurred."
 
@@ -41,6 +42,13 @@ struct ReminderSettingsListView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
+            .alert(isPresented: $showSuccess) {
+                Alert(
+                    title: Text("Success"),
+                    message: Text("Reminder saved successfully"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
             .onAppear {
                 viewModel.loadIntervals()
                 viewModel.loadOptions()
@@ -52,20 +60,16 @@ struct ReminderSettingsListView: View {
     }
 
     private func saveReminder() {
-        if viewModel.selectedSection?.repeatInterval == RepeatIntervals.daily || viewModel.selectedSection?.repeatInterval == RepeatIntervals.monthly {
-            do {
-                let selectionItems = try viewModel.getSelectedItems()
-
-                // viewModel.reminder =
-            } catch {
-                showAlert = true
-                if let error = error as? ReminderSettingsError {
-                    errorMessage = error.description
-                } else {
-                    errorMessage = error.localizedDescription
-                }
+        do {
+            try viewModel.saveReminder()
+            showSuccess = true
+        } catch {
+            showAlert = true
+            if let error = error as? ReminderSettingsError {
+                errorMessage = error.description
+            } else {
+                errorMessage = error.localizedDescription
             }
-        } else {
         }
     }
 
@@ -117,6 +121,7 @@ struct ReminderSettingsListView: View {
     @ViewBuilder private var listView: some View {
         List {
             ForEach($viewModel.repeatIntervalModelList, id: \.repeatInterval.rawValue) { $sectionHeader in
+
                 DisclosureGroup(isExpanded: $sectionHeader.expanded) {
                     ForEach(viewModel.intervalsDictionary[sectionHeader] ?? [], id: \.id) { item in
                         VStack(alignment: .leading) {
@@ -127,14 +132,26 @@ struct ReminderSettingsListView: View {
                     HStack {
                         Text(sectionHeader.repeatInterval.title)
                             .foregroundColor(/*@START_MENU_TOKEN@*/ .blue/*@END_MENU_TOKEN@*/)
+                        Spacer()
+
+                        Image(systemName: sectionHeader.expanded ? "chevron.down" : "chevron.right")
+                            .imageScale(.small)
+                            .rotationEffect(.degrees(sectionHeader.expanded ? 0 : 90))
+                            .foregroundColor(.blue) // Adjust the color as needed
+                            .onTapGesture {
+                                sectionHeader.expanded.toggle()
+                                viewModel.setSelectedIntervalSectionHeader(selectedSection: sectionHeader)
+                                withAnimation { viewModel.collapseAllExceptSelectedOne() }
+                            }
                     }
+                    .contentShape(Rectangle())
                     .font(.title3)
                     .onTapGesture {
                         sectionHeader.expanded.toggle()
                         viewModel.setSelectedIntervalSectionHeader(selectedSection: sectionHeader)
                         withAnimation { viewModel.collapseAllExceptSelectedOne() }
                     }
-                }
+                }.buttonStyle(PlainButtonStyle()).accentColor(.clear).disabled(false)
             }
         }
         .listStyle(.plain)
@@ -142,5 +159,7 @@ struct ReminderSettingsListView: View {
 }
 
 #Preview {
-    ReminderSettingsListView()
+    NavigationStack {
+        ReminderSettingsListView()
+    }
 }

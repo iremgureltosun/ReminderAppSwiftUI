@@ -17,8 +17,7 @@ import SwiftData
     var date: Date?
     var time: Date?
     
-    init(id: String, title: String,body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
-        self.id = id
+    init(title: String,body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
         self.title = title
         self.body = body
         self.repeatIntervalId = repeatIntervalId
