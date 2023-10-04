@@ -14,8 +14,8 @@
             filePath = "RemindMe/app/models/viewModels/ReminderSettingsListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "saveReminder()"
             landmarkType = "7">
          </BreakpointContent>

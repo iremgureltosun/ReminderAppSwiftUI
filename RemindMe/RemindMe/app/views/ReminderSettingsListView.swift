@@ -9,7 +9,7 @@ import SwiftData
 import SwiftUI
 
 struct ReminderSettingsListView: View {
-    @StateObject private var viewModel = ReminderSettingsListViewModel()
+    @ObservedObject private var viewModel = ReminderSettingsListViewModel()
 
     var body: some View {
         NavigationView {

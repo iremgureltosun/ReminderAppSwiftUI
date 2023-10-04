@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftData
+import SwiftUI
 
-public protocol PersistentProtocol{
-    
+public protocol PersistentProtocol: PersistentModel, Observable{
+    associatedtype PersistentType
 }

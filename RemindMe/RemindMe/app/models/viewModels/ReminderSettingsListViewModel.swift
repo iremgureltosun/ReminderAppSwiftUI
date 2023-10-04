@@ -10,7 +10,7 @@ import SwiftData
 import SwiftUI
 
 @MainActor
-final class ReminderSettingsListViewModel: ObservableObject {
+final class ReminderSettingsListViewModel: BaseViewModel<ReminderModel>, ObservableObject {
     @Published var intervalsDictionary: [IntervalSection: [IntervalItem]] = [:]
     @Published var repeatIntervalModelList: [IntervalSection] = []
     @Published var intervalItems: [IntervalItem] = []
@@ -23,21 +23,6 @@ final class ReminderSettingsListViewModel: ObservableObject {
     @Published var showSuccess = false
     @Published var showAlert = false
     @Published var errorMessage = "An undefined error occurred."
-
-    var context: ModelContext?
-
-    init() {
-        do {
-            let configuration = ModelConfiguration(isStoredInMemoryOnly: true, allowsSave: false)
-            let container = try ModelContainer(
-                for: ReminderModel.self,
-                configurations: configuration
-            )
-            context = container.mainContext
-        } catch {
-            context = nil
-        }
-    }
 
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
@@ -114,8 +99,7 @@ final class ReminderSettingsListViewModel: ObservableObject {
             guard let reminder = try createReminder() else {
                 throw ReminderSettingsError.unknownError
             }
-            context?.insert(reminder)
-            try context?.save()
+            try savePersistable(model: reminder)
             showSuccess = true
         } catch {
             showAlert = true
