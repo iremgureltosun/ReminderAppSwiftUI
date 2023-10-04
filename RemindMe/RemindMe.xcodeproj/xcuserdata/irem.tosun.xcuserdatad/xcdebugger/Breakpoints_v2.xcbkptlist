@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BC5FE0F1-1EBD-400A-AC4C-E6FF6834E343"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F9A5E3C-3519-4677-8680-03256B20D025"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "collapseAllExceptSelectedOne()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F9A5E3C-3519-4677-8680-03256B20D025 - 7fdf24eebf4b002a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.ReminderSettingsListViewModel.collapseAllExceptSelectedOne() -&gt; ()"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/RemindMe/RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "0F9A5E3C-3519-4677-8680-03256B20D025 - 7fdf24eebf4b002a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.ReminderSettingsListViewModel.collapseAllExceptSelectedOne() -&gt; ()"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/RemindMe/RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "772">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A84FF83-6941-48F3-BB62-43648D27BE50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "setSelectedInterval(selectedInterval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
