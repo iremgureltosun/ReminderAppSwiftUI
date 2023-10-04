@@ -21,6 +21,7 @@
 		4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
 		4D0933552ACD423000539DA9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0933542ACD423000539DA9 /* TimerView.swift */; };
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
+		4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
 		4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */; };
 		4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */; };
@@ -72,6 +73,7 @@
 		4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatIntervals.swift; sourceTree = "<group>"; };
 		4D0933542ACD423000539DA9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
+		4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSettingsError.swift; sourceTree = "<group>"; };
 		4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalProtocol.swift; sourceTree = "<group>"; };
 		4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyInterval.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				4DBF52B82ACC1CEF00F0CADF /* DailyInterval.swift */,
 				4DBF52C92ACC3DCE00F0CADF /* OnceInterval.swift */,
 				4DBF52BA2ACC1F4F00F0CADF /* EventError.swift */,
+				4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
 				4DBF52C62ACC2E3A00F0CADF /* IntervalSection.swift in Sources */,
+				4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */,
 				4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */,
 				4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */,
 				4DC153EE2ACC0A7300DFC063 /* ReminderStatsView.swift in Sources */,

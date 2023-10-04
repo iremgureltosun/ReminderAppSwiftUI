@@ -12,7 +12,11 @@ struct ReminderSettingsListView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 15) {
+                TextField("Enter title", text: $viewModel.title)
+
+                TextField("Enter body", text: $viewModel.body)
+
                 timePickerView
 
                 expandCollapseButtonsView
@@ -20,9 +24,16 @@ struct ReminderSettingsListView: View {
                 listView
 
                 PillShapedButton(text: "Save") {
+                    do {
+                        let selectionItems = try viewModel.getSelectedItems()
+
+                        // viewModel.reminder =
+                    } catch {
+                    }
                 }
                 .padding()
             }
+            .padding(.horizontal, 20)
             .onAppear {
                 viewModel.loadIntervals()
                 viewModel.loadOptions()
@@ -36,9 +47,7 @@ struct ReminderSettingsListView: View {
     @ViewBuilder private var timePickerView: some View {
         RoundedRectangle(cornerRadius: 18)
             .frame(height: 50)
-            .padding()
             .foregroundColor(Color.offWhite)
-            .shadow(radius: 8)
             .overlay {
                 TimerView()
             }
@@ -60,7 +69,6 @@ struct ReminderSettingsListView: View {
             }
             .disabled(viewModel.allCollapsed)
         }
-        .padding()
     }
 
     @ViewBuilder private var listView: some View {
@@ -69,11 +77,7 @@ struct ReminderSettingsListView: View {
                 DisclosureGroup(isExpanded: $sectionHeader.expanded) {
                     ForEach(viewModel.intervalsDictionary[sectionHeader] ?? [], id: \.id) { item in
                         VStack(alignment: .leading) {
-                            HStack {
-                                Text(item.sectionHeader.title)
-                                Spacer()
-                                IntervalItemSelectionView(item: item)
-                            }
+                            IntervalItemSelectionView(item: item)
                         }
                     }
                 } label: {

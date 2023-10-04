@@ -13,6 +13,9 @@ final class ReminderSettingsListViewModel: ObservableObject {
     @Published var repeatIntervalModelList: [IntervalSection] = []
     @Published var intervalItems: [IntervalItem] = []
     @Published var selectedSection: IntervalSection?
+    @Published var title: String = ""
+    @Published var body: String = ""
+    @Published var reminder: ReminderModel?
 
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
@@ -61,5 +64,14 @@ final class ReminderSettingsListViewModel: ObservableObject {
 
     func setSelectedIntervalSectionHeader(selectedSection: IntervalSection) {
         self.selectedSection = selectedSection
+    }
+
+    func getSelectedItems() throws -> [IntervalItem] {
+        guard let selectedSection = selectedSection else{throw ReminderSettingsError.sectionNotSelected}
+        let selectionItems = intervalsDictionary[selectedSection]?.filter { $0.checked == true }
+        guard let selectionItems = selectionItems,  !selectionItems.isEmpty else{
+            throw ReminderSettingsError.itemNotSelected
+        }
+        return selectionItems
     }
 }
