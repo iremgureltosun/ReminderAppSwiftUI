@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ReminderSettingsListView: View {
     @StateObject var viewModel = ReminderSettingsListViewModel()
+    @State private var showAlert = false
+    @State private var errorMessage = "An undefined error occurred."
 
     var body: some View {
         NavigationView {
@@ -17,23 +19,28 @@ struct ReminderSettingsListView: View {
 
                 TextField("Enter body", text: $viewModel.body)
 
-                timePickerView
+                dateAndTimeSelectionView
+
+                Divider()
 
                 expandCollapseButtonsView
 
                 listView
 
                 PillShapedButton(text: "Save") {
-                    do {
-                        let selectionItems = try viewModel.getSelectedItems()
-
-                        // viewModel.reminder =
-                    } catch {
-                    }
+                    saveReminder()
                 }
                 .padding()
             }
+            .padding(.top, 20)
             .padding(.horizontal, 20)
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(errorMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
             .onAppear {
                 viewModel.loadIntervals()
                 viewModel.loadOptions()
@@ -44,13 +51,49 @@ struct ReminderSettingsListView: View {
         .navigationViewStyle(.stack)
     }
 
-    @ViewBuilder private var timePickerView: some View {
-        RoundedRectangle(cornerRadius: 18)
-            .frame(height: 50)
-            .foregroundColor(Color.offWhite)
-            .overlay {
-                TimerView()
+    private func saveReminder() {
+        if viewModel.selectedSection?.repeatInterval == RepeatIntervals.daily || viewModel.selectedSection?.repeatInterval == RepeatIntervals.monthly {
+            do {
+                let selectionItems = try viewModel.getSelectedItems()
+
+                // viewModel.reminder =
+            } catch {
+                showAlert = true
+                if let error = error as? ReminderSettingsError {
+                    errorMessage = error.description
+                } else {
+                    errorMessage = error.localizedDescription
+                }
             }
+        } else {
+        }
+    }
+
+    @ViewBuilder private var dateAndTimeSelectionView: some View {
+        HStack {
+            Spacer()
+            datePickerView
+                .opacity(viewModel.showDate == true ? 1 : 0)
+
+            timePickerView
+            Spacer()
+        }
+    }
+
+    @ViewBuilder private var datePickerView: some View {
+        DatePicker("Select a date", selection: $viewModel.selectedDate, displayedComponents: .date)
+            .background(Color.clear) // Make the background transparent
+            .accentColor(.blue) // Set the text color to blue
+            .padding()
+            .labelsHidden()
+    }
+
+    @ViewBuilder private var timePickerView: some View {
+        DatePicker("Select a date", selection: $viewModel.selectedDate, displayedComponents: .hourAndMinute)
+            .background(Color.clear) // Make the background transparent
+            .accentColor(.blue) // Set the text color to blue
+            .padding()
+            .labelsHidden()
     }
 
     @ViewBuilder private var expandCollapseButtonsView: some View {

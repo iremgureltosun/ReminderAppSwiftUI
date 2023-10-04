@@ -16,7 +16,9 @@ final class ReminderSettingsListViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var body: String = ""
     @Published var reminder: ReminderModel?
-
+    @Published var selectedDate: Date = Date()
+    @Published var showDate = false
+    
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
     }
@@ -64,6 +66,7 @@ final class ReminderSettingsListViewModel: ObservableObject {
 
     func setSelectedIntervalSectionHeader(selectedSection: IntervalSection) {
         self.selectedSection = selectedSection
+        self.showDate = selectedSection.repeatInterval == RepeatIntervals.once
     }
 
     func getSelectedItems() throws -> [IntervalItem] {

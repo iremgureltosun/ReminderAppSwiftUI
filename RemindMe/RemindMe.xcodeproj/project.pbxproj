@@ -19,7 +19,6 @@
 		4D02B3092ABD6BE20032F011 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3082ABD6BE20032F011 /* NotificationFactory.swift */; };
 		4D02B30C2ABD6E370032F011 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4D02B30B2ABD6E370032F011 /* Resolver */; };
 		4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
-		4D0933552ACD423000539DA9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0933542ACD423000539DA9 /* TimerView.swift */; };
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
 		4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
@@ -71,7 +70,6 @@
 		4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeProtocol.swift; sourceTree = "<group>"; };
 		4D02B3082ABD6BE20032F011 /* NotificationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
 		4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatIntervals.swift; sourceTree = "<group>"; };
-		4D0933542ACD423000539DA9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
 		4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSettingsError.swift; sourceTree = "<group>"; };
 		4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				4DC153ED2ACC0A7300DFC063 /* ReminderStatsView.swift */,
-				4D0933542ACD423000539DA9 /* TimerView.swift */,
 				4DBF52CB2ACC40A500F0CADF /* IntervalItemSelectionView.swift */,
 				4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */,
 			);
@@ -457,7 +454,6 @@
 				4DBF52C42ACC297500F0CADF /* ReminderSettingsListViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,
 				4DBF52BF2ACC265600F0CADF /* ReminderSettingsListView.swift in Sources */,
-				4D0933552ACD423000539DA9 /* TimerView.swift in Sources */,
 				4D02B3092ABD6BE20032F011 /* NotificationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
