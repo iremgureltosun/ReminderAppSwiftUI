@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepeatIntervalModel: Hashable {
+struct IntervalSection: Hashable {
     var repeatInterval: RepeatIntervals
     var expanded: Bool
 }

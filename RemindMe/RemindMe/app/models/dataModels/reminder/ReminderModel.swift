@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model final public class ReminderSetting: Identifiable {
+@Model final public class ReminderModel: Identifiable {
     @Attribute(.unique) public var id: String
     var title: String
     var repeatIntervalId: Int
