@@ -14,13 +14,14 @@
 		4D02B2EA2ABD69AC0032F011 /* RemindMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2E92ABD69AC0032F011 /* RemindMeTests.swift */; };
 		4D02B2F42ABD69AC0032F011 /* RemindMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2F32ABD69AC0032F011 /* RemindMeUITests.swift */; };
 		4D02B2F62ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2F52ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift */; };
-		4D02B3042ABD6A410032F011 /* BaseReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3032ABD6A410032F011 /* BaseReminderService.swift */; };
 		4D02B3072ABD6A830032F011 /* RemindMeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */; };
-		4D02B3092ABD6BE20032F011 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3082ABD6BE20032F011 /* NotificationFactory.swift */; };
+		4D02B3092ABD6BE20032F011 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3082ABD6BE20032F011 /* NotificationService.swift */; };
 		4D02B30C2ABD6E370032F011 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4D02B30B2ABD6E370032F011 /* Resolver */; };
 		4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
 		4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */; };
+		4D33737C2ACD92C2009F1DB1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737B2ACD92C2009F1DB1 /* BaseViewModel.swift */; };
+		4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
 		4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */; };
 		4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */; };
@@ -66,12 +67,13 @@
 		4D02B2EF2ABD69AC0032F011 /* RemindMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D02B2F32ABD69AC0032F011 /* RemindMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeUITests.swift; sourceTree = "<group>"; };
 		4D02B2F52ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4D02B3032ABD6A410032F011 /* BaseReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReminderService.swift; sourceTree = "<group>"; };
 		4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeProtocol.swift; sourceTree = "<group>"; };
-		4D02B3082ABD6BE20032F011 /* NotificationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
+		4D02B3082ABD6BE20032F011 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatIntervals.swift; sourceTree = "<group>"; };
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
 		4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSettingsError.swift; sourceTree = "<group>"; };
+		4D33737B2ACD92C2009F1DB1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentProtocol.swift; sourceTree = "<group>"; };
 		4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalProtocol.swift; sourceTree = "<group>"; };
 		4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyInterval.swift; sourceTree = "<group>"; };
@@ -176,8 +178,7 @@
 		4D02B3022ABD6A1B0032F011 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				4D02B3032ABD6A410032F011 /* BaseReminderService.swift */,
-				4D02B3082ABD6BE20032F011 /* NotificationFactory.swift */,
+				4D02B3082ABD6BE20032F011 /* NotificationService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -217,6 +218,7 @@
 		4D0933572ACD444300539DA9 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4D33737B2ACD92C2009F1DB1 /* BaseViewModel.swift */,
 				4DBF52C32ACC297500F0CADF /* ReminderSettingsListViewModel.swift */,
 			);
 			path = viewModels;
@@ -225,7 +227,7 @@
 		4D0933582ACD446B00539DA9 /* dataModels */ = {
 			isa = PBXGroup;
 			children = (
-				4D09335A2ACD484F00539DA9 /* reminder */,
+				4D09335A2ACD484F00539DA9 /* persistentModels */,
 				4D0933592ACD451300539DA9 /* interval */,
 				4DC153F22ACC11C100DFC063 /* -Reminder.swift */,
 			);
@@ -241,12 +243,12 @@
 			path = interval;
 			sourceTree = "<group>";
 		};
-		4D09335A2ACD484F00539DA9 /* reminder */ = {
+		4D09335A2ACD484F00539DA9 /* persistentModels */ = {
 			isa = PBXGroup;
 			children = (
 				4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */,
 			);
-			path = reminder;
+			path = persistentModels;
 			sourceTree = "<group>";
 		};
 		4D09335B2ACD486C00539DA9 /* partialViews */ = {
@@ -264,6 +266,7 @@
 			children = (
 				4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */,
 				4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */,
+				4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				4DBF52CA2ACC3DCE00F0CADF /* OnceInterval.swift in Sources */,
 				4D02B3072ABD6A830032F011 /* RemindMeProtocol.swift in Sources */,
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
+				4D33737C2ACD92C2009F1DB1 /* BaseViewModel.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
 				4DBF52C62ACC2E3A00F0CADF /* IntervalSection.swift in Sources */,
 				4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */,
@@ -447,14 +451,14 @@
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
 				4DBF52CC2ACC40A500F0CADF /* IntervalItemSelectionView.swift in Sources */,
 				4DBF52BB2ACC1F4F00F0CADF /* EventError.swift in Sources */,
-				4D02B3042ABD6A410032F011 /* BaseReminderService.swift in Sources */,
 				4D02B2D92ABD69AA0032F011 /* RemindMeApp.swift in Sources */,
+				4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */,
 				4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */,
 				4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */,
 				4DBF52C42ACC297500F0CADF /* ReminderSettingsListViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,
 				4DBF52BF2ACC265600F0CADF /* ReminderSettingsListView.swift in Sources */,
-				4D02B3092ABD6BE20032F011 /* NotificationFactory.swift in Sources */,
+				4D02B3092ABD6BE20032F011 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

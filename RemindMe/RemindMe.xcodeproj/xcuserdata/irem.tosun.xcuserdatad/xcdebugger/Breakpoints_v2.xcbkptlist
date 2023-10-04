@@ -7,96 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0F9A5E3C-3519-4677-8680-03256B20D025"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "collapseAllExceptSelectedOne()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0F9A5E3C-3519-4677-8680-03256B20D025 - 7fdf24eebf4b002a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RemindMe.ReminderSettingsListViewModel.collapseAllExceptSelectedOne() -&gt; ()"
-                  moduleName = "RemindMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/irem.tosun/Documents/1/RemindMe/RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "296">
-               </Location>
-               <Location
-                  uuid = "0F9A5E3C-3519-4677-8680-03256B20D025 - 7fdf24eebf4b002a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RemindMe.ReminderSettingsListViewModel.collapseAllExceptSelectedOne() -&gt; ()"
-                  moduleName = "RemindMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/irem.tosun/Documents/1/RemindMe/RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "772">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0A84FF83-6941-48F3-BB62-43648D27BE50"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemindMe/app/viewModels/ReminderSettingsListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "setSelectedInterval(selectedInterval:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BD9A0736-D78F-4000-9128-B141DE7620C6"
-            shouldBeEnabled = "Yes"
+            uuid = "C582DA66-1FCD-4CB6-9A82-E0D4D61F0EA1"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RemindMe/app/models/viewModels/ReminderSettingsListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "setSelectedIntervalSectionHeader(selectedSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "31760C58-59AF-4096-B393-8D9443B0953D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RemindMe/app/models/viewModels/ReminderSettingsListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "setSelectedIntervalSectionHeader(selectedSection:)"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "saveReminder()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

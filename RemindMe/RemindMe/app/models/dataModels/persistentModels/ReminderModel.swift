@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model final public class ReminderModel: Identifiable {
+@Model final public class ReminderModel: PersistentProtocol, Identifiable {
     @Attribute(.unique) public var id: String = UUID().uuidString
     var title: String
     var body: String

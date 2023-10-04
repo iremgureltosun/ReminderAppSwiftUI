@@ -5,13 +5,11 @@
 //  Created by Tosun, Irem on 3.10.2023.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ReminderSettingsListView: View {
-    @StateObject var viewModel = ReminderSettingsListViewModel()
-    @State private var showSuccess = false
-    @State private var showAlert = false
-    @State private var errorMessage = "An undefined error occurred."
+    @StateObject private var viewModel = ReminderSettingsListViewModel()
 
     var body: some View {
         NavigationView {
@@ -29,20 +27,20 @@ struct ReminderSettingsListView: View {
                 listView
 
                 PillShapedButton(text: "Save") {
-                    saveReminder()
+                    viewModel.saveReminder()
                 }
                 .padding()
             }
             .padding(.top, 20)
             .padding(.horizontal, 20)
-            .alert(isPresented: $showAlert) {
+            .alert(isPresented: $viewModel.showAlert) {
                 Alert(
                     title: Text("Error"),
-                    message: Text(errorMessage),
+                    message: Text(viewModel.errorMessage),
                     dismissButton: .default(Text("OK"))
                 )
             }
-            .alert(isPresented: $showSuccess) {
+            .alert(isPresented: $viewModel.showSuccess) {
                 Alert(
                     title: Text("Success"),
                     message: Text("Reminder saved successfully"),
@@ -57,20 +55,6 @@ struct ReminderSettingsListView: View {
             .navigationBarTitle("Reminder Settings")
         }
         .navigationViewStyle(.stack)
-    }
-
-    private func saveReminder() {
-        do {
-            try viewModel.saveReminder()
-            showSuccess = true
-        } catch {
-            showAlert = true
-            if let error = error as? ReminderSettingsError {
-                errorMessage = error.description
-            } else {
-                errorMessage = error.localizedDescription
-            }
-        }
     }
 
     @ViewBuilder private var dateAndTimeSelectionView: some View {

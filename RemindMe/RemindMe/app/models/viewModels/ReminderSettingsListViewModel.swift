@@ -11,7 +11,6 @@ import SwiftUI
 
 @MainActor
 final class ReminderSettingsListViewModel: ObservableObject {
-    @Environment(\.modelContext) private var context
     @Published var intervalsDictionary: [IntervalSection: [IntervalItem]] = [:]
     @Published var repeatIntervalModelList: [IntervalSection] = []
     @Published var intervalItems: [IntervalItem] = []
@@ -21,6 +20,24 @@ final class ReminderSettingsListViewModel: ObservableObject {
     @Published var reminder: ReminderModel?
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
+    @Published var showSuccess = false
+    @Published var showAlert = false
+    @Published var errorMessage = "An undefined error occurred."
+
+    var context: ModelContext?
+
+    init() {
+        do {
+            let configuration = ModelConfiguration(isStoredInMemoryOnly: true, allowsSave: false)
+            let container = try ModelContainer(
+                for: ReminderModel.self,
+                configurations: configuration
+            )
+            context = container.mainContext
+        } catch {
+            context = nil
+        }
+    }
 
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
@@ -81,22 +98,32 @@ final class ReminderSettingsListViewModel: ObservableObject {
         return selectionItems
     }
 
-    private func createReminder() throws -> ReminderModel? {
-        guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw ReminderSettingsError.sectionNotSelected }
+    func createReminder() throws -> ReminderModel? {
+        guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw ReminderSettingsError.sectionNotSelected
+        }
         let selectedItems = try getCheckedItemsOfSelectedSection().map { $0.id }
         if selectedSection?.repeatInterval == RepeatIntervals.daily || selectedSection?.repeatInterval == RepeatIntervals.monthly {
             return ReminderModel(title: title, body: body, repeatIntervalId: intervalId, intervals: selectedItems, date: nil, time: selectedDate)
         } else {
             return ReminderModel(title: title, body: body, repeatIntervalId: intervalId, intervals: nil, date: selectedDate, time: nil)
         }
-        return nil
     }
 
-    func saveReminder() throws {
-        guard let reminder = try createReminder() else {
-            throw ReminderSettingsError.unknownError
+    func saveReminder() {
+        do {
+            guard let reminder = try createReminder() else {
+                throw ReminderSettingsError.unknownError
+            }
+            context?.insert(reminder)
+            try context?.save()
+            showSuccess = true
+        } catch {
+            showAlert = true
+            if let error = error as? ReminderSettingsError {
+                errorMessage = error.description
+            } else {
+                errorMessage = error.localizedDescription
+            }
         }
-        context.insert(reminder)
-        try context.save()
     }
 }
