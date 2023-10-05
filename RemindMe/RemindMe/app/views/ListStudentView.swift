@@ -1,14 +1,14 @@
 //
-//  StoredRemindersListView.swift
+//  ListStudentView.swift
 //  RemindMe
 //
-//  Created by Tosun, Irem on 4.10.2023.
+//  Created by Tosun, Irem on 5.10.2023.
 //
 
 import SwiftData
 import SwiftUI
 
-struct RemindersListView: View {
+struct ListStudentView: View {
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
@@ -16,10 +16,10 @@ struct RemindersListView: View {
     }
 
     private struct ListView: View {
-        @StateObject var viewModel: RemindersListViewModel
+        @StateObject var viewModel: ListReminderViewModel
 
         init(modelContext: ModelContext) {
-            let viewModel = RemindersListViewModel(modelContext: modelContext)
+            let viewModel = ListReminderViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
@@ -28,7 +28,7 @@ struct RemindersListView: View {
                 ForEach(viewModel.list, id: \.id) { item in
 
                     HStack {
-                        Text(item.name)
+                        Text(item.title)
                             .foregroundColor(.blue)
                     }
                 }
@@ -41,6 +41,6 @@ struct RemindersListView: View {
 }
 
 #Preview {
-    RemindersListView()
-        .modelContainer(for: ReminderModel.self)
+    ListStudentView()
+        .modelContainer(for: StudentModel.self)
 }

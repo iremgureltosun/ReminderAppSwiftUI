@@ -12,7 +12,7 @@ import SwiftData
     public typealias PersistentType = PersistentProtocol
     
     @Attribute(.unique) public var id: String = UUID().uuidString
-    public var name: String
+    public var title: String
     var body: String
     var repeatIntervalId: Int
     var intervals: [Int]?
@@ -20,7 +20,7 @@ import SwiftData
     var time: Date?
     
     init(title: String, body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
-        self.name = title
+        self.title = title
         self.body = body
         self.repeatIntervalId = repeatIntervalId
         self.intervals = intervals

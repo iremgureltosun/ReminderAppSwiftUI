@@ -27,7 +27,7 @@ public class BasePersistenceManager<T> where T: PersistentProtocol {
     }
 
     public func fetch() throws -> [T] {
-        let descriptor = FetchDescriptor<T>(sortBy: [SortDescriptor(\.name)])
+        let descriptor = FetchDescriptor<T>(sortBy: [SortDescriptor(\.title)])
         items = try context.fetch(descriptor) ?? []
         return items
     }

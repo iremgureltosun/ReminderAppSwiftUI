@@ -12,5 +12,5 @@ import SwiftUI
 public protocol PersistentProtocol: PersistentModel, Observable{
     associatedtype PersistentType
     
-    var name: String { get }
+    var title: String { get }
 }

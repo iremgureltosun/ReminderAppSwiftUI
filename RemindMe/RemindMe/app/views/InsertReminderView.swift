@@ -8,18 +8,18 @@
 import SwiftData
 import SwiftUI
 
-struct AddReminderView: View {
+struct InsertReminderView: View {
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
-        ReminderInputView(modelContext: modelContext)
+        InsertView(modelContext: modelContext)
     }
 
-    private struct ReminderInputView: View {
-        @StateObject var viewModel: AddReminderViewModel
+    private struct InsertView: View {
+        @StateObject var viewModel: InsertReminderViewModel
 
         init(modelContext: ModelContext) {
-            let viewModel = AddReminderViewModel(modelContext: modelContext)
+            let viewModel = InsertReminderViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
@@ -38,7 +38,7 @@ struct AddReminderView: View {
 
                     listView
 
-                    PillShapedButton(text: "Save") {
+                    PillShapedButton(text: Constants.Text.saveText) {
                         viewModel.saveReminder()
                     }
                     .padding()
@@ -47,16 +47,16 @@ struct AddReminderView: View {
                 .padding(.horizontal, 20)
                 .alert(isPresented: $viewModel.showAlert) {
                     Alert(
-                        title: Text("Error"),
+                        title: Text(Constants.Text.errorTitle),
                         message: Text(viewModel.errorMessage),
-                        dismissButton: .default(Text("OK"))
+                        dismissButton: .default(Text(Constants.Text.okText))
                     )
                 }
                 .alert(isPresented: $viewModel.showSuccess) {
                     Alert(
-                        title: Text("Success"),
-                        message: Text("Reminder saved successfully"),
-                        dismissButton: .default(Text("OK"))
+                        title: Text(Constants.Text.successTitle),
+                        message: Text(Constants.Text.successMessage),
+                        dismissButton: .default(Text(Constants.Text.okText))
                     )
                 }
                 .onAppear {
@@ -157,6 +157,6 @@ struct AddReminderView: View {
 
 #Preview {
     NavigationStack {
-        AddReminderView()
+        InsertReminderView()
     }
 }

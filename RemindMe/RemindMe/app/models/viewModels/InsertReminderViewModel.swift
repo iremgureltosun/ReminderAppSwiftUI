@@ -9,8 +9,7 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-@MainActor
-final class AddReminderViewModel: ObservableObject {
+final class InsertReminderViewModel: BasePersistentViewModel {
     @Published var intervalsDictionary: [IntervalSection: [IntervalItem]] = [:]
     @Published var repeatIntervalModelList: [IntervalSection] = []
     @Published var intervalItems: [IntervalItem] = []
@@ -20,17 +19,9 @@ final class AddReminderViewModel: ObservableObject {
     @Published var reminder: ReminderModel? = nil
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
-    @Published var showSuccess = false
-    @Published var showAlert = false
-    @Published var errorMessage = "An undefined error occurred."
-    var modelContext: ModelContext
-
-    init(modelContext: ModelContext) {
-        self.modelContext = modelContext
-    }
 
     @MainActor
-    struct ListViewModel {
+    struct InsertViewModel {
         var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
         var modelContext: ModelContext
 
@@ -57,7 +48,7 @@ final class AddReminderViewModel: ObservableObject {
 
 // MARK: Reminder creation
 
-extension AddReminderViewModel {
+extension InsertReminderViewModel {
     func createReminder() throws -> ReminderModel? {
         guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw ReminderSettingsError.sectionNotSelected
         }
@@ -75,7 +66,7 @@ extension AddReminderViewModel {
             guard let reminder = try createReminder() else {
                 throw ReminderSettingsError.unknownError
             }
-            try ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.save(reminder)
+            try InsertViewModel(modelContext: modelContext).reminderReminderPersistenceManager.save(reminder)
             showSuccess = true
         } catch {
             showAlert = true
@@ -90,7 +81,7 @@ extension AddReminderViewModel {
 
 // MARK: Expand of collapse disclosure group
 
-extension AddReminderViewModel {
+extension InsertReminderViewModel {
     var allExpanded: Bool {
         repeatIntervalModelList.allSatisfy { $0.expanded }
     }
@@ -117,7 +108,7 @@ extension AddReminderViewModel {
 
 // MARK: Loading functions
 
-extension AddReminderViewModel {
+extension InsertReminderViewModel {
     func loadIntervals() {
         repeatIntervalModelList.removeAll()
         for interval in RepeatIntervals.allCases {

@@ -10,15 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            AddReminderView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+//            InsertReminderView()
+//                .tabItem {
+//                    Label("Add Reminder", systemImage: "gear")
+//                }
 
-           // ReminderStatsView(icon: "calendar", title: "Today", count: 9)
-            RemindersListView()
+            // ReminderStatsView(icon: "calendar", title: "Today", count: 9)
+            ListReminderView()
                 .tabItem {
                     Label("Reminders", systemImage: "calendar")
+                }
+
+            ListStudentView()
+                .tabItem {
+                    Label("Students", systemImage: "user")
                 }
         }
         .navigationBarBackButtonHidden(true)

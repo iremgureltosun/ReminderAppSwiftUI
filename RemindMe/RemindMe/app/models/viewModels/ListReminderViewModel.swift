@@ -9,24 +9,19 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-@MainActor
-final class RemindersListViewModel: ObservableObject {
-    var modelContext: ModelContext
+final class ListReminderViewModel: BasePersistentViewModel {
     @Published var list: [ReminderModel] = []
-    init(modelContext: ModelContext) {
-        self.modelContext = modelContext
-    }
 
     func loadItems() {
         do {
-            list = try FetchViewModel(modelContext: modelContext).reminderReminderPersistenceManager.fetch()
+            list = try ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.fetch()
         } catch {
             list = []
         }
     }
 
     @MainActor
-    struct FetchViewModel {
+    struct ListViewModel {
         var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
         var modelContext: ModelContext
 
