@@ -37,10 +37,10 @@ final class InsertReminderViewModel: BasePersistentViewModel {
     }
 
     func getCheckedItemsOfSelectedSection() throws -> [IntervalItem] {
-        guard let selectedSection = selectedSection else { throw ReminderSettingsError.sectionNotSelected }
+        guard let selectedSection = selectedSection else { throw PersistenceError.sectionNotSelected }
         let selectionItems = intervalsDictionary[selectedSection]?.filter { $0.checked == true }
         guard let selectionItems = selectionItems, !selectionItems.isEmpty else {
-            throw ReminderSettingsError.itemNotSelected
+            throw PersistenceError.itemNotSelected
         }
         return selectionItems
     }
@@ -50,7 +50,7 @@ final class InsertReminderViewModel: BasePersistentViewModel {
 
 extension InsertReminderViewModel {
     func createReminder() throws -> ReminderModel? {
-        guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw ReminderSettingsError.sectionNotSelected
+        guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw PersistenceError.sectionNotSelected
         }
         let selectedItems = try getCheckedItemsOfSelectedSection().map { $0.id }
         if selectedSection?.repeatInterval == RepeatIntervals.daily || selectedSection?.repeatInterval == RepeatIntervals.monthly {
@@ -64,13 +64,13 @@ extension InsertReminderViewModel {
     func saveReminder() {
         do {
             guard let reminder = try createReminder() else {
-                throw ReminderSettingsError.unknownError
+                throw PersistenceError.unknownError
             }
             try InsertViewModel(modelContext: modelContext).reminderReminderPersistenceManager.save(reminder)
             showSuccess = true
         } catch {
             showAlert = true
-            if let error = error as? ReminderSettingsError {
+            if let error = error as? PersistenceError {
                 errorMessage = error.description
             } else {
                 errorMessage = error.localizedDescription

@@ -25,6 +25,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Students", systemImage: "user")
                 }
+            
+            ListStudentView()
+                .tabItem {
+                    Label("Schools", systemImage: "home")
+                }
         }
         .navigationBarBackButtonHidden(true)
     }

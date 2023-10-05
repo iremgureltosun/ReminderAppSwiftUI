@@ -20,9 +20,17 @@ final class ContainerBuilder {
             ReminderPersistenceManager(context: context)
         }.inObjectScope(.container)
 
+        container.register(StudentPersistenceManagerProtocol.self) { _ in
+            StudentPersistenceManager(context: context)
+        }.inObjectScope(.container)
+
+        container.register(SchoolPersistenceManagerProtocol.self) { _ in
+            SchoolPersistenceManager(context: context)
+        }.inObjectScope(.container)
+
         return container
     }
-    
+
     func buildContainer() -> Container {
         let container = Container()
         return container

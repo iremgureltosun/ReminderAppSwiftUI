@@ -33,7 +33,7 @@ final class InsertStudentViewModel: BasePersistentViewModel {
             showSuccess = true
         } catch {
             showAlert = true
-            if let error = error as? ReminderSettingsError {
+            if let error = error as? PersistenceError {
                 errorMessage = error.description
             } else {
                 errorMessage = error.localizedDescription

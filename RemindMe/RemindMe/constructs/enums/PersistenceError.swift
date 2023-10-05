@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ReminderSettingsError: Error{
+enum PersistenceError: Error{
     case sectionNotSelected
     case itemNotSelected
     case unknownError

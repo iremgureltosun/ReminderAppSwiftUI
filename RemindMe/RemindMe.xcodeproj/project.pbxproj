@@ -19,10 +19,14 @@
 		4D02B30C2ABD6E370032F011 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4D02B30B2ABD6E370032F011 /* Resolver */; };
 		4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
-		4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */; };
+		4D3373782ACD5E94009F1DB1 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */; };
 		4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */; };
 		4D3373802ACD9BFC009F1DB1 /* ListReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */; };
 		4D3373822ACD9C0E009F1DB1 /* ListReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */; };
+		4D383A252ACEC57C00E0B99A /* ListSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */; };
+		4D383A272ACEC59200E0B99A /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A262ACEC59200E0B99A /* SchoolModel.swift */; };
+		4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */; };
+		4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
 		4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */; };
 		4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */; };
@@ -86,10 +90,14 @@
 		4D02B3082ABD6BE20032F011 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatIntervals.swift; sourceTree = "<group>"; };
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
-		4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSettingsError.swift; sourceTree = "<group>"; };
+		4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
 		4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentProtocol.swift; sourceTree = "<group>"; };
 		4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReminderView.swift; sourceTree = "<group>"; };
 		4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReminderViewModel.swift; sourceTree = "<group>"; };
+		4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchoolViewModel.swift; sourceTree = "<group>"; };
+		4D383A262ACEC59200E0B99A /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
+		4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSchoolViewModel.swift; sourceTree = "<group>"; };
+		4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPersistenceManager.swift; sourceTree = "<group>"; };
 		4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalProtocol.swift; sourceTree = "<group>"; };
 		4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyInterval.swift; sourceTree = "<group>"; };
@@ -231,7 +239,7 @@
 				4DBF52B82ACC1CEF00F0CADF /* DailyInterval.swift */,
 				4DBF52C92ACC3DCE00F0CADF /* OnceInterval.swift */,
 				4DBF52BA2ACC1F4F00F0CADF /* EventError.swift */,
-				4D3373772ACD5E94009F1DB1 /* ReminderSettingsError.swift */,
+				4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -251,10 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				4DFE0EA32ACEBE1C002BF525 /* BaseViewModel.swift */,
-				4DBF52C32ACC297500F0CADF /* InsertReminderViewModel.swift */,
-				4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */,
-				4DFE0EA72ACEC031002BF525 /* InsertStudentViewModel.swift */,
-				4DFE0EB22ACEC38F002BF525 /* ListStudentViewModel.swift */,
+				4DFE0EB72ACEC4E9002BF525 /* insert */,
+				4DFE0EB62ACEC4DC002BF525 /* list */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			children = (
 				4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */,
 				4DFE0EA92ACEC08D002BF525 /* StudentModel.swift */,
+				4D383A262ACEC59200E0B99A /* SchoolModel.swift */,
 			);
 			path = persistentModels;
 			sourceTree = "<group>";
@@ -310,11 +317,9 @@
 		4DC153EB2ACC0A4D00DFC063 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				4DFE0EB52ACEC4CB002BF525 /* insert */,
+				4DFE0EB42ACEC4B2002BF525 /* list */,
 				4D09335B2ACD486C00539DA9 /* partialViews */,
-				4DBF52BE2ACC265600F0CADF /* InsertReminderView.swift */,
-				4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */,
-				4DFE0EA52ACEBFE2002BF525 /* InsertStudentView.swift */,
-				4DFE0EB02ACEC363002BF525 /* ListStudentView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */,
 				4DFAD0202ACDC75600C78561 /* ReminderPersistenceManager.swift */,
 				4DFE0EAB2ACEC13E002BF525 /* StudentPersistenceManager.swift */,
+				4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -365,6 +371,44 @@
 				4DFE0EAE2ACEC24A002BF525 /* Constants.swift */,
 			);
 			path = constants;
+			sourceTree = "<group>";
+		};
+		4DFE0EB42ACEC4B2002BF525 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */,
+				4DFE0EB02ACEC363002BF525 /* ListStudentView.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		4DFE0EB52ACEC4CB002BF525 /* insert */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE0EA52ACEBFE2002BF525 /* InsertStudentView.swift */,
+				4DBF52BE2ACC265600F0CADF /* InsertReminderView.swift */,
+			);
+			path = insert;
+			sourceTree = "<group>";
+		};
+		4DFE0EB62ACEC4DC002BF525 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE0EB22ACEC38F002BF525 /* ListStudentViewModel.swift */,
+				4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */,
+				4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		4DFE0EB72ACEC4E9002BF525 /* insert */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE0EA72ACEC031002BF525 /* InsertStudentViewModel.swift */,
+				4DBF52C32ACC297500F0CADF /* InsertReminderViewModel.swift */,
+				4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */,
+			);
+			path = insert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,8 +556,10 @@
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
 				4D3373822ACD9C0E009F1DB1 /* ListReminderViewModel.swift in Sources */,
+				4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */,
 				4DBF52C62ACC2E3A00F0CADF /* IntervalSection.swift in Sources */,
-				4D3373782ACD5E94009F1DB1 /* ReminderSettingsError.swift in Sources */,
+				4D3373782ACD5E94009F1DB1 /* PersistenceError.swift in Sources */,
+				4D383A252ACEC57C00E0B99A /* ListSchoolViewModel.swift in Sources */,
 				4DFE0EA62ACEBFE2002BF525 /* InsertStudentView.swift in Sources */,
 				4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */,
 				4DFE0EB12ACEC363002BF525 /* ListStudentView.swift in Sources */,
@@ -526,6 +572,7 @@
 				4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */,
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
 				4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */,
+				4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */,
 				4DFE0EA82ACEC031002BF525 /* InsertStudentViewModel.swift in Sources */,
 				4DFE0EAA2ACEC08D002BF525 /* StudentModel.swift in Sources */,
 				4DFAD0212ACDC75600C78561 /* ReminderPersistenceManager.swift in Sources */,
@@ -540,6 +587,7 @@
 				4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */,
 				4DBF52C42ACC297500F0CADF /* InsertReminderViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,
+				4D383A272ACEC59200E0B99A /* SchoolModel.swift in Sources */,
 				4DBF52BF2ACC265600F0CADF /* InsertReminderView.swift in Sources */,
 				4D02B3092ABD6BE20032F011 /* NotificationService.swift in Sources */,
 				4DFE0EAF2ACEC24A002BF525 /* Constants.swift in Sources */,
