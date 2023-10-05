@@ -8,19 +8,19 @@
 import Foundation
 import SwiftData
 
-@Model final public class ReminderModel: PersistentProtocol, Identifiable {
+@Model public class ReminderModel: PersistentProtocol, Identifiable {
     public typealias PersistentType = PersistentProtocol
     
     @Attribute(.unique) public var id: String = UUID().uuidString
-    var title: String
+    public var name: String
     var body: String
     var repeatIntervalId: Int
     var intervals: [Int]?
     var date: Date?
     var time: Date?
     
-    init(title: String,body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
-        self.title = title
+    init(title: String, body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
+        self.name = title
         self.body = body
         self.repeatIntervalId = repeatIntervalId
         self.intervals = intervals

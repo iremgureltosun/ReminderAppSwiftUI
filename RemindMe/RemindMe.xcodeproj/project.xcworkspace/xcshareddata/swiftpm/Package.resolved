@@ -8,6 +8,15 @@
         "revision" : "97de0b0320036607564af4a60025b48f8d041221",
         "version" : "1.5.0"
       }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
+        "version" : "2.8.4"
+      }
     }
   ],
   "version" : 2

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct RemindMeApp: App {
@@ -15,6 +14,7 @@ struct RemindMeApp: App {
             NavigationStack {
                 ContentView()
             }
-        }.modelContainer(for: [ReminderModel.self])
+        }
+        .modelContainer(for: [ReminderModel.self])
     }
 }

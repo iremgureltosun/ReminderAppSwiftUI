@@ -1,0 +1,34 @@
+//
+//  PersistenceManager.swift
+//  RemindMe
+//
+//  Created by Tosun, Irem on 4.10.2023.
+//
+
+import Foundation
+import SwiftData
+import SwiftUI
+
+@MainActor
+public class BasePersistenceManager<T> where T: PersistentProtocol {
+    typealias PersistentType = T.Type
+
+    let context: ModelContext
+    
+    private var items: [T] = []
+
+    init(context: ModelContext){
+        self.context = context
+    }
+
+    public func save(_ model: T) throws {
+        context.insert(model)
+        try context.save()
+    }
+
+    public func fetch() throws -> [T] {
+        let descriptor = FetchDescriptor<T>(sortBy: [SortDescriptor(\.name)])
+        items = try context.fetch(descriptor) ?? []
+        return items
+    }
+}

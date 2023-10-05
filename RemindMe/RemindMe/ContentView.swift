@@ -10,12 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            ReminderSettingsListView()
+            AddReminderView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
 
-            ReminderStatsView(icon: "calendar", title: "Today", count: 9)
+           // ReminderStatsView(icon: "calendar", title: "Today", count: 9)
+            RemindersListView()
                 .tabItem {
                     Label("Reminders", systemImage: "calendar")
                 }
