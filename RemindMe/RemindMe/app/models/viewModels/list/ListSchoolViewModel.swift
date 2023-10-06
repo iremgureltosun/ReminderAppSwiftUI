@@ -11,7 +11,7 @@ import SwiftUI
 
 final class ListSchoolViewModel: BasePersistentViewModel {
     @Published var list: [SchoolModel] = []
-    var schoolPersistenceManager: SchoolPersistenceManagerProtocol = Inject().wrappedValue
+    @Inject var schoolPersistenceManager: SchoolPersistenceManagerProtocol
 
     func loadItems() {
         do {

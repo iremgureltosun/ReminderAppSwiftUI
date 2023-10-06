@@ -11,7 +11,7 @@ import SwiftUI
 
 final class ListReminderViewModel: BasePersistentViewModel {
     @Published var list: [ReminderModel] = []
-    var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol = Inject().wrappedValue
+    @Inject private var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
 
     func loadItems() {
         do {
@@ -21,7 +21,7 @@ final class ListReminderViewModel: BasePersistentViewModel {
         }
     }
 
-    func delete(indexSet: IndexSet) {
-        // ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.delete(indexSet: indexSet)
+    func delete(indexSet: IndexSet) throws {
+        try reminderReminderPersistenceManager.delete(indexSet: indexSet)
     }
 }

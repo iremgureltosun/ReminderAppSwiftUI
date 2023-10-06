@@ -19,8 +19,7 @@ final class InsertReminderViewModel: BasePersistentViewModel {
     @Published var reminder: ReminderModel? = nil
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
-
-    var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol = Inject().wrappedValue
+    @Inject var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
 
     func setSelectedIntervalSectionHeader(selectedSection: IntervalSection) {
         self.selectedSection = selectedSection

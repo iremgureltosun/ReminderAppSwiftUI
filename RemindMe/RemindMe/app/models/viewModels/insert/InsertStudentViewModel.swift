@@ -12,9 +12,8 @@ import SwiftUI
 final class InsertStudentViewModel: BasePersistentViewModel {
     @Published var name: String = ""
     @Published var surname: String = ""
-
-    var studentReminderPersistenceManager: StudentPersistenceManagerProtocol = Inject().wrappedValue
-
+    @Inject var studentReminderPersistenceManager: StudentPersistenceManagerProtocol
+    
     func save() {
         do {
             let student = StudentModel(name: name, surname: surname)

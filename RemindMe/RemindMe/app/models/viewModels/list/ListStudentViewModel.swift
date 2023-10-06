@@ -11,7 +11,7 @@ import SwiftUI
 
 final class ListStudentViewModel: BasePersistentViewModel {
     @Published var list: [StudentModel] = []
-    var studentReminderPersistenceManager: StudentPersistenceManagerProtocol = Inject().wrappedValue
+    @Inject var studentReminderPersistenceManager: StudentPersistenceManagerProtocol 
 
     func loadItems() {
         do {
