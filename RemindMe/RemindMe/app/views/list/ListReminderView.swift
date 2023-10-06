@@ -9,18 +9,11 @@ import SwiftData
 import SwiftUI
 
 struct ListReminderView: View {
-    @Environment(\.modelContext) private var modelContext
-
-    var body: some View {
-        ListView(modelContext: modelContext)
-    }
-
-    private struct ListView: View {
         @StateObject var viewModel: ListReminderViewModel
         @State private var presentInsertReminder = false
 
-        init(modelContext: ModelContext) {
-            let viewModel = ListReminderViewModel(modelContext: modelContext)
+        init() {
+            let viewModel = ListReminderViewModel()
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
@@ -29,7 +22,6 @@ struct ListReminderView: View {
                 VStack {
                     reminderList
                         .onAppear {
-                            viewModel.loadContext()
                             viewModel.loadItems()
                         }
                         .sheet(isPresented: $presentInsertReminder, onDismiss: {
@@ -60,10 +52,10 @@ struct ListReminderView: View {
                 }
             }
         }
-    }
+    
 }
 
-// #Preview {
-//    ListReminderView()
-//        .modelContainer(for: ReminderModel.self)
-// }
+ #Preview {
+    ListReminderView()
+        .modelContainer(for: ReminderModel.self)
+ }

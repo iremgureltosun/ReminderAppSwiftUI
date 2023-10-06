@@ -10,18 +10,11 @@ import SwiftData
 import SwiftUI
 
 struct ListSchoolView: View {
-    @Environment(\.modelContext) private var modelContext
-
-    var body: some View {
-        ListView(modelContext: modelContext)
-    }
-
-    private struct ListView: View {
         @StateObject var viewModel: ListSchoolViewModel
         @State private var presentInsertSchool: Bool = false
 
-        init(modelContext: ModelContext) {
-            let viewModel = ListSchoolViewModel(modelContext: modelContext)
+        init() {
+            let viewModel = ListSchoolViewModel()
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
@@ -30,7 +23,6 @@ struct ListSchoolView: View {
                 VStack {
                     schoolList
                         .onAppear {
-                            viewModel.loadContext()
                             viewModel.loadItems()
                         }
                         .sheet(isPresented: $presentInsertSchool, onDismiss: {
@@ -67,5 +59,5 @@ struct ListSchoolView: View {
                 }
             }
         }
-    }
+    
 }

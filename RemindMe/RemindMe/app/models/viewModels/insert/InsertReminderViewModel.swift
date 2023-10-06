@@ -20,16 +20,7 @@ final class InsertReminderViewModel: BasePersistentViewModel {
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
 
-    @MainActor
-    struct InsertViewModel {
-        var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
-        var modelContext: ModelContext
-
-        init(modelContext: ModelContext) {
-            self.modelContext = modelContext
-            reminderReminderPersistenceManager = Inject(context: modelContext).wrappedValue
-        }
-    }
+    var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol = Inject().wrappedValue
 
     func setSelectedIntervalSectionHeader(selectedSection: IntervalSection) {
         self.selectedSection = selectedSection
@@ -66,7 +57,7 @@ extension InsertReminderViewModel {
             guard let reminder = try create() else {
                 throw PersistenceError.unknownError
             }
-            try InsertViewModel(modelContext: modelContext).reminderReminderPersistenceManager.save(reminder)
+            try reminderReminderPersistenceManager.save(reminder)
             showSuccess = true
         } catch {
             showAlert = true

@@ -16,7 +16,7 @@ final class ContainerBuilder {
     func buildContainer(context: ModelContext) -> Container {
         let container = Container()
 
-        container.register(ReminderPersistenceManagerProtocol.self) { _ in
+        container.register(ReminderPersistenceManagerProtocol.self) { resolver in
             ReminderPersistenceManager(context: context)
         }.inObjectScope(.container)
 

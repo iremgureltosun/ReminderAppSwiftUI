@@ -13,7 +13,7 @@ import SwiftData
 @MainActor
 struct Inject<Component> {
     let wrappedValue: Component
-    init(context: ModelContext) {
+    init() {
         wrappedValue = Resolver.shared.resolve(Component.self)
     }
 }

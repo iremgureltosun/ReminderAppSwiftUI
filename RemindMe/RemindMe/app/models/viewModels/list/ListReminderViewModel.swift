@@ -11,16 +11,11 @@ import SwiftUI
 
 final class ListReminderViewModel: BasePersistentViewModel {
     @Published var list: [ReminderModel] = []
-
-    var model: ListViewModel?
-
-    func loadContext() {
-        model = ListViewModel(modelContext: modelContext)
-    }
+    var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol = Inject().wrappedValue
 
     func loadItems() {
         do {
-            list = try ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.fetch()
+            list = try reminderReminderPersistenceManager.fetch()
         } catch {
             list = []
         }
@@ -28,16 +23,5 @@ final class ListReminderViewModel: BasePersistentViewModel {
 
     func delete(indexSet: IndexSet) {
         // ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.delete(indexSet: indexSet)
-    }
-
-    @MainActor
-    struct ListViewModel {
-        var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
-        var modelContext: ModelContext
-
-        init(modelContext: ModelContext) {
-            self.modelContext = modelContext
-            reminderReminderPersistenceManager = Inject(context: modelContext).wrappedValue
-        }
     }
 }

@@ -11,33 +11,17 @@ import SwiftUI
 
 final class ListSchoolViewModel: BasePersistentViewModel {
     @Published var list: [SchoolModel] = []
+    var schoolPersistenceManager: SchoolPersistenceManagerProtocol = Inject().wrappedValue
 
-    var model: ListViewModel?
-    
-    func loadContext() {
-        model = ListViewModel(modelContext: modelContext)
-    }
-    
     func loadItems() {
         do {
-            list = try ListViewModel(modelContext: modelContext).schoolPersistenceManager.fetch()
+            list = try schoolPersistenceManager.fetch()
         } catch {
             list = []
         }
     }
 
     func delete(indexSet: IndexSet) throws {
-        try model?.schoolPersistenceManager.delete(indexSet: indexSet)
-    }
-    
-    @MainActor
-    struct ListViewModel {
-        var schoolPersistenceManager: SchoolPersistenceManagerProtocol
-        var modelContext: ModelContext
-
-        init(modelContext: ModelContext) {
-            self.modelContext = modelContext
-            schoolPersistenceManager = Inject(context: modelContext).wrappedValue
-        }
+        try schoolPersistenceManager.delete(indexSet: indexSet)
     }
 }

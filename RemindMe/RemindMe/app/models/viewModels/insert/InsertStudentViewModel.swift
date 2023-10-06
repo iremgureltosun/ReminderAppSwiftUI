@@ -13,21 +13,12 @@ final class InsertStudentViewModel: BasePersistentViewModel {
     @Published var name: String = ""
     @Published var surname: String = ""
 
-    @MainActor
-    struct InsertViewModel {
-        var studentReminderPersistenceManager: StudentPersistenceManagerProtocol
-        var modelContext: ModelContext
-        
-        init(modelContext: ModelContext) {
-            self.modelContext = modelContext
-            studentReminderPersistenceManager = Inject(context: modelContext).wrappedValue
-        }
-    }
-    
+    var studentReminderPersistenceManager: StudentPersistenceManagerProtocol = Inject().wrappedValue
+
     func save() {
         do {
             let student = StudentModel(name: name, surname: surname)
-            try InsertViewModel(modelContext: modelContext).studentReminderPersistenceManager.save(student)
+            try studentReminderPersistenceManager.save(student)
             showSuccess = true
         } catch {
             showAlert = true

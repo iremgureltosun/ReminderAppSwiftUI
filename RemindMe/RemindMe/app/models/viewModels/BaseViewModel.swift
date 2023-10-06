@@ -11,13 +11,7 @@ import SwiftUI
 
 @MainActor
 class BasePersistentViewModel: ObservableObject {
-    var modelContext: ModelContext
     @Published var showSuccess = false
     @Published var showAlert = false
     @Published var errorMessage = "An undefined error occurred."
-   
-    
-    init(modelContext: ModelContext) {
-        self.modelContext = modelContext
-    }
 }

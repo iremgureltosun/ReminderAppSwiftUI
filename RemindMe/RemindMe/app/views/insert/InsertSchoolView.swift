@@ -9,68 +9,60 @@ import SwiftData
 import SwiftUI
 
 struct InsertSchoolView: View {
-    @Environment(\.modelContext) private var modelContext
+    @StateObject var viewModel: InsertSchoolViewModel
+    @Environment(\.dismiss) private var dismiss
 
-    var body: some View {
-        InsertView(modelContext: modelContext)
+    private var isFormValid: Bool {
+        !viewModel.schoolName.isEmptyOrWhiteSpace
     }
 
-    private struct InsertView: View {
-        @StateObject var viewModel: InsertSchoolViewModel
-        @Environment(\.dismiss) private var dismiss
+    init() {
+        let viewModel = InsertSchoolViewModel()
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
-        private var isFormValid: Bool {
-            !viewModel.schoolName.isEmptyOrWhiteSpace
-        }
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("School name", text: $viewModel.schoolName)
 
-        init(modelContext: ModelContext) {
-            let viewModel = InsertSchoolViewModel(modelContext: modelContext)
-            _viewModel = StateObject(wrappedValue: viewModel)
-        }
-
-        var body: some View {
-            NavigationView {
-                Form {
-                    TextField("School name", text: $viewModel.schoolName)
-
-                    TextField("Description", text: $viewModel.description)
-                }
-                .background(.red)
-                .navigationTitle("Add School")
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button("Close") {
-                            dismiss()
-                        }
-                    }
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Save") {
-                            viewModel.save()
-                            dismiss()
-
-                        }.disabled(!isFormValid)
+                TextField("Description", text: $viewModel.description)
+            }
+            .background(.red)
+            .navigationTitle("Add School")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Close") {
+                        dismiss()
                     }
                 }
-                .padding(Constants.Spacing.large)
-                .alert(isPresented: $viewModel.showAlert) {
-                    Alert(
-                        title: Text(Constants.Text.errorTitle),
-                        message: Text(viewModel.errorMessage),
-                        dismissButton: .default(Text(Constants.Text.okText))
-                    )
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Save") {
+                        viewModel.save()
+                        dismiss()
+
+                    }.disabled(!isFormValid)
                 }
-                .alert(isPresented: $viewModel.showSuccess) {
-                    Alert(
-                        title: Text(Constants.Text.successTitle),
-                        message: Text(Constants.Text.successMessage),
-                        dismissButton: .default(Text(Constants.Text.okText))
-                    )
-                }
+            }
+            .padding(Constants.Spacing.large)
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(
+                    title: Text(Constants.Text.errorTitle),
+                    message: Text(viewModel.errorMessage),
+                    dismissButton: .default(Text(Constants.Text.okText))
+                )
+            }
+            .alert(isPresented: $viewModel.showSuccess) {
+                Alert(
+                    title: Text(Constants.Text.successTitle),
+                    message: Text(Constants.Text.successMessage),
+                    dismissButton: .default(Text(Constants.Text.okText))
+                )
             }
         }
     }
 }
 
-#Preview {
-    InsertSchoolView()
-}
+//#Preview {
+//    InsertSchoolView()
+//}
