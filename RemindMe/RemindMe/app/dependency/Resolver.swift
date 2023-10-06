@@ -19,7 +19,7 @@ final class Resolver {
 
     private init() {
         container = ContainerBuilder.shared.buildContainer()
-        let modelContainer = try! ModelContainer(for: ReminderModel.self)
+        let modelContainer = try! ModelContainer(for: StudentModel.self)
         context = modelContainer.mainContext
     }
 

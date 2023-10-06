@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-public protocol PersistentProtocol: PersistentModel, Observable{
+public protocol PersistentProtocol: PersistentModel{
     associatedtype PersistentType
     
     var title: String { get }

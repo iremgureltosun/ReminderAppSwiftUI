@@ -10,11 +10,9 @@ import SwiftData
 import SwiftUI
 
 final class InsertStudentViewModel: BasePersistentViewModel {
-    
     @Published var name: String = ""
     @Published var surname: String = ""
-    
-    
+
     @MainActor
     struct InsertViewModel {
         var studentReminderPersistenceManager: StudentPersistenceManagerProtocol
@@ -26,7 +24,7 @@ final class InsertStudentViewModel: BasePersistentViewModel {
         }
     }
     
-    func saveStudent() {
+    func save() {
         do {
             let student = StudentModel(name: name, surname: surname)
             try InsertViewModel(modelContext: modelContext).studentReminderPersistenceManager.save(student)

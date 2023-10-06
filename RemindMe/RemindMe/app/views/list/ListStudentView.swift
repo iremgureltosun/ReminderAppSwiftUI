@@ -16,31 +16,59 @@ struct ListStudentView: View {
     }
 
     private struct ListView: View {
-        @StateObject var viewModel: ListReminderViewModel
+        @StateObject var viewModel: ListStudentViewModel
+        @State private var presentInsertStudent: Bool = false
 
         init(modelContext: ModelContext) {
-            let viewModel = ListReminderViewModel(modelContext: modelContext)
+            let viewModel = ListStudentViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
         var body: some View {
+            NavigationView {
+                VStack {
+                    studentList
+                        .onAppear {
+                            viewModel.loadContext()
+                            viewModel.loadItems()
+                        }
+                        .sheet(isPresented: $presentInsertStudent, content: {
+                            InsertStudentView()
+                        })
+                        .presentationDetents([.height(300)])
+                    Spacer()
+                }
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add Student") {
+                            presentInsertStudent = true
+                        }
+                    }
+                })
+            }
+        }
+
+        @ViewBuilder private var studentList: some View {
             List {
                 ForEach(viewModel.list, id: \.id) { item in
-
                     HStack {
                         Text(item.title)
                             .foregroundColor(.blue)
                     }
                 }
-            }
-            .onAppear {
-                viewModel.loadItems()
+                .onDelete { index in
+                    do {
+                        try viewModel.delete(indexSet: index)
+                    } catch {
+                        debugPrint(error)
+                    }
+                }
             }
         }
     }
 }
 
-#Preview {
-    ListStudentView()
-        .modelContainer(for: StudentModel.self)
-}
+//#Preview {
+//    ListStudentView()
+//        .modelContainer(for: StudentModel.self)
+//}

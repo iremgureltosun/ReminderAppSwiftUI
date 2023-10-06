@@ -1,14 +1,15 @@
 //
-//  StoredRemindersListView.swift
+//  ListSchoolView.swift
 //  RemindMe
 //
-//  Created by Tosun, Irem on 4.10.2023.
+//  Created by Tosun, Irem on 6.10.2023.
 //
 
+import Foundation
 import SwiftData
 import SwiftUI
 
-struct ListReminderView: View {
+struct ListSchoolView: View {
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
@@ -16,11 +17,10 @@ struct ListReminderView: View {
     }
 
     private struct ListView: View {
-        @StateObject var viewModel: ListReminderViewModel
-        @State private var presentInsertReminder = false
-        
+        @StateObject var viewModel: ListSchoolViewModel
+
         init(modelContext: ModelContext) {
-            let viewModel = ListReminderViewModel(modelContext: modelContext)
+            let viewModel = ListSchoolViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
@@ -37,14 +37,11 @@ struct ListReminderView: View {
             .onAppear {
                 viewModel.loadItems()
             }
-            .sheet(isPresented: $presentInsertReminder, content: {
-                InsertStudentView()
-            })
         }
     }
 }
 
-//#Preview {
-//    ListReminderView()
-//        .modelContainer(for: ReminderModel.self)
-//}
+#Preview {
+    ListSchoolView()
+        .modelContainer(for: SchoolModel.self)
+}

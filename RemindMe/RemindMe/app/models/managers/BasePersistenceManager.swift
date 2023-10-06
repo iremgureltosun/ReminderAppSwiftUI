@@ -14,10 +14,10 @@ public class BasePersistenceManager<T> where T: PersistentProtocol {
     typealias PersistentType = T.Type
 
     let context: ModelContext
-    
+
     private var items: [T] = []
 
-    init(context: ModelContext){
+    init(context: ModelContext) {
         self.context = context
     }
 
@@ -27,8 +27,16 @@ public class BasePersistenceManager<T> where T: PersistentProtocol {
     }
 
     public func fetch() throws -> [T] {
-        let descriptor = FetchDescriptor<T>(sortBy: [SortDescriptor(\.title)])
-        items = try context.fetch(descriptor) ?? []
+        let descriptor = FetchDescriptor<T>()//(sortBy: [SortDescriptor(\.title)])
+        items = try context.fetch(descriptor)
         return items
+    }
+
+    public func delete(indexSet: IndexSet) throws {
+        try indexSet.forEach { index in
+            let item = items[index]
+            context.delete(item)
+            try context.save()
+        }
     }
 }

@@ -42,6 +42,9 @@
 		4DC153EE2ACC0A7300DFC063 /* ReminderStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC153ED2ACC0A7300DFC063 /* ReminderStatsView.swift */; };
 		4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC153F02ACC0AA100DFC063 /* Color+.swift */; };
 		4DC153F32ACC11C100DFC063 /* -Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC153F22ACC11C100DFC063 /* -Reminder.swift */; };
+		4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDCA6CF2ACFDEE900FE9148 /* ListSchoolView.swift */; };
+		4DDCA6D22ACFDEFC00FE9148 /* InsertSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDCA6D12ACFDEFC00FE9148 /* InsertSchoolView.swift */; };
+		4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE30ED2ACFFA6C00198FE0 /* String+.swift */; };
 		4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */; };
 		4DFAD0212ACDC75600C78561 /* ReminderPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0202ACDC75600C78561 /* ReminderPersistenceManager.swift */; };
 		4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */; };
@@ -113,6 +116,9 @@
 		4DC153ED2ACC0A7300DFC063 /* ReminderStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStatsView.swift; sourceTree = "<group>"; };
 		4DC153F02ACC0AA100DFC063 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		4DC153F22ACC11C100DFC063 /* -Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "-Reminder.swift"; sourceTree = "<group>"; };
+		4DDCA6CF2ACFDEE900FE9148 /* ListSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchoolView.swift; sourceTree = "<group>"; };
+		4DDCA6D12ACFDEFC00FE9148 /* InsertSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSchoolView.swift; sourceTree = "<group>"; };
+		4DDE30ED2ACFFA6C00198FE0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePersistenceManager.swift; sourceTree = "<group>"; };
 		4DFAD0202ACDC75600C78561 /* ReminderPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPersistenceManager.swift; sourceTree = "<group>"; };
 		4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBuilder.swift; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 			children = (
 				4DC153F02ACC0AA100DFC063 /* Color+.swift */,
 				4DBF52BC2ACC208E00F0CADF /* Date+.swift */,
+				4DDE30ED2ACFFA6C00198FE0 /* String+.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -378,6 +385,7 @@
 			children = (
 				4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */,
 				4DFE0EB02ACEC363002BF525 /* ListStudentView.swift */,
+				4DDCA6CF2ACFDEE900FE9148 /* ListSchoolView.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -385,8 +393,9 @@
 		4DFE0EB52ACEC4CB002BF525 /* insert */ = {
 			isa = PBXGroup;
 			children = (
-				4DFE0EA52ACEBFE2002BF525 /* InsertStudentView.swift */,
 				4DBF52BE2ACC265600F0CADF /* InsertReminderView.swift */,
+				4DFE0EA52ACEBFE2002BF525 /* InsertStudentView.swift */,
+				4DDCA6D12ACFDEFC00FE9148 /* InsertSchoolView.swift */,
 			);
 			path = insert;
 			sourceTree = "<group>";
@@ -404,8 +413,8 @@
 		4DFE0EB72ACEC4E9002BF525 /* insert */ = {
 			isa = PBXGroup;
 			children = (
-				4DFE0EA72ACEC031002BF525 /* InsertStudentViewModel.swift */,
 				4DBF52C32ACC297500F0CADF /* InsertReminderViewModel.swift */,
+				4DFE0EA72ACEC031002BF525 /* InsertStudentViewModel.swift */,
 				4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */,
 			);
 			path = insert;
@@ -554,6 +563,7 @@
 				4DBF52CA2ACC3DCE00F0CADF /* OnceInterval.swift in Sources */,
 				4D02B3072ABD6A830032F011 /* RemindMeProtocol.swift in Sources */,
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
+				4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
 				4D3373822ACD9C0E009F1DB1 /* ListReminderViewModel.swift in Sources */,
 				4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */,
@@ -569,6 +579,7 @@
 				4DFE0EA42ACEBE1C002BF525 /* BaseViewModel.swift in Sources */,
 				4DC153F32ACC11C100DFC063 /* -Reminder.swift in Sources */,
 				4DFAD0272ACDCC4300C78561 /* Resolver.swift in Sources */,
+				4DDCA6D22ACFDEFC00FE9148 /* InsertSchoolView.swift in Sources */,
 				4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */,
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
 				4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */,
@@ -584,6 +595,7 @@
 				4D02B2D92ABD69AA0032F011 /* RemindMeApp.swift in Sources */,
 				4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */,
 				4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */,
+				4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */,
 				4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */,
 				4DBF52C42ACC297500F0CADF /* InsertReminderViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,

@@ -20,6 +20,10 @@ final class ListReminderViewModel: BasePersistentViewModel {
         }
     }
 
+    func delete(indexSet: IndexSet) {
+        // ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.delete(indexSet: indexSet)
+    }
+
     @MainActor
     struct ListViewModel {
         var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol

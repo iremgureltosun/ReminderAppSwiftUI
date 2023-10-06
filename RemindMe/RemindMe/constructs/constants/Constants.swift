@@ -14,4 +14,8 @@ enum Constants{
         static let errorTitle = "Ooops"
         static let saveText = "Save"
     }
+    enum Spacing{
+        static let medium: CGFloat = 15
+        static let large: CGFloat = 20
+    }
 }

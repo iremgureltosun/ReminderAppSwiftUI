@@ -25,7 +25,7 @@ struct InsertReminderView: View {
 
         var body: some View {
             NavigationView {
-                VStack(spacing: 15) {
+                VStack(spacing: Constants.Spacing.medium) {
                     TextField("Enter title", text: $viewModel.title)
 
                     TextField("Enter body", text: $viewModel.body)
@@ -39,12 +39,11 @@ struct InsertReminderView: View {
                     listView
 
                     PillShapedButton(text: Constants.Text.saveText) {
-                        viewModel.saveReminder()
+                        viewModel.save()
                     }
                     .padding()
                 }
-                .padding(.top, 20)
-                .padding(.horizontal, 20)
+                .padding([.top, .horizontal], Constants.Spacing.large)
                 .alert(isPresented: $viewModel.showAlert) {
                     Alert(
                         title: Text(Constants.Text.errorTitle),

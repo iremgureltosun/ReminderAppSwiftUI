@@ -49,7 +49,7 @@ final class InsertReminderViewModel: BasePersistentViewModel {
 // MARK: Reminder creation
 
 extension InsertReminderViewModel {
-    func createReminder() throws -> ReminderModel? {
+    func create() throws -> ReminderModel? {
         guard let intervalId = selectedSection?.repeatInterval.rawValue else { throw PersistenceError.sectionNotSelected
         }
         let selectedItems = try getCheckedItemsOfSelectedSection().map { $0.id }
@@ -61,9 +61,9 @@ extension InsertReminderViewModel {
         }
     }
 
-    func saveReminder() {
+    func save() {
         do {
-            guard let reminder = try createReminder() else {
+            guard let reminder = try create() else {
                 throw PersistenceError.unknownError
             }
             try InsertViewModel(modelContext: modelContext).reminderReminderPersistenceManager.save(reminder)

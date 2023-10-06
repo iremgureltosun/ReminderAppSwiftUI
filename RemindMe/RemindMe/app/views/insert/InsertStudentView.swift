@@ -16,35 +16,62 @@ struct InsertStudentView: View {
     }
 
     private struct InsertView: View {
-        @StateObject var viewModel: InsertReminderViewModel
+        @Environment(\.dismiss) private var dismiss
+        @StateObject var viewModel: InsertStudentViewModel
 
+        private var isFormValid: Bool {
+            !viewModel.name.isEmptyOrWhiteSpace && !viewModel.surname.isEmptyOrWhiteSpace
+        }
+        
         init(modelContext: ModelContext) {
-            let viewModel = InsertReminderViewModel(modelContext: modelContext)
+            let viewModel = InsertStudentViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
         var body: some View {
-            VStack(spacing: 15) {
-                TextField("Enter student's name", text: $viewModel.title)
-            }
-            .alert(isPresented: $viewModel.showAlert) {
-                Alert(
-                    title: Text(Constants.Text.errorTitle),
-                    message: Text(viewModel.errorMessage),
-                    dismissButton: .default(Text(Constants.Text.okText))
-                )
-            }
-            .alert(isPresented: $viewModel.showSuccess) {
-                Alert(
-                    title: Text(Constants.Text.successTitle),
-                    message: Text(Constants.Text.successMessage),
-                    dismissButton: .default(Text(Constants.Text.okText))
-                )
+            NavigationView{
+                Form {
+                    TextField("Student's name", text: $viewModel.name)
+                    
+                    TextField("Student's surname", text: $viewModel.surname)
+                    
+                }
+                .background(.red)
+                .navigationTitle("Add Student")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            dismiss()
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Save") {
+                            viewModel.save()
+                            dismiss()
+                            
+                        }.disabled(!isFormValid)
+                    }
+                }
+                .padding(Constants.Spacing.large)
+                .alert(isPresented: $viewModel.showAlert) {
+                    Alert(
+                        title: Text(Constants.Text.errorTitle),
+                        message: Text(viewModel.errorMessage),
+                        dismissButton: .default(Text(Constants.Text.okText))
+                    )
+                }
+                .alert(isPresented: $viewModel.showSuccess) {
+                    Alert(
+                        title: Text(Constants.Text.successTitle),
+                        message: Text(Constants.Text.successMessage),
+                        dismissButton: .default(Text(Constants.Text.okText))
+                    )
+                }
             }
         }
     }
 }
 
-#Preview {
-    InsertStudentView()
-}
+//#Preview {
+//    InsertStudentView()
+//}
