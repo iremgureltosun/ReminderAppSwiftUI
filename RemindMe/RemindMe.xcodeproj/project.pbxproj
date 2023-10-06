@@ -403,8 +403,8 @@
 		4DFE0EB62ACEC4DC002BF525 /* list */ = {
 			isa = PBXGroup;
 			children = (
-				4DFE0EB22ACEC38F002BF525 /* ListStudentViewModel.swift */,
 				4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */,
+				4DFE0EB22ACEC38F002BF525 /* ListStudentViewModel.swift */,
 				4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */,
 			);
 			path = list;

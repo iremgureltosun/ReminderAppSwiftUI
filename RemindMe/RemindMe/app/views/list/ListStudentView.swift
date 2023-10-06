@@ -32,10 +32,11 @@ struct ListStudentView: View {
                             viewModel.loadContext()
                             viewModel.loadItems()
                         }
-                        .sheet(isPresented: $presentInsertStudent, content: {
+                        .sheet(isPresented: $presentInsertStudent, onDismiss: {
+                            viewModel.loadItems()
+                        }, content: {
                             InsertStudentView()
                         })
-                        .presentationDetents([.height(300)])
                     Spacer()
                 }
                 .toolbar(content: {

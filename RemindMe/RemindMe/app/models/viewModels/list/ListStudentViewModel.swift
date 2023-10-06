@@ -11,12 +11,13 @@ import SwiftUI
 
 final class ListStudentViewModel: BasePersistentViewModel {
     @Published var list: [StudentModel] = []
+
     var model: ListViewModel?
     
     func loadContext() {
         model = ListViewModel(modelContext: modelContext)
     }
-
+    
     func loadItems() {
         do {
             list = try model?.studentReminderPersistenceManager.fetch() ?? []

@@ -12,6 +12,12 @@ import SwiftUI
 final class ListSchoolViewModel: BasePersistentViewModel {
     @Published var list: [SchoolModel] = []
 
+    var model: ListViewModel?
+    
+    func loadContext() {
+        model = ListViewModel(modelContext: modelContext)
+    }
+    
     func loadItems() {
         do {
             list = try ListViewModel(modelContext: modelContext).schoolPersistenceManager.fetch()
@@ -20,6 +26,10 @@ final class ListSchoolViewModel: BasePersistentViewModel {
         }
     }
 
+    func delete(indexSet: IndexSet) throws {
+        try model?.schoolPersistenceManager.delete(indexSet: indexSet)
+    }
+    
     @MainActor
     struct ListViewModel {
         var schoolPersistenceManager: SchoolPersistenceManagerProtocol

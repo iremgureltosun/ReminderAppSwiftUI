@@ -12,6 +12,12 @@ import SwiftUI
 final class ListReminderViewModel: BasePersistentViewModel {
     @Published var list: [ReminderModel] = []
 
+    var model: ListViewModel?
+
+    func loadContext() {
+        model = ListViewModel(modelContext: modelContext)
+    }
+
     func loadItems() {
         do {
             list = try ListViewModel(modelContext: modelContext).reminderReminderPersistenceManager.fetch()

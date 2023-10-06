@@ -15,6 +15,7 @@ class BasePersistentViewModel: ObservableObject {
     @Published var showSuccess = false
     @Published var showAlert = false
     @Published var errorMessage = "An undefined error occurred."
+   
     
     init(modelContext: ModelContext) {
         self.modelContext = modelContext

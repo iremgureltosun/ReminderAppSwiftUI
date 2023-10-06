@@ -18,6 +18,7 @@ struct ListSchoolView: View {
 
     private struct ListView: View {
         @StateObject var viewModel: ListSchoolViewModel
+        @State private var presentInsertSchool: Bool = false
 
         init(modelContext: ModelContext) {
             let viewModel = ListSchoolViewModel(modelContext: modelContext)
@@ -25,23 +26,46 @@ struct ListSchoolView: View {
         }
 
         var body: some View {
+            NavigationView {
+                VStack {
+                    schoolList
+                        .onAppear {
+                            viewModel.loadContext()
+                            viewModel.loadItems()
+                        }
+                        .sheet(isPresented: $presentInsertSchool, onDismiss: {
+                            viewModel.loadItems()
+                        }, content: {
+                            InsertSchoolView()
+                        })
+                    Spacer()
+                }
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add School") {
+                            presentInsertSchool = true
+                        }
+                    }
+                })
+            }
+        }
+
+        @ViewBuilder private var schoolList: some View {
             List {
                 ForEach(viewModel.list, id: \.id) { item in
-
                     HStack {
                         Text(item.title)
                             .foregroundColor(.blue)
                     }
                 }
-            }
-            .onAppear {
-                viewModel.loadItems()
+                .onDelete { index in
+                    do {
+                        try viewModel.delete(indexSet: index)
+                    } catch {
+                        debugPrint(error)
+                    }
+                }
             }
         }
     }
-}
-
-#Preview {
-    ListSchoolView()
-        .modelContainer(for: SchoolModel.self)
 }

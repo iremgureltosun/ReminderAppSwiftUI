@@ -24,7 +24,7 @@ final class InsertSchoolViewModel: BasePersistentViewModel {
         }
     }
 
-    func saveStudent() {
+    func save() {
         do {
             let school = SchoolModel(schoolName: schoolName, schoolCategoryId: nil, schoolDescription: description)
             try InsertViewModel(modelContext: modelContext).schoolReminderPersistenceManager.save(school)

@@ -17,6 +17,11 @@ struct InsertSchoolView: View {
 
     private struct InsertView: View {
         @StateObject var viewModel: InsertSchoolViewModel
+        @Environment(\.dismiss) private var dismiss
+
+        private var isFormValid: Bool {
+            !viewModel.schoolName.isEmptyOrWhiteSpace
+        }
 
         init(modelContext: ModelContext) {
             let viewModel = InsertSchoolViewModel(modelContext: modelContext)
@@ -24,22 +29,43 @@ struct InsertSchoolView: View {
         }
 
         var body: some View {
-            VStack(spacing: Constants.Spacing.medium) {
-                TextField("Enter school name", text: $viewModel.schoolName)
-            }
-            .alert(isPresented: $viewModel.showAlert) {
-                Alert(
-                    title: Text(Constants.Text.errorTitle),
-                    message: Text(viewModel.errorMessage),
-                    dismissButton: .default(Text(Constants.Text.okText))
-                )
-            }
-            .alert(isPresented: $viewModel.showSuccess) {
-                Alert(
-                    title: Text(Constants.Text.successTitle),
-                    message: Text(Constants.Text.successMessage),
-                    dismissButton: .default(Text(Constants.Text.okText))
-                )
+            NavigationView {
+                Form {
+                    TextField("School name", text: $viewModel.schoolName)
+
+                    TextField("Description", text: $viewModel.description)
+                }
+                .background(.red)
+                .navigationTitle("Add School")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            dismiss()
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Save") {
+                            viewModel.save()
+                            dismiss()
+
+                        }.disabled(!isFormValid)
+                    }
+                }
+                .padding(Constants.Spacing.large)
+                .alert(isPresented: $viewModel.showAlert) {
+                    Alert(
+                        title: Text(Constants.Text.errorTitle),
+                        message: Text(viewModel.errorMessage),
+                        dismissButton: .default(Text(Constants.Text.okText))
+                    )
+                }
+                .alert(isPresented: $viewModel.showSuccess) {
+                    Alert(
+                        title: Text(Constants.Text.successTitle),
+                        message: Text(Constants.Text.successMessage),
+                        dismissButton: .default(Text(Constants.Text.okText))
+                    )
+                }
             }
         }
     }
