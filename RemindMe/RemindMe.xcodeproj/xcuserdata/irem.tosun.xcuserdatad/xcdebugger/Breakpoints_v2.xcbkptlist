@@ -3,4 +3,118 @@
    uuid = "BC5FE0F1-1EBD-400A-AC4C-E6FF6834E343"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B22D4539-4017-429F-B496-4ED4E420D787"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/models/viewModels/BaseViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(modelContext:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF120D53-322E-4ED7-B7CE-915C2795081C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/dependency/Resolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "resolve(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF120D53-322E-4ED7-B7CE-915C2795081C - 348ad94641090b42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.resolve&lt;&#x3c4;_0_0&gt;(&#x3c4;_0_0.Type) -&gt; &#x3c4;_0_0"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "EF120D53-322E-4ED7-B7CE-915C2795081C - 348ad94641090b63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.resolve&lt;&#x3c4;_0_0&gt;(&#x3c4;_0_0.Type) -&gt; &#x3c4;_0_0"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7312098A-A6A9-459D-AB41-5FD11A23D66B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/dependency/Resolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7312098A-A6A9-459D-AB41-5FD11A23D66B - b3192f90d0d4d968"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.() -&gt; RemindMe.Resolver.init() -&gt; RemindMe.Resolver"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "7312098A-A6A9-459D-AB41-5FD11A23D66B - b3192f90d0d4d949"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.() -&gt; RemindMe.Resolver.init() -&gt; RemindMe.Resolver"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

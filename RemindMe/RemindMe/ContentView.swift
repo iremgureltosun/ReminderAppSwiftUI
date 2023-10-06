@@ -10,12 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-//            InsertReminderView()
-//                .tabItem {
-//                    Label("Add Reminder", systemImage: "gear")
-//                }
-
-            // ReminderStatsView(icon: "calendar", title: "Today", count: 9)
             ListReminderView()
                 .tabItem {
                     Label("Reminders", systemImage: "calendar")
@@ -25,7 +19,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Students", systemImage: "person")
                 }
-            
+
             ListSchoolView()
                 .tabItem {
                     Label("Schools", systemImage: "graduationcap")

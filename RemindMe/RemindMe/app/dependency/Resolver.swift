@@ -18,15 +18,8 @@ final class Resolver {
     static let shared = Resolver()
 
     private init() {
-        container = ContainerBuilder.shared.buildContainer()
-        
-        let modelContainer = try! ModelContainer(for: StudentModel.self, SchoolModel.self, configurations: ModelConfiguration.init(isStoredInMemoryOnly: false))
+        let modelContainer = try! ModelContainer(for: StudentModel.self, SchoolModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
         context = modelContainer.mainContext
-    }
-
-    convenience init(withValue context: ModelContext) {
-        self.init()
-        self.context = context
         container = ContainerBuilder.shared.buildContainer(context: context)
     }
 

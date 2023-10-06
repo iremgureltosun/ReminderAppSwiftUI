@@ -30,9 +30,4 @@ final class ContainerBuilder {
 
         return container
     }
-
-    func buildContainer() -> Container {
-        let container = Container()
-        return container
-    }
 }

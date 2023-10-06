@@ -14,7 +14,6 @@ import SwiftData
 struct Inject<Component> {
     let wrappedValue: Component
     init(context: ModelContext) {
-        let resolver: Resolver = .init(withValue: context)
-        wrappedValue = resolver.resolve(Component.self)
+        wrappedValue = Resolver.shared.resolve(Component.self)
     }
 }

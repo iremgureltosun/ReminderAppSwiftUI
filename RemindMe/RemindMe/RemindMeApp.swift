@@ -15,6 +15,5 @@ struct RemindMeApp: App {
                 ContentView()
             }
         }
-        .modelContainer(for: [ReminderModel.self, StudentModel.self, SchoolModel.self])
     }
 }
