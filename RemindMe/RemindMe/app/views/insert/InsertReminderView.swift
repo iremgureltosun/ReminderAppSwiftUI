@@ -16,6 +16,7 @@ struct InsertReminderView: View {
     }
 
     private struct InsertView: View {
+        @Environment(\.dismiss) private var dismiss
         @StateObject var viewModel: InsertReminderViewModel
 
         init(modelContext: ModelContext) {
@@ -40,6 +41,7 @@ struct InsertReminderView: View {
 
                     PillShapedButton(text: Constants.Text.saveText) {
                         viewModel.save()
+                        dismiss()
                     }
                     .padding()
                 }

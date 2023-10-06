@@ -65,6 +65,21 @@
                   endingLineNumber = "32"
                   offsetFromSymbolStart = "148">
                </Location>
+               <Location
+                  uuid = "EF120D53-322E-4ED7-B7CE-915C2795081C - 348ad9464109082d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.resolve&lt;&#x3c4;_0_0&gt;(&#x3c4;_0_0.Type) -&gt; &#x3c4;_0_0"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "148">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -113,7 +128,38 @@
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "332">
                </Location>
+               <Location
+                  uuid = "7312098A-A6A9-459D-AB41-5FD11A23D66B - b3192f90d0d4d949"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.Resolver.() -&gt; RemindMe.Resolver.init() -&gt; RemindMe.Resolver"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/dependency/Resolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "368">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "558FE383-A6A4-44A5-BF50-B2FF71A8B4C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/views/list/ListReminderView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

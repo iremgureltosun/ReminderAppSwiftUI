@@ -18,13 +18,38 @@ struct ListReminderView: View {
     private struct ListView: View {
         @StateObject var viewModel: ListReminderViewModel
         @State private var presentInsertReminder = false
-        
+
         init(modelContext: ModelContext) {
             let viewModel = ListReminderViewModel(modelContext: modelContext)
             _viewModel = StateObject(wrappedValue: viewModel)
         }
 
         var body: some View {
+            NavigationView {
+                VStack {
+                    reminderList
+                        .onAppear {
+                            viewModel.loadContext()
+                            viewModel.loadItems()
+                        }
+                        .sheet(isPresented: $presentInsertReminder, onDismiss: {
+                            viewModel.loadItems()
+                        }, content: {
+                            InsertReminderView()
+                        })
+                    Spacer()
+                }
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add Reminder") {
+                            presentInsertReminder = true
+                        }
+                    }
+                })
+            }
+        }
+
+        @ViewBuilder private var reminderList: some View {
             List {
                 ForEach(viewModel.list, id: \.id) { item in
 
@@ -34,17 +59,11 @@ struct ListReminderView: View {
                     }
                 }
             }
-            .onAppear {
-                viewModel.loadItems()
-            }
-            .sheet(isPresented: $presentInsertReminder, content: {
-                InsertStudentView()
-            })
         }
     }
 }
 
-//#Preview {
+// #Preview {
 //    ListReminderView()
 //        .modelContainer(for: ReminderModel.self)
-//}
+// }
