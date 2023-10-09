@@ -12,12 +12,15 @@ import SwiftUI
 final class InsertStudentViewModel: BasePersistentViewModel {
     @Published var name: String = ""
     @Published var surname: String = ""
-    @Inject var studentReminderPersistenceManager: StudentPersistenceManagerProtocol
-    
+    @Inject private var studentPersistenceManager: StudentPersistenceManagerProtocol
+    @Inject private var schoolPersistenceManager: SchoolPersistenceManagerProtocol
+    @Published var selectedSchool: SchoolModel?
+    @Published var schools: [SchoolModel] = []
+
     func save() {
         do {
-            let student = StudentModel(name: name, surname: surname)
-            try studentReminderPersistenceManager.save(student)
+            let student = StudentModel(name: name, surname: surname, school: selectedSchool)
+            try studentPersistenceManager.save(student)
             showSuccess = true
         } catch {
             showAlert = true
@@ -26,6 +29,15 @@ final class InsertStudentViewModel: BasePersistentViewModel {
             } else {
                 errorMessage = error.localizedDescription
             }
+        }
+    }
+
+    func loadSchools() {
+        do {
+            schools = try schoolPersistenceManager.fetch()
+            selectedSchool = schools.first
+        } catch {
+            schools = []
         }
     }
 }

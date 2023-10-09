@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model public class SchoolModel: PersistentProtocol, Identifiable {
+@Model public class SchoolModel: PersistentProtocol, Identifiable{
     public typealias PersistentType = PersistentProtocol
 
     @Attribute(.unique) public var id: String = UUID().uuidString
@@ -19,6 +19,7 @@ import SwiftData
     var schoolName: String = ""
     var schoolCategoryId: Int?
     var schoolDescription: String = ""
+    @Relationship(deleteRule: .cascade, inverse: \StudentModel.school) var students: [StudentModel]?
     
     init(schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
         self.schoolName = schoolName

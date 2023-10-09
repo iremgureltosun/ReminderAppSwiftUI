@@ -20,9 +20,11 @@ import SwiftData
     var surname: String = ""
     var birthDate: Date?
     var sexId: Int?
+    var school : SchoolModel?
 
-    init(name: String, surname: String) {
+    init(name: String, surname: String, school: SchoolModel?) {
         id = id
         self.name = name
+        self.school = school
     }
 }

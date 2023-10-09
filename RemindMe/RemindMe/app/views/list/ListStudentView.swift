@@ -47,6 +47,11 @@ struct ListStudentView: View {
                 HStack {
                     Text(item.title)
                         .foregroundColor(.blue)
+                    
+                    Spacer()
+                    
+                    Text(item.school?.schoolName ?? "")
+                        .foregroundColor(.blue)
                 }
             }
             .onDelete { index in

@@ -27,6 +27,12 @@ struct InsertStudentView: View {
                 TextField("Student's name", text: $viewModel.name)
 
                 TextField("Student's surname", text: $viewModel.surname)
+                
+                Picker(selection: $viewModel.selectedSchool, label: Text("School")) {
+                    ForEach(viewModel.schools) { school in
+                        Text(school.schoolName).tag(Optional(school))
+                    }
+                }
             }
             .background(.red)
             .navigationTitle("Add Student")
@@ -43,6 +49,9 @@ struct InsertStudentView: View {
 
                     }.disabled(!isFormValid)
                 }
+            }
+            .onAppear(){
+                viewModel.loadSchools()
             }
             .padding(Constants.Spacing.large)
             .alert(isPresented: $viewModel.showAlert) {
