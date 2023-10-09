@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Swinject
-import SwiftData
 
 @propertyWrapper
 @MainActor

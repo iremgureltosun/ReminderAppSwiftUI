@@ -5,7 +5,6 @@
 //  Created by Tosun, Irem on 3.10.2023.
 //
 
-import SwiftData
 import SwiftUI
 
 struct InsertReminderView: View {

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftData
 import SwiftUI
 
 final class ListSchoolViewModel: BasePersistentViewModel {

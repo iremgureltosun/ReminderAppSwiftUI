@@ -1,40 +1,40 @@
 //
-//  InsertStudentView.swift
+//  UpdateStudentView.swift
 //  RemindMe
 //
-//  Created by Tosun, Irem on 5.10.2023.
+//  Created by Tosun, Irem on 9.10.2023.
 //
 
 import SwiftUI
 
-struct InsertStudentView: View {
+struct UpdateStudentView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject var viewModel: InsertStudentViewModel
+    @StateObject var viewModel: UpdateStudentViewModel
 
     private var isFormValid: Bool {
-        !viewModel.name.isEmptyOrWhiteSpace && !viewModel.surname.isEmptyOrWhiteSpace
+        true
     }
 
-    init() {
-        let viewModel = InsertStudentViewModel()
+    init(studentToEdit: StudentModel) {
+        let viewModel = UpdateStudentViewModel(studentToEdit: studentToEdit)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
         NavigationView {
             Form {
-                TextField("Student's name", text: $viewModel.name)
+                TextField("Student's name", text: $viewModel.studentToEdit.name)
 
-                TextField("Student's surname", text: $viewModel.surname)
-                
-                Picker(selection: $viewModel.selectedSchool, label: Text("School")) {
+                TextField("Student's surname", text: $viewModel.studentToEdit.surname)
+
+                Picker(selection: $viewModel.studentToEdit.school, label: Text("School")) {
                     ForEach(viewModel.schools) { school in
                         Text(school.schoolName).tag(Optional(school))
                     }
                 }
             }
             .background(.red)
-            .navigationTitle("Add Student")
+            .navigationTitle("Update Student")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Close") {
@@ -43,13 +43,12 @@ struct InsertStudentView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-                        viewModel.save()
                         dismiss()
 
                     }.disabled(!isFormValid)
                 }
             }
-            .onAppear(){
+            .onAppear {
                 viewModel.loadSchools()
             }
             .padding(Constants.Spacing.large)
@@ -71,6 +70,6 @@ struct InsertStudentView: View {
     }
 }
 
- #Preview {
-    InsertStudentView()
- }
+// #Preview {
+//   // UpdateStudentView()
+// }

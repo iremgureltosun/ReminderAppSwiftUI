@@ -39,4 +39,5 @@ public class BasePersistenceManager<T> where T: PersistentProtocol {
             try context.save()
         }
     }
+
 }

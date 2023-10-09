@@ -5,13 +5,12 @@
 //  Created by Tosun, Irem on 4.10.2023.
 //
 
-import SwiftData
 import SwiftUI
 
 struct ListReminderView: View {
     @StateObject var viewModel: ListReminderViewModel
     @State private var presentInsertReminder = false
-   
+
     init() {
         let viewModel = ListReminderViewModel()
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -48,6 +47,13 @@ struct ListReminderView: View {
                 HStack {
                     Text(item.title)
                         .foregroundColor(.blue)
+                }
+            }
+            .onDelete { index in
+                do {
+                    try viewModel.delete(indexSet: index)
+                } catch {
+                    debugPrint(error)
                 }
             }
         }

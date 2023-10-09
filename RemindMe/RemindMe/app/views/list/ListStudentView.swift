@@ -5,7 +5,6 @@
 //  Created by Tosun, Irem on 5.10.2023.
 //
 
-import SwiftData
 import SwiftUI
 
 struct ListStudentView: View {
@@ -31,6 +30,9 @@ struct ListStudentView: View {
                     })
                 Spacer()
             }
+            .sheet(item: $viewModel.studentToEdit) { student in
+                UpdateStudentView(studentToEdit: student)
+            }
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add Student") {
@@ -43,16 +45,12 @@ struct ListStudentView: View {
 
     @ViewBuilder private var studentList: some View {
         List {
-            ForEach(viewModel.list, id: \.id) { item in
-                HStack {
-                    Text(item.title)
-                        .foregroundColor(.blue)
-                    
-                    Spacer()
-                    
-                    Text(item.school?.schoolName ?? "")
-                        .foregroundColor(.blue)
-                }
+            ForEach(viewModel.list, id: \.id) { student in
+                getStudentCell(student)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        viewModel.studentToEdit = student
+                    }
             }
             .onDelete { index in
                 do {
@@ -61,6 +59,19 @@ struct ListStudentView: View {
                     debugPrint(error)
                 }
             }
+        }
+    }
+
+    @ViewBuilder private func getStudentCell(_ student: StudentModel) -> some View {
+        HStack {
+            Text(student.title)
+                .foregroundColor(.blue)
+
+            Spacer()
+
+            Text(student.school?.schoolName ?? "")
+                .foregroundColor(.blue)
+                .multilineTextAlignment(.trailing)
         }
     }
 }

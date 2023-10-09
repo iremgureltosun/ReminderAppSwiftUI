@@ -6,16 +6,16 @@
 //
 
 import Foundation
-import SwiftData
 import SwiftUI
 
 final class ListStudentViewModel: BasePersistentViewModel {
     @Published var list: [StudentModel] = []
     @Inject var studentReminderPersistenceManager: StudentPersistenceManagerProtocol 
+    @Published var studentToEdit: StudentModel?
 
     func loadItems() {
         do {
-            list = try studentReminderPersistenceManager.fetch() ?? []
+            list = try studentReminderPersistenceManager.fetch()
         } catch {
             list = []
         }
@@ -24,4 +24,5 @@ final class ListStudentViewModel: BasePersistentViewModel {
     func delete(indexSet: IndexSet) throws {
         try studentReminderPersistenceManager.delete(indexSet: indexSet)
     }
+    
 }
