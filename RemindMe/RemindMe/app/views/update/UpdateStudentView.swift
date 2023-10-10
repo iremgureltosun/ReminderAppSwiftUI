@@ -15,7 +15,7 @@ struct UpdateStudentView: View {
         true
     }
 
-    init(studentToEdit: StudentModel) {
+    init(studentToEdit: Student) {
         let viewModel = UpdateStudentViewModel(studentToEdit: studentToEdit)
         _viewModel = StateObject(wrappedValue: viewModel)
     }

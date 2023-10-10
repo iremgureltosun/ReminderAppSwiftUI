@@ -62,7 +62,7 @@ struct ListStudentView: View {
         }
     }
 
-    @ViewBuilder private func getStudentCell(_ student: StudentModel) -> some View {
+    @ViewBuilder private func getStudentCell(_ student: Student) -> some View {
         HStack {
             Text(student.title)
                 .foregroundColor(.blue)
@@ -76,7 +76,3 @@ struct ListStudentView: View {
     }
 }
 
-#Preview {
-    ListStudentView()
-        .modelContainer(for: StudentModel.self)
-}
