@@ -24,5 +24,4 @@ final class ListStudentViewModel: BasePersistentViewModel {
     func delete(indexSet: IndexSet) throws {
         try studentReminderPersistenceManager.delete(indexSet: indexSet)
     }
-    
 }

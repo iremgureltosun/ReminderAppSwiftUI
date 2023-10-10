@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftData
 
 enum RepeatIntervals: Int, CaseIterable {
     case daily = 1
