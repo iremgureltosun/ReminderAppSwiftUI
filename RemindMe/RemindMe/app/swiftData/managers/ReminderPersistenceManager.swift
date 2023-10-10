@@ -7,11 +7,11 @@
 
 import Foundation
 
-public protocol ReminderPersistenceManagerProtocol {
+protocol ReminderPersistenceManagerProtocol {
     func save(_ model: ReminderModel) throws
     func fetch() throws -> [ReminderModel]
-    func delete(indexSet: IndexSet) throws 
+    func delete(indexSet: IndexSet) throws
 }
 
-public final class ReminderPersistenceManager: BasePersistenceManager<ReminderModel>, ReminderPersistenceManagerProtocol {
+final class ReminderPersistenceManager: BasePersistenceManager<ReminderModel>, ReminderPersistenceManagerProtocol {
 }

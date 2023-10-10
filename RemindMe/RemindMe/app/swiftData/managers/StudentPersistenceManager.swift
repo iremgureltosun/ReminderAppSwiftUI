@@ -7,11 +7,11 @@
 
 import Foundation
 
-public protocol StudentPersistenceManagerProtocol {
+protocol StudentPersistenceManagerProtocol {
     func save(_ model: StudentModel) throws
     func fetch() throws -> [StudentModel]
-    func delete(indexSet: IndexSet) throws 
+    func delete(indexSet: IndexSet) throws
 }
 
-public final class StudentPersistenceManager: BasePersistenceManager<StudentModel>, StudentPersistenceManagerProtocol {
+final class StudentPersistenceManager: BasePersistenceManager<StudentModel>, StudentPersistenceManagerProtocol {
 }

@@ -10,7 +10,7 @@ import SwiftData
 import SwiftUI
 
 @MainActor
-public class BasePersistenceManager<T> where T: PersistentProtocol {
+public class BasePersistenceManager<T> where T: PersistentModel, T: CommonDataProtocol, T.EntityType: StorageProtocol {
     typealias PersistentType = T.Type
 
     let context: ModelContext

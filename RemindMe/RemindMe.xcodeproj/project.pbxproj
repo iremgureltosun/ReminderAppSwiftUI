@@ -14,7 +14,6 @@
 		4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2E92ABD69AC0032F011 /* StudentPersistenceManagerTests.swift */; };
 		4D02B2F42ABD69AC0032F011 /* RemindMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2F32ABD69AC0032F011 /* RemindMeUITests.swift */; };
 		4D02B2F62ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B2F52ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift */; };
-		4D02B3072ABD6A830032F011 /* RemindMeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */; };
 		4D02B30C2ABD6E370032F011 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 4D02B30B2ABD6E370032F011 /* Resolver */; };
 		4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
@@ -40,15 +39,31 @@
 		4D2B207B2AD527C30045760C /* ListReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */; };
 		4D2B207C2AD527C60045760C /* ListStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0EB22ACEC38F002BF525 /* ListStudentViewModel.swift */; };
 		4D2B207D2AD527C90045760C /* ListSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */; };
-		4D2B207E2AD528180045760C /* PersistentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */; };
+		4D2B207E2AD528180045760C /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* StorageProtocol.swift */; };
 		4D2B207F2AD5281F0045760C /* RepeatIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */; };
 		4D2B20802AD5282A0045760C /* IntervalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */; };
 		4D2B20812AD528490045760C /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */; };
 		4D2B20822AD5285B0045760C /* DailyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B82ACC1CEF00F0CADF /* DailyInterval.swift */; };
 		4D2B20832AD5286E0045760C /* MonthlyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */; };
 		4D2B20842AD528740045760C /* OnceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52C92ACC3DCE00F0CADF /* OnceInterval.swift */; };
+		4D2B20882AD52F8D0045760C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20872AD52F8D0045760C /* Realm */; };
+		4D2B208A2AD52F8D0045760C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20892AD52F8D0045760C /* RealmSwift */; };
+		4D2B208C2AD52FFF0045760C /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentEntity.swift */; };
+		4D2B208D2AD52FFF0045760C /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentEntity.swift */; };
+		4D2B208F2AD530770045760C /* SchoolEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolEntity.swift */; };
+		4D2B20902AD530770045760C /* SchoolEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolEntity.swift */; };
+		4D2B20922AD5312A0045760C /* ReminderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderEntity.swift */; };
+		4D2B20932AD5312A0045760C /* ReminderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderEntity.swift */; };
+		4D2B20982AD532260045760C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20972AD532260045760C /* Reminder.swift */; };
+		4D2B20992AD532260045760C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20972AD532260045760C /* Reminder.swift */; };
+		4D2B209B2AD5322F0045760C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B209A2AD5322F0045760C /* Student.swift */; };
+		4D2B209C2AD5322F0045760C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B209A2AD5322F0045760C /* Student.swift */; };
+		4D2B209E2AD532390045760C /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B209D2AD532390045760C /* School.swift */; };
+		4D2B209F2AD532390045760C /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B209D2AD532390045760C /* School.swift */; };
+		4D2B20A12AD534850045760C /* CommonDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20A02AD534850045760C /* CommonDataProtocol.swift */; };
+		4D2B20A22AD534850045760C /* CommonDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20A02AD534850045760C /* CommonDataProtocol.swift */; };
 		4D3373782ACD5E94009F1DB1 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */; };
-		4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */; };
+		4D33737E2ACD92F6009F1DB1 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* StorageProtocol.swift */; };
 		4D3373802ACD9BFC009F1DB1 /* ListReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */; };
 		4D3373822ACD9C0E009F1DB1 /* ListReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */; };
 		4D383A252ACEC57C00E0B99A /* ListSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */; };
@@ -116,13 +131,19 @@
 		4D02B2EF2ABD69AC0032F011 /* RemindMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D02B2F32ABD69AC0032F011 /* RemindMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeUITests.swift; sourceTree = "<group>"; };
 		4D02B2F52ABD69AC0032F011 /* RemindMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeProtocol.swift; sourceTree = "<group>"; };
 		4D02B30E2ABD6E9C0032F011 /* RepeatIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatIntervals.swift; sourceTree = "<group>"; };
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
 		4D0DC8882AD3E7E200DDC5EC /* UpdateStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStudentView.swift; sourceTree = "<group>"; };
 		4D0DC88A2AD3E82700DDC5EC /* UpdateStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStudentViewModel.swift; sourceTree = "<group>"; };
+		4D2B208B2AD52FFF0045760C /* StudentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEntity.swift; sourceTree = "<group>"; };
+		4D2B208E2AD530770045760C /* SchoolEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEntity.swift; sourceTree = "<group>"; };
+		4D2B20912AD5312A0045760C /* ReminderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEntity.swift; sourceTree = "<group>"; };
+		4D2B20972AD532260045760C /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		4D2B209A2AD5322F0045760C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		4D2B209D2AD532390045760C /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		4D2B20A02AD534850045760C /* CommonDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDataProtocol.swift; sourceTree = "<group>"; };
 		4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
-		4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentProtocol.swift; sourceTree = "<group>"; };
+		4D33737D2ACD92F5009F1DB1 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		4D33737F2ACD9BFC009F1DB1 /* ListReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReminderView.swift; sourceTree = "<group>"; };
 		4D3373812ACD9C0E009F1DB1 /* ListReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReminderViewModel.swift; sourceTree = "<group>"; };
 		4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchoolViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +187,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2B208A2AD52F8D0045760C /* RealmSwift in Frameworks */,
+				4D2B20882AD52F8D0045760C /* Realm in Frameworks */,
 				4D02B30C2ABD6E370032F011 /* Resolver in Frameworks */,
 				4DFE0EA22ACE8796002BF525 /* Swinject in Frameworks */,
 			);
@@ -281,22 +304,13 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
-		4D0933582ACD446B00539DA9 /* dataModels */ = {
-			isa = PBXGroup;
-			children = (
-				4D09335A2ACD484F00539DA9 /* persistentModels */,
-				4D0933592ACD451300539DA9 /* interval */,
-			);
-			path = dataModels;
-			sourceTree = "<group>";
-		};
-		4D0933592ACD451300539DA9 /* interval */ = {
+		4D0933592ACD451300539DA9 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				4DBF52C72ACC33E100F0CADF /* IntervalItem.swift */,
 				4DBF52C52ACC2E3A00F0CADF /* IntervalSection.swift */,
 			);
-			path = interval;
+			path = models;
 			sourceTree = "<group>";
 		};
 		4D09335A2ACD484F00539DA9 /* persistentModels */ = {
@@ -338,7 +352,7 @@
 		4D0DC88D2AD3F5A300DDC5EC /* swiftData */ = {
 			isa = PBXGroup;
 			children = (
-				4D0933582ACD446B00539DA9 /* dataModels */,
+				4D09335A2ACD484F00539DA9 /* persistentModels */,
 				4DFAD01F2ACDC74900C78561 /* managers */,
 			);
 			path = swiftData;
@@ -347,16 +361,45 @@
 		4D2B20852AD52F1B0045760C /* realm */ = {
 			isa = PBXGroup;
 			children = (
+				4D2B20942AD531B40045760C /* persistentModels */,
 			);
 			path = realm;
+			sourceTree = "<group>";
+		};
+		4D2B20942AD531B40045760C /* persistentModels */ = {
+			isa = PBXGroup;
+			children = (
+				4D2B20912AD5312A0045760C /* ReminderEntity.swift */,
+				4D2B208E2AD530770045760C /* SchoolEntity.swift */,
+				4D2B208B2AD52FFF0045760C /* StudentEntity.swift */,
+			);
+			path = persistentModels;
+			sourceTree = "<group>";
+		};
+		4D2B20952AD531C70045760C /* commonPersistency */ = {
+			isa = PBXGroup;
+			children = (
+				4D2B20962AD532100045760C /* models */,
+				4D33737D2ACD92F5009F1DB1 /* StorageProtocol.swift */,
+				4D2B20A02AD534850045760C /* CommonDataProtocol.swift */,
+			);
+			path = commonPersistency;
+			sourceTree = "<group>";
+		};
+		4D2B20962AD532100045760C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4D2B20972AD532260045760C /* Reminder.swift */,
+				4D2B209A2AD5322F0045760C /* Student.swift */,
+				4D2B209D2AD532390045760C /* School.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		4DBF52B32ACC1C0800F0CADF /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4D02B3062ABD6A830032F011 /* RemindMeProtocol.swift */,
 				4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */,
-				4D33737D2ACD92F5009F1DB1 /* PersistentProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -364,6 +407,7 @@
 		4DC153EB2ACC0A4D00DFC063 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				4D0933592ACD451300539DA9 /* models */,
 				4D0DC8872AD3E7CC00DDC5EC /* update */,
 				4DFE0EB52ACEC4CB002BF525 /* insert */,
 				4DFE0EB42ACEC4B2002BF525 /* list */,
@@ -375,6 +419,7 @@
 		4DC153EC2ACC0A5800DFC063 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				4D2B20952AD531C70045760C /* commonPersistency */,
 				4D2B20852AD52F1B0045760C /* realm */,
 				4D0DC88D2AD3F5A300DDC5EC /* swiftData */,
 				4DFAD0232ACDCBDD00C78561 /* dependency */,
@@ -482,6 +527,8 @@
 			packageProductDependencies = (
 				4D02B30B2ABD6E370032F011 /* Resolver */,
 				4DFE0EA12ACE8796002BF525 /* Swinject */,
+				4D2B20872AD52F8D0045760C /* Realm */,
+				4D2B20892AD52F8D0045760C /* RealmSwift */,
 			);
 			productName = RemindMe;
 			productReference = 4D02B2D52ABD69AA0032F011 /* RemindMe.app */;
@@ -558,6 +605,7 @@
 			packageReferences = (
 				4D02B30A2ABD6E370032F011 /* XCRemoteSwiftPackageReference "Resolver" */,
 				4DFAD0222ACDCBC700C78561 /* XCRemoteSwiftPackageReference "Swinject" */,
+				4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 4D02B2D62ABD69AA0032F011 /* Products */;
 			projectDirPath = "";
@@ -604,7 +652,6 @@
 				4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */,
 				4DBF52B92ACC1CEF00F0CADF /* DailyInterval.swift in Sources */,
 				4DBF52CA2ACC3DCE00F0CADF /* OnceInterval.swift in Sources */,
-				4D02B3072ABD6A830032F011 /* RemindMeProtocol.swift in Sources */,
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
 				4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
@@ -617,16 +664,21 @@
 				4DFE0EA62ACEBFE2002BF525 /* InsertStudentView.swift in Sources */,
 				4D02B30F2ABD6E9C0032F011 /* RepeatIntervals.swift in Sources */,
 				4DFE0EB12ACEC363002BF525 /* ListStudentView.swift in Sources */,
+				4D2B20982AD532260045760C /* Reminder.swift in Sources */,
 				4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */,
 				4D3373802ACD9BFC009F1DB1 /* ListReminderView.swift in Sources */,
 				4DC153EE2ACC0A7300DFC063 /* ReminderStatsView.swift in Sources */,
+				4D2B209B2AD5322F0045760C /* Student.swift in Sources */,
 				4DFE0EA42ACEBE1C002BF525 /* BaseViewModel.swift in Sources */,
 				4DFAD0272ACDCC4300C78561 /* Resolver.swift in Sources */,
 				4DDCA6D22ACFDEFC00FE9148 /* InsertSchoolView.swift in Sources */,
+				4D2B209E2AD532390045760C /* School.swift in Sources */,
+				4D2B208C2AD52FFF0045760C /* StudentEntity.swift in Sources */,
 				4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */,
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
 				4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */,
 				4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */,
+				4D2B20A12AD534850045760C /* CommonDataProtocol.swift in Sources */,
 				4DFE0EA82ACEC031002BF525 /* InsertStudentViewModel.swift in Sources */,
 				4DFE0EAA2ACEC08D002BF525 /* StudentModel.swift in Sources */,
 				4DFAD0212ACDC75600C78561 /* ReminderPersistenceManager.swift in Sources */,
@@ -634,15 +686,17 @@
 				4DFE0EAC2ACEC13E002BF525 /* StudentPersistenceManager.swift in Sources */,
 				4DBF52CC2ACC40A500F0CADF /* IntervalItemSelectionView.swift in Sources */,
 				4DFE0EA02ACE876B002BF525 /* Inject.swift in Sources */,
+				4D2B20922AD5312A0045760C /* ReminderEntity.swift in Sources */,
 				4D0DC88B2AD3E82700DDC5EC /* UpdateStudentViewModel.swift in Sources */,
 				4DBF52BB2ACC1F4F00F0CADF /* EventError.swift in Sources */,
 				4D02B2D92ABD69AA0032F011 /* RemindMeApp.swift in Sources */,
-				4D33737E2ACD92F6009F1DB1 /* PersistentProtocol.swift in Sources */,
+				4D33737E2ACD92F6009F1DB1 /* StorageProtocol.swift in Sources */,
 				4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */,
 				4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */,
 				4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */,
 				4DBF52C42ACC297500F0CADF /* InsertReminderViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,
+				4D2B208F2AD530770045760C /* SchoolEntity.swift in Sources */,
 				4D383A272ACEC59200E0B99A /* SchoolModel.swift in Sources */,
 				4DBF52BF2ACC265600F0CADF /* InsertReminderView.swift in Sources */,
 				4DFE0EAF2ACEC24A002BF525 /* Constants.swift in Sources */,
@@ -654,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2B20802AD5282A0045760C /* IntervalProtocol.swift in Sources */,
+				4D2B209F2AD532390045760C /* School.swift in Sources */,
 				4D2B207F2AD5281F0045760C /* RepeatIntervals.swift in Sources */,
 				4D2B20722AD5279E0045760C /* BasePersistenceManager.swift in Sources */,
 				4D2B20742AD527A40045760C /* StudentPersistenceManager.swift in Sources */,
@@ -669,6 +724,7 @@
 				4D2B206D2AD5278A0045760C /* ReminderModel.swift in Sources */,
 				4D2B206F2AD527900045760C /* SchoolModel.swift in Sources */,
 				4D2B20822AD5285B0045760C /* DailyInterval.swift in Sources */,
+				4D2B20932AD5312A0045760C /* ReminderEntity.swift in Sources */,
 				4D2B207A2AD527BF0045760C /* InsertSchoolViewModel.swift in Sources */,
 				4D2B207C2AD527C60045760C /* ListStudentViewModel.swift in Sources */,
 				4D2B20792AD527BC0045760C /* InsertStudentViewModel.swift in Sources */,
@@ -676,11 +732,16 @@
 				4D2B20812AD528490045760C /* PersistenceError.swift in Sources */,
 				4D2B20712AD527980045760C /* IntervalSection.swift in Sources */,
 				4D2B20832AD5286E0045760C /* MonthlyInterval.swift in Sources */,
+				4D2B208D2AD52FFF0045760C /* StudentEntity.swift in Sources */,
+				4D2B209C2AD5322F0045760C /* Student.swift in Sources */,
 				4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */,
-				4D2B207E2AD528180045760C /* PersistentProtocol.swift in Sources */,
+				4D2B207E2AD528180045760C /* StorageProtocol.swift in Sources */,
+				4D2B20902AD530770045760C /* SchoolEntity.swift in Sources */,
 				4D2B20772AD527B40045760C /* UpdateStudentViewModel.swift in Sources */,
 				4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */,
 				4D2B20782AD527B80045760C /* InsertReminderViewModel.swift in Sources */,
+				4D2B20A22AD534850045760C /* CommonDataProtocol.swift in Sources */,
+				4D2B20992AD532260045760C /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1072,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4DFAD0222ACDCBC700C78561 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -1026,6 +1095,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D02B30A2ABD6E370032F011 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		4D2B20872AD52F8D0045760C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4D2B20892AD52F8D0045760C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		4DFE0EA12ACE8796002BF525 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;

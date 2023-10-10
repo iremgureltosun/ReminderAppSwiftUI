@@ -9,8 +9,8 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-public protocol PersistentProtocol: PersistentModel{
-    associatedtype PersistentType
+public protocol StorageProtocol{
+    associatedtype CommonType
     
     var title: String { get }
 }
