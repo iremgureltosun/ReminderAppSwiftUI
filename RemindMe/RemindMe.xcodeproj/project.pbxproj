@@ -344,6 +344,13 @@
 			path = swiftData;
 			sourceTree = "<group>";
 		};
+		4D2B20852AD52F1B0045760C /* realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = realm;
+			sourceTree = "<group>";
+		};
 		4DBF52B32ACC1C0800F0CADF /* protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +375,7 @@
 		4DC153EC2ACC0A5800DFC063 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				4D2B20852AD52F1B0045760C /* realm */,
 				4D0DC88D2AD3F5A300DDC5EC /* swiftData */,
 				4DFAD0232ACDCBDD00C78561 /* dependency */,
 				4D0933572ACD444300539DA9 /* viewModels */,
