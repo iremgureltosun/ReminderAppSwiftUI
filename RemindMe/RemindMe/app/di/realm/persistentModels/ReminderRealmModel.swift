@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class ReminderRealmModel: Object, DataEntity {
+class ReminderRealmModel: Object, StorageProtocol {
     typealias EntityType = Reminder
 
     @Persisted(primaryKey: true) var id: String = UUID().uuidString

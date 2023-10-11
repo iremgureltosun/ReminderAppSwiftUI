@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Reminder: CommonModel, ObservableObject, Identifiable {
+class Reminder: CommonModelProtocol, ObservableObject, Identifiable {
     var id: String
     var title: String
     var body: String

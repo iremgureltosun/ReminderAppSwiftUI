@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol DataEntity {
+public protocol StorageProtocol {
     associatedtype EntityType
 
     init(_ entity: EntityType)

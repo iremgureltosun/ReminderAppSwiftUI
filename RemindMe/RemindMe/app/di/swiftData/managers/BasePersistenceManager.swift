@@ -10,11 +10,11 @@ import SwiftData
 import SwiftUI
 
 protocol ManagerProtocol {
-    associatedtype EntityType: CommonModel
+    associatedtype EntityType: CommonModelProtocol
 }
 
 @MainActor
-class BasePersistenceManager<T>: ManagerProtocol where T: DataEntity, T: PersistentModel, T.EntityType: CommonModel {
+class BasePersistenceManager<T>: ManagerProtocol where T: StorageProtocol, T: PersistentModel, T.EntityType: CommonModelProtocol {
     typealias EntityType = T.EntityType
 
     let context: ModelContext

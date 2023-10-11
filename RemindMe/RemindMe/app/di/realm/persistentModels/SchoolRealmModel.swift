@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class SchoolRealmModel: Object, DataEntity {
+class SchoolRealmModel: Object, StorageProtocol {
     typealias EntityType = School
 
     @Persisted(primaryKey: true) var id: String = UUID().uuidString

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model class SchoolPersistentModel: Identifiable, Hashable, DataEntity {
+@Model class SchoolPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = School
 
     @Attribute(.unique) public var id: String = UUID().uuidString
