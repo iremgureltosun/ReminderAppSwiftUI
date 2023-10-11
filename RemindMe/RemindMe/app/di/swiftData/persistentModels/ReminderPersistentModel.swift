@@ -37,7 +37,7 @@ import SwiftData
         self.time = time
     }
 
-    func getDataModel()-> Reminder{
+    func getModel()-> Reminder{
         return Reminder(id: self.id, title: self.title, body: self.body, repeatIntervalId: self.repeatIntervalId, intervals: self.intervals, date: self.date, time: self.time)
     }
 }

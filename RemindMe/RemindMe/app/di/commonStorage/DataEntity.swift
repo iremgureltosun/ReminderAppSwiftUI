@@ -12,5 +12,5 @@ public protocol DataEntity {
 
     init(_ entity: EntityType)
 
-    func getDataModel() -> EntityType
+    func getModel() -> EntityType
 }

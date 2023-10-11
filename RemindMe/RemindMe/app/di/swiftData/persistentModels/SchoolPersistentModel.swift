@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model class SchoolModel: Identifiable, Hashable, DataEntity {
+@Model class SchoolPersistentModel: Identifiable, Hashable, DataEntity {
     typealias EntityType = School
 
     @Attribute(.unique) public var id: String = UUID().uuidString
@@ -19,7 +19,7 @@ import SwiftData
     var schoolName: String = ""
     var schoolCategoryId: Int?
     var schoolDescription: String = ""
-    @Relationship(deleteRule: .cascade, inverse: \StudentModel.school) var students: [StudentModel]?
+    @Relationship(deleteRule: .cascade, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]?
 
     required init(_ entity: School) {
         id = UUID().uuidString
@@ -34,7 +34,7 @@ import SwiftData
         self.schoolDescription = schoolDescription
     }
 
-    func getDataModel() -> School {
+    func getModel() -> School {
         return School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: nil)
     }
 }

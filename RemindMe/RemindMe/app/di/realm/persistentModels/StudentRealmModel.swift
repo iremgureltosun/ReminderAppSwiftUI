@@ -43,7 +43,7 @@ class StudentRealmModel: Object, DataEntity {
         }
     }
 
-    func getDataModel() -> Student {
+    func getModel() -> Student {
         var school: School?
         if let schoolEntity = self.school {
             // var students: []

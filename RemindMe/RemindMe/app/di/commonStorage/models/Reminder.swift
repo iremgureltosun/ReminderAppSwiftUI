@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Reminder: DataModel, ObservableObject, Identifiable {
+class Reminder: CommonModel, ObservableObject, Identifiable {
     var id: String
     var title: String
     var body: String

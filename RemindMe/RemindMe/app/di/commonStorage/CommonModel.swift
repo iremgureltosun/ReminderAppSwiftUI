@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-public protocol DataModel {
+public protocol CommonModel {
     var title: String { get }
 }

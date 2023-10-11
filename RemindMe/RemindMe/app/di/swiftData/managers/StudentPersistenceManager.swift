@@ -13,5 +13,5 @@ protocol StudentPersistenceManagerProtocol {
     func delete(_ model: Student) throws
 }
 
-final class StudentPersistenceManager: BasePersistenceManager<StudentModel>, StudentPersistenceManagerProtocol {
+final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentPersistenceManagerProtocol {
 }

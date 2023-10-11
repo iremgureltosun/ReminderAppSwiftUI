@@ -10,7 +10,7 @@ import RealmSwift
 import SwiftUI
 
 @MainActor
-class BaseRealmManager<T>: ManagerProtocol where T: DataEntity, T: Object, T.EntityType: DataModel {
+class BaseRealmManager<T>: ManagerProtocol where T: DataEntity, T: Object, T.EntityType: CommonModel {
     typealias EntityType = T.EntityType
 
     private var items: [EntityType] = []
@@ -33,7 +33,7 @@ class BaseRealmManager<T>: ManagerProtocol where T: DataEntity, T: Object, T.Ent
             return []
         }
         let objects = realm.objects(T.self)
-        return objects.map { $0.getDataModel() }
+        return objects.map { $0.getModel() }
     }
 
     func delete(_ model: EntityType) throws {

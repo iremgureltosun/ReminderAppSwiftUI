@@ -13,5 +13,5 @@ protocol SchoolPersistenceManagerProtocol {
     func delete(_ model: School) throws 
 }
 
-final class SchoolPersistenceManager: BasePersistenceManager<SchoolModel>, SchoolPersistenceManagerProtocol {
+final class SchoolPersistenceManager: BasePersistenceManager<SchoolPersistentModel>, SchoolPersistenceManagerProtocol {
 }

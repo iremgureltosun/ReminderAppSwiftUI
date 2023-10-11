@@ -34,7 +34,7 @@ class SchoolRealmModel: Object, DataEntity {
         schoolDescription = entity.schoolDescription
     }
 
-    func getDataModel() -> School {
+    func getModel() -> School {
         return School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: nil)
     }
 }

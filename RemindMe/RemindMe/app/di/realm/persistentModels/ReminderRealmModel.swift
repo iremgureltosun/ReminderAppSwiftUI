@@ -47,7 +47,7 @@ class ReminderRealmModel: Object, DataEntity {
         time = entity.time
     }
 
-    func getDataModel()-> Reminder {
+    func getModel()-> Reminder {
         var list: [Int] = []
         for intValue in intervals {
             list.append(intValue)

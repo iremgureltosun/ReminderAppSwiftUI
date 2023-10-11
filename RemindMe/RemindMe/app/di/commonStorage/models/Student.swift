@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Student: DataModel, ObservableObject, Identifiable, Hashable {
+class Student: CommonModel, ObservableObject, Identifiable, Hashable {
     var id: String
     var name: String = ""
     var surname: String = ""

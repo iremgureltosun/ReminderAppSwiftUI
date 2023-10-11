@@ -10,11 +10,11 @@ import SwiftData
 import SwiftUI
 
 protocol ManagerProtocol {
-    associatedtype EntityType: DataModel
+    associatedtype EntityType: CommonModel
 }
 
 @MainActor
-class BasePersistenceManager<T>: ManagerProtocol where T: DataEntity, T: PersistentModel, T.EntityType: DataModel {
+class BasePersistenceManager<T>: ManagerProtocol where T: DataEntity, T: PersistentModel, T.EntityType: CommonModel {
     typealias EntityType = T.EntityType
 
     let context: ModelContext
@@ -33,7 +33,7 @@ class BasePersistenceManager<T>: ManagerProtocol where T: DataEntity, T: Persist
     func fetch() throws -> [EntityType] {
         let descriptor = FetchDescriptor<T>() // (sortBy: [SortDescriptor(\.title)])
         let dbitems = try context.fetch(descriptor)
-        items = dbitems.map { $0.getDataModel() }
+        items = dbitems.map { $0.getModel() }
         return items
     }
 
