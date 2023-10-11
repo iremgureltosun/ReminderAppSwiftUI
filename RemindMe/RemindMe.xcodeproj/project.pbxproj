@@ -19,10 +19,17 @@
 		4D09335D2ACD498E00539DA9 /* PillShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */; };
 		4D0DC8892AD3E7E200DDC5EC /* UpdateStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DC8882AD3E7E200DDC5EC /* UpdateStudentView.swift */; };
 		4D0DC88B2AD3E82700DDC5EC /* UpdateStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DC88A2AD3E82700DDC5EC /* UpdateStudentViewModel.swift */; };
+		4D1F0FA22AD678C500DA40E8 /* SchoolRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */; };
+		4D1F0FA32AD678C500DA40E8 /* SchoolRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */; };
+		4D1F0FA42AD6793600DA40E8 /* BaseRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */; };
+		4D1F0FA62AD6795700DA40E8 /* StudentRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */; };
+		4D1F0FA72AD6795700DA40E8 /* StudentRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */; };
+		4D1F0FA92AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */; };
+		4D1F0FAA2AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */; };
 		4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */; };
 		4D2B206B2AD5276B0045760C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0262ACDCC4300C78561 /* Resolver.swift */; };
 		4D2B206C2AD5276F0045760C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0E9F2ACE876B002BF525 /* Inject.swift */; };
-		4D2B206D2AD5278A0045760C /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
+		4D2B206D2AD5278A0045760C /* ReminderPersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderPersistentModel.swift */; };
 		4D2B206E2AD5278C0045760C /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0EA92ACEC08D002BF525 /* StudentModel.swift */; };
 		4D2B206F2AD527900045760C /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A262ACEC59200E0B99A /* SchoolModel.swift */; };
 		4D2B20702AD527950045760C /* IntervalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52C72ACC33E100F0CADF /* IntervalItem.swift */; };
@@ -48,12 +55,12 @@
 		4D2B20842AD528740045760C /* OnceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52C92ACC3DCE00F0CADF /* OnceInterval.swift */; };
 		4D2B20882AD52F8D0045760C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20872AD52F8D0045760C /* Realm */; };
 		4D2B208A2AD52F8D0045760C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20892AD52F8D0045760C /* RealmSwift */; };
-		4D2B208C2AD52FFF0045760C /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentEntity.swift */; };
-		4D2B208D2AD52FFF0045760C /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentEntity.swift */; };
-		4D2B208F2AD530770045760C /* SchoolEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolEntity.swift */; };
-		4D2B20902AD530770045760C /* SchoolEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolEntity.swift */; };
-		4D2B20922AD5312A0045760C /* ReminderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderEntity.swift */; };
-		4D2B20932AD5312A0045760C /* ReminderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderEntity.swift */; };
+		4D2B208C2AD52FFF0045760C /* StudentRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */; };
+		4D2B208D2AD52FFF0045760C /* StudentRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */; };
+		4D2B208F2AD530770045760C /* SchoolRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolRealmModel.swift */; };
+		4D2B20902AD530770045760C /* SchoolRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolRealmModel.swift */; };
+		4D2B20922AD5312A0045760C /* ReminderRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderRealmModel.swift */; };
+		4D2B20932AD5312A0045760C /* ReminderRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20912AD5312A0045760C /* ReminderRealmModel.swift */; };
 		4D2B20982AD532260045760C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20972AD532260045760C /* Reminder.swift */; };
 		4D2B20992AD532260045760C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B20972AD532260045760C /* Reminder.swift */; };
 		4D2B209B2AD5322F0045760C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B209A2AD5322F0045760C /* Student.swift */; };
@@ -70,7 +77,8 @@
 		4D383A272ACEC59200E0B99A /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A262ACEC59200E0B99A /* SchoolModel.swift */; };
 		4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */; };
 		4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */; };
-		4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */; };
+		4D38532C2AD590F00081DBF1 /* BaseRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */; };
+		4D76E22E2ACBEFFE009BAC93 /* ReminderPersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* ReminderPersistentModel.swift */; };
 		4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */; };
 		4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */; };
 		4DBF52B92ACC1CEF00F0CADF /* DailyInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52B82ACC1CEF00F0CADF /* DailyInterval.swift */; };
@@ -135,9 +143,12 @@
 		4D09335C2ACD498E00539DA9 /* PillShapedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShapedButton.swift; sourceTree = "<group>"; };
 		4D0DC8882AD3E7E200DDC5EC /* UpdateStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStudentView.swift; sourceTree = "<group>"; };
 		4D0DC88A2AD3E82700DDC5EC /* UpdateStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStudentViewModel.swift; sourceTree = "<group>"; };
-		4D2B208B2AD52FFF0045760C /* StudentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEntity.swift; sourceTree = "<group>"; };
-		4D2B208E2AD530770045760C /* SchoolEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEntity.swift; sourceTree = "<group>"; };
-		4D2B20912AD5312A0045760C /* ReminderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEntity.swift; sourceTree = "<group>"; };
+		4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmManager.swift; sourceTree = "<group>"; };
+		4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmManager.swift; sourceTree = "<group>"; };
+		4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRealmManager.swift; sourceTree = "<group>"; };
+		4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmModel.swift; sourceTree = "<group>"; };
+		4D2B208E2AD530770045760C /* SchoolRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmModel.swift; sourceTree = "<group>"; };
+		4D2B20912AD5312A0045760C /* ReminderRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRealmModel.swift; sourceTree = "<group>"; };
 		4D2B20972AD532260045760C /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		4D2B209A2AD5322F0045760C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4D2B209D2AD532390045760C /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -150,7 +161,8 @@
 		4D383A262ACEC59200E0B99A /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
 		4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSchoolViewModel.swift; sourceTree = "<group>"; };
 		4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPersistenceManager.swift; sourceTree = "<group>"; };
-		4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
+		4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmManager.swift; sourceTree = "<group>"; };
+		4D76E22D2ACBEFFE009BAC93 /* ReminderPersistentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPersistentModel.swift; sourceTree = "<group>"; };
 		4DBF52B42ACC1C1D00F0CADF /* IntervalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalProtocol.swift; sourceTree = "<group>"; };
 		4DBF52B62ACC1CE300F0CADF /* MonthlyInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyInterval.swift; sourceTree = "<group>"; };
 		4DBF52B82ACC1CEF00F0CADF /* DailyInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInterval.swift; sourceTree = "<group>"; };
@@ -317,7 +329,7 @@
 		4D09335A2ACD484F00539DA9 /* persistentModels */ = {
 			isa = PBXGroup;
 			children = (
-				4D76E22D2ACBEFFE009BAC93 /* ReminderModel.swift */,
+				4D76E22D2ACBEFFE009BAC93 /* ReminderPersistentModel.swift */,
 				4DFE0EA92ACEC08D002BF525 /* StudentModel.swift */,
 				4D383A262ACEC59200E0B99A /* SchoolModel.swift */,
 			);
@@ -359,10 +371,22 @@
 			path = swiftData;
 			sourceTree = "<group>";
 		};
+		4D1F0FA02AD678B300DA40E8 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */,
+				4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */,
+				4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */,
+				4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
 		4D2B20852AD52F1B0045760C /* realm */ = {
 			isa = PBXGroup;
 			children = (
 				4D2B20942AD531B40045760C /* persistentModels */,
+				4D1F0FA02AD678B300DA40E8 /* managers */,
 			);
 			path = realm;
 			sourceTree = "<group>";
@@ -370,9 +394,9 @@
 		4D2B20942AD531B40045760C /* persistentModels */ = {
 			isa = PBXGroup;
 			children = (
-				4D2B20912AD5312A0045760C /* ReminderEntity.swift */,
-				4D2B208E2AD530770045760C /* SchoolEntity.swift */,
-				4D2B208B2AD52FFF0045760C /* StudentEntity.swift */,
+				4D2B20912AD5312A0045760C /* ReminderRealmModel.swift */,
+				4D2B208E2AD530770045760C /* SchoolRealmModel.swift */,
+				4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */,
 			);
 			path = persistentModels;
 			sourceTree = "<group>";
@@ -649,6 +673,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D38532C2AD590F00081DBF1 /* BaseRealmManager.swift in Sources */,
+				4D1F0FA62AD6795700DA40E8 /* StudentRealmManager.swift in Sources */,
 				4DBF52B72ACC1CE300F0CADF /* MonthlyInterval.swift in Sources */,
 				4DBF52B92ACC1CEF00F0CADF /* DailyInterval.swift in Sources */,
 				4DBF52CA2ACC3DCE00F0CADF /* OnceInterval.swift in Sources */,
@@ -673,12 +699,13 @@
 				4DFAD0272ACDCC4300C78561 /* Resolver.swift in Sources */,
 				4DDCA6D22ACFDEFC00FE9148 /* InsertSchoolView.swift in Sources */,
 				4D2B209E2AD532390045760C /* School.swift in Sources */,
-				4D2B208C2AD52FFF0045760C /* StudentEntity.swift in Sources */,
+				4D2B208C2AD52FFF0045760C /* StudentRealmModel.swift in Sources */,
 				4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */,
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
 				4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */,
 				4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */,
 				4D2B20A12AD534850045760C /* DataEntity.swift in Sources */,
+				4D1F0FA22AD678C500DA40E8 /* SchoolRealmManager.swift in Sources */,
 				4DFE0EA82ACEC031002BF525 /* InsertStudentViewModel.swift in Sources */,
 				4DFE0EAA2ACEC08D002BF525 /* StudentModel.swift in Sources */,
 				4DFAD0212ACDC75600C78561 /* ReminderPersistenceManager.swift in Sources */,
@@ -686,17 +713,18 @@
 				4DFE0EAC2ACEC13E002BF525 /* StudentPersistenceManager.swift in Sources */,
 				4DBF52CC2ACC40A500F0CADF /* IntervalItemSelectionView.swift in Sources */,
 				4DFE0EA02ACE876B002BF525 /* Inject.swift in Sources */,
-				4D2B20922AD5312A0045760C /* ReminderEntity.swift in Sources */,
+				4D2B20922AD5312A0045760C /* ReminderRealmModel.swift in Sources */,
 				4D0DC88B2AD3E82700DDC5EC /* UpdateStudentViewModel.swift in Sources */,
+				4D1F0FA92AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */,
 				4DBF52BB2ACC1F4F00F0CADF /* EventError.swift in Sources */,
 				4D02B2D92ABD69AA0032F011 /* RemindMeApp.swift in Sources */,
 				4D33737E2ACD92F6009F1DB1 /* DataModel.swift in Sources */,
 				4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */,
 				4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */,
-				4D76E22E2ACBEFFE009BAC93 /* ReminderModel.swift in Sources */,
+				4D76E22E2ACBEFFE009BAC93 /* ReminderPersistentModel.swift in Sources */,
 				4DBF52C42ACC297500F0CADF /* InsertReminderViewModel.swift in Sources */,
 				4DBF52C82ACC33E100F0CADF /* IntervalItem.swift in Sources */,
-				4D2B208F2AD530770045760C /* SchoolEntity.swift in Sources */,
+				4D2B208F2AD530770045760C /* SchoolRealmModel.swift in Sources */,
 				4D383A272ACEC59200E0B99A /* SchoolModel.swift in Sources */,
 				4DBF52BF2ACC265600F0CADF /* InsertReminderView.swift in Sources */,
 				4DFE0EAF2ACEC24A002BF525 /* Constants.swift in Sources */,
@@ -712,31 +740,35 @@
 				4D2B207F2AD5281F0045760C /* RepeatIntervals.swift in Sources */,
 				4D2B20722AD5279E0045760C /* BasePersistenceManager.swift in Sources */,
 				4D2B20742AD527A40045760C /* StudentPersistenceManager.swift in Sources */,
+				4D1F0FA42AD6793600DA40E8 /* BaseRealmManager.swift in Sources */,
 				4D2B20752AD527A70045760C /* SchoolPersistenceManager.swift in Sources */,
 				4D2B20762AD527B00045760C /* BaseViewModel.swift in Sources */,
 				4D2B206C2AD5276F0045760C /* Inject.swift in Sources */,
 				4D2B20842AD528740045760C /* OnceInterval.swift in Sources */,
 				4D2B207D2AD527C90045760C /* ListSchoolViewModel.swift in Sources */,
 				4D2B20702AD527950045760C /* IntervalItem.swift in Sources */,
+				4D1F0FA32AD678C500DA40E8 /* SchoolRealmManager.swift in Sources */,
 				4D2B206E2AD5278C0045760C /* StudentModel.swift in Sources */,
 				4D2B206B2AD5276B0045760C /* Resolver.swift in Sources */,
 				4D2B20732AD527A10045760C /* ReminderPersistenceManager.swift in Sources */,
-				4D2B206D2AD5278A0045760C /* ReminderModel.swift in Sources */,
+				4D2B206D2AD5278A0045760C /* ReminderPersistentModel.swift in Sources */,
 				4D2B206F2AD527900045760C /* SchoolModel.swift in Sources */,
 				4D2B20822AD5285B0045760C /* DailyInterval.swift in Sources */,
-				4D2B20932AD5312A0045760C /* ReminderEntity.swift in Sources */,
+				4D2B20932AD5312A0045760C /* ReminderRealmModel.swift in Sources */,
 				4D2B207A2AD527BF0045760C /* InsertSchoolViewModel.swift in Sources */,
 				4D2B207C2AD527C60045760C /* ListStudentViewModel.swift in Sources */,
 				4D2B20792AD527BC0045760C /* InsertStudentViewModel.swift in Sources */,
+				4D1F0FA72AD6795700DA40E8 /* StudentRealmManager.swift in Sources */,
+				4D1F0FAA2AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */,
 				4D2B207B2AD527C30045760C /* ListReminderViewModel.swift in Sources */,
 				4D2B20812AD528490045760C /* PersistenceError.swift in Sources */,
 				4D2B20712AD527980045760C /* IntervalSection.swift in Sources */,
 				4D2B20832AD5286E0045760C /* MonthlyInterval.swift in Sources */,
-				4D2B208D2AD52FFF0045760C /* StudentEntity.swift in Sources */,
+				4D2B208D2AD52FFF0045760C /* StudentRealmModel.swift in Sources */,
 				4D2B209C2AD5322F0045760C /* Student.swift in Sources */,
 				4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */,
 				4D2B207E2AD528180045760C /* DataModel.swift in Sources */,
-				4D2B20902AD530770045760C /* SchoolEntity.swift in Sources */,
+				4D2B20902AD530770045760C /* SchoolRealmModel.swift in Sources */,
 				4D2B20772AD527B40045760C /* UpdateStudentViewModel.swift in Sources */,
 				4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */,
 				4D2B20782AD527B80045760C /* InsertReminderViewModel.swift in Sources */,

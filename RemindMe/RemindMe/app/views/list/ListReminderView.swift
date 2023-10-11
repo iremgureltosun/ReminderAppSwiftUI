@@ -62,5 +62,5 @@ struct ListReminderView: View {
 
 #Preview {
     ListReminderView()
-        .modelContainer(for: ReminderModel.self)
+        .modelContainer(for: ReminderPersistentModel.self)
 }

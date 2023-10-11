@@ -21,6 +21,9 @@ final class ListReminderViewModel: BasePersistentViewModel {
     }
 
     func delete(indexSet: IndexSet) throws {
-        try reminderReminderPersistenceManager.delete(indexSet: indexSet)
+        try indexSet.forEach { index in
+            let item = list[index]
+            try reminderReminderPersistenceManager.delete(item)
+        }
     }
 }

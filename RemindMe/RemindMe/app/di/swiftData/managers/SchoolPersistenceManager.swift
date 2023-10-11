@@ -10,7 +10,7 @@ import Foundation
 protocol SchoolPersistenceManagerProtocol {
     func save(_ model: School) throws
     func fetch() throws -> [School]
-    func delete(indexSet: IndexSet) throws 
+    func delete(_ model: School) throws 
 }
 
 final class SchoolPersistenceManager: BasePersistenceManager<SchoolModel>, SchoolPersistenceManagerProtocol {

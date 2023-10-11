@@ -10,9 +10,9 @@ import Foundation
 protocol ReminderPersistenceManagerProtocol {
     func save(_ model: Reminder) throws
     func fetch() throws -> [Reminder]
-    func delete(indexSet: IndexSet) throws
+    func delete(_ model: Reminder) throws
 }
 
-final class ReminderPersistenceManager: BasePersistenceManager<ReminderModel>, ReminderPersistenceManagerProtocol {
+final class ReminderPersistenceManager: BasePersistenceManager<ReminderPersistentModel>, ReminderPersistenceManagerProtocol {
     
 }

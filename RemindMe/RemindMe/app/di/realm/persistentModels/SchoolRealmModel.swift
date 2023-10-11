@@ -8,14 +8,14 @@
 import Foundation
 import RealmSwift
 
-class SchoolEntity: Object, DataEntity {
+class SchoolRealmModel: Object, DataEntity {
     typealias EntityType = School
 
     @Persisted(primaryKey: true) var id: String = UUID().uuidString
     @Persisted var schoolName: String = ""
     @Persisted var schoolCategoryId: Int?
     @Persisted var schoolDescription: String = ""
-    @Persisted var students: List<StudentEntity> = List<StudentEntity>()
+    @Persisted var students: List<StudentRealmModel> = List<StudentRealmModel>()
 
     convenience init(schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
         self.init()

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model class ReminderModel: Identifiable, Hashable, DataEntity {
+@Model class ReminderPersistentModel: Identifiable, Hashable, DataEntity {
     typealias EntityType = Reminder
 
     @Attribute(.unique) public var id: String = UUID().uuidString

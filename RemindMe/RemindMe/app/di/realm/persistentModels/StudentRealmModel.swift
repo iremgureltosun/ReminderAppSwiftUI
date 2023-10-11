@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class StudentEntity: Object, DataEntity {
+class StudentRealmModel: Object, DataEntity {
     typealias EntityType = Student
 
     @Persisted(primaryKey: true) var id: String = UUID().uuidString
@@ -16,13 +16,13 @@ class StudentEntity: Object, DataEntity {
     @Persisted var surname: String = ""
     @Persisted var birthDate: Date?
     @Persisted var sexId: Int?
-    @Persisted var school: SchoolEntity?
+    @Persisted var school: SchoolRealmModel?
 
     var title: String {
         return "\(name) \(surname)"
     }
 
-    convenience init(name: String, surname: String, school: SchoolEntity?) {
+    convenience init(name: String, surname: String, school: SchoolRealmModel?) {
         self.init()
         self.name = name
         self.surname = surname
@@ -37,7 +37,7 @@ class StudentEntity: Object, DataEntity {
         name = entity.name
         surname = entity.surname
         if let entitySchool = entity.school {
-            school = SchoolEntity(entitySchool)
+            school = SchoolRealmModel(entitySchool)
         } else {
             school = nil
         }

@@ -37,11 +37,8 @@ class BasePersistenceManager<T>: ManagerProtocol where T: DataEntity, T: Persist
         return items
     }
 
-    func delete(indexSet: IndexSet) throws {
-        try indexSet.forEach { index in
-            let item = items[index]
-            context.delete(T(item))
-            try context.save()
-        }
+    func delete(_ model: EntityType) throws {
+        context.delete(T(model))
+        try context.save()
     }
 }

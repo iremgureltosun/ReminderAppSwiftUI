@@ -15,7 +15,7 @@ final class InsertReminderViewModel: BasePersistentViewModel {
     @Published var selectedSection: IntervalSection?
     @Published var title: String = ""
     @Published var body: String = ""
-    @Published var reminder: ReminderModel? = nil
+    @Published var reminder: ReminderPersistentModel? = nil
     @Published var selectedDate: Date = Date()
     @Published var showDate = false
     @Inject var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol

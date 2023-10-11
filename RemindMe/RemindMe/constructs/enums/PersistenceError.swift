@@ -11,6 +11,7 @@ enum PersistenceError: Error{
     case sectionNotSelected
     case itemNotSelected
     case unknownError
+    case realmError
     
     var description: String{
         switch self {
@@ -19,6 +20,8 @@ enum PersistenceError: Error{
         case .itemNotSelected:
             "Please select at least one interval."
         case .unknownError:
+            "Error occured"
+        case .realmError:
             "Error occured"
         }
     }

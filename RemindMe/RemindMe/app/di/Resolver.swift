@@ -18,7 +18,7 @@ final class Resolver {
     static let shared = Resolver()
 
     private init() {
-        let modelContainer = try! ModelContainer(for: ReminderModel.self, StudentModel.self, SchoolModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+        let modelContainer = try! ModelContainer(for: ReminderPersistentModel.self, StudentModel.self, SchoolModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
         context = modelContainer.mainContext
         container = ContainerBuilder.shared.buildContainer(context: context)
     }
