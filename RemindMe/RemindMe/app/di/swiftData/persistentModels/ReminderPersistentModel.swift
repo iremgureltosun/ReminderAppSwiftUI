@@ -11,7 +11,7 @@ import SwiftData
 @Model class ReminderPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = Reminder
 
-    @Attribute(.unique) public var id: String = UUID().uuidString
+    @Attribute(.unique) public var id: String 
     public var title: String
     var body: String
     var repeatIntervalId: Int
@@ -20,6 +20,7 @@ import SwiftData
     var time: Date?
 
     required init(_ entity: Reminder) {
+        id = entity.id
         title = entity.title
         body = entity.body
         repeatIntervalId = entity.repeatIntervalId
@@ -28,7 +29,8 @@ import SwiftData
         time = entity.time
     }
 
-    init(title: String, body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
+    init(id: String, title: String, body: String, repeatIntervalId: Int, intervals: [Int]?, date: Date?, time: Date?) {
+        self.id = id
         self.title = title
         self.body = body
         self.repeatIntervalId = repeatIntervalId

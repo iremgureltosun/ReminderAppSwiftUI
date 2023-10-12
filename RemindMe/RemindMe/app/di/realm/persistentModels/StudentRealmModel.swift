@@ -11,7 +11,7 @@ import RealmSwift
 class StudentRealmModel: Object, StorageProtocol {
     typealias EntityType = Student
 
-    @Persisted(primaryKey: true) var id: String = UUID().uuidString
+    @Persisted(primaryKey: true) var id: String 
     @Persisted var name: String = ""
     @Persisted var surname: String = ""
     @Persisted var birthDate: Date?
@@ -22,8 +22,9 @@ class StudentRealmModel: Object, StorageProtocol {
         return "\(name) \(surname)"
     }
 
-    convenience init(name: String, surname: String, school: SchoolRealmModel?) {
+    convenience init(id: String, name: String, surname: String, school: SchoolRealmModel?) {
         self.init()
+        self.id = id
         self.name = name
         self.surname = surname
         self.school = school
@@ -34,6 +35,8 @@ class StudentRealmModel: Object, StorageProtocol {
     }
 
     required init(_ entity: Student) {
+        super.init()
+        id = entity.id
         name = entity.name
         surname = entity.surname
         if let entitySchool = entity.school {

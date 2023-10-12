@@ -11,14 +11,15 @@ import RealmSwift
 class SchoolRealmModel: Object, StorageProtocol {
     typealias EntityType = School
 
-    @Persisted(primaryKey: true) var id: String = UUID().uuidString
+    @Persisted(primaryKey: true) var id: String
     @Persisted var schoolName: String = ""
     @Persisted var schoolCategoryId: Int?
     @Persisted var schoolDescription: String = ""
     @Persisted var students: List<StudentRealmModel> = List<StudentRealmModel>()
 
-    convenience init(schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
+    convenience init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
         self.init()
+        self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId
         self.schoolDescription = schoolDescription
@@ -29,6 +30,8 @@ class SchoolRealmModel: Object, StorageProtocol {
     }
 
     required init(_ entity: School) {
+        super.init()
+        self.id = entity.id
         schoolName = entity.schoolName
         schoolCategoryId = entity.schoolCategoryId
         schoolDescription = entity.schoolDescription

@@ -11,7 +11,7 @@ import SwiftData
 @Model class StudentPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = Student
 
-    @Attribute(.unique) public var id: String = UUID().uuidString
+    @Attribute(.unique) public var id: String 
     var title: String {
         return "\(name) \(surname)"
     }
@@ -23,7 +23,7 @@ import SwiftData
     var school: SchoolPersistentModel?
 
     required init(_ entity: Student) {
-        id = UUID().uuidString
+        id = entity.id
         name = entity.name
         surname = entity.surname
         if let sch = entity.school {
@@ -33,7 +33,8 @@ import SwiftData
         }
     }
 
-    init(name: String, surname: String, school: SchoolPersistentModel?) {
+    init(id: String, name: String, surname: String, school: SchoolPersistentModel?) {
+        self.id = id
         self.name = name
         self.surname = surname
         self.school = school

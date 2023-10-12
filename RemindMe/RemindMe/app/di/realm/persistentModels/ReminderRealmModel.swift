@@ -11,7 +11,7 @@ import RealmSwift
 class ReminderRealmModel: Object, StorageProtocol {
     typealias EntityType = Reminder
 
-    @Persisted(primaryKey: true) var id: String = UUID().uuidString
+    @Persisted(primaryKey: true) var id: String 
     @Persisted var title: String = ""
     @Persisted var body: String = ""
     @Persisted var repeatIntervalId: Int = 0
@@ -23,8 +23,9 @@ class ReminderRealmModel: Object, StorageProtocol {
         return "id"
     }
 
-    convenience init(title: String, body: String, repeatIntervalId: Int, intervals: List<Int>, date: Date?, time: Date?) {
+    convenience init(id: String, title: String, body: String, repeatIntervalId: Int, intervals: List<Int>, date: Date?, time: Date?) {
         self.init()
+        self.id = id
         self.title = title
         self.body = body
         self.repeatIntervalId = repeatIntervalId
@@ -34,6 +35,8 @@ class ReminderRealmModel: Object, StorageProtocol {
     }
 
     required init(_ entity: Reminder) {
+        super.init()
+        id = entity.id
         title = entity.title
         body = entity.body
         repeatIntervalId = entity.repeatIntervalId

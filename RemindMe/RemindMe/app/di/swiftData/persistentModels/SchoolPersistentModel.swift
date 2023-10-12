@@ -11,7 +11,7 @@ import SwiftData
 @Model class SchoolPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = School
 
-    @Attribute(.unique) public var id: String = UUID().uuidString
+    @Attribute(.unique) public var id: String 
     var title: String {
         return schoolName
     }
@@ -22,13 +22,14 @@ import SwiftData
     @Relationship(deleteRule: .cascade, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]?
 
     required init(_ entity: School) {
-        id = UUID().uuidString
+        id = entity.id
         schoolName = entity.schoolName
         schoolCategoryId = entity.schoolCategoryId
         schoolDescription = entity.schoolDescription
     }
 
-    init(schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
+    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
+        self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId
         self.schoolDescription = schoolDescription
