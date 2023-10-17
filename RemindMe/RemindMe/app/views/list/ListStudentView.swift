@@ -75,4 +75,3 @@ struct ListStudentView: View {
         }
     }
 }
-

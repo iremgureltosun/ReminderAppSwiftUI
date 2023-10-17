@@ -26,8 +26,6 @@ struct InsertSchoolView: View {
                 TextField("School name", text: $viewModel.schoolName)
 
                 TextField("Description", text: $viewModel.description)
-                
-                
             }
             .background(.red)
             .navigationTitle("Add School")
@@ -64,6 +62,6 @@ struct InsertSchoolView: View {
     }
 }
 
-//#Preview {
+// #Preview {
 //    InsertSchoolView()
-//}
+// }

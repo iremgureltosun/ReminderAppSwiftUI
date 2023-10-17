@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 final class UpdateStudentViewModel: BasePersistentViewModel {
-    @Inject private var studentPersistenceManager: StudentPersistenceManagerProtocol
-    @Inject private var schoolPersistenceManager: SchoolPersistenceManagerProtocol
+    @Inject private var studentPersistenceManager: StudentManagerProtocol
+    @Inject private var schoolPersistenceManager: SchoolManagerProtocol
     @Published var schools: [School] = []
     @ObservedObject var studentToEdit: Student
 

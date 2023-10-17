@@ -15,7 +15,7 @@ class SchoolRealmModel: Object, StorageProtocol {
     @Persisted var schoolName: String = ""
     @Persisted var schoolCategoryId: Int?
     @Persisted var schoolDescription: String = ""
-    @Persisted var students: List<StudentRealmModel> = List<StudentRealmModel>()
+    @Persisted var students: List<StudentRealmModel> = .init()
 
     convenience init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
         self.init()
@@ -31,7 +31,7 @@ class SchoolRealmModel: Object, StorageProtocol {
 
     required init(_ entity: School) {
         super.init()
-        self.id = entity.id
+        id = entity.id
         schoolName = entity.schoolName
         schoolCategoryId = entity.schoolCategoryId
         schoolDescription = entity.schoolDescription

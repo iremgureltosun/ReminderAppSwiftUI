@@ -11,7 +11,7 @@ import SwiftUI
 final class InsertSchoolViewModel: BasePersistentViewModel {
     @Published var schoolName: String = ""
     @Published var description: String = ""
-    @Inject var schoolReminderPersistenceManager: SchoolPersistenceManagerProtocol
+    @Inject var schoolReminderPersistenceManager: SchoolManagerProtocol
 
     func save() {
         do {

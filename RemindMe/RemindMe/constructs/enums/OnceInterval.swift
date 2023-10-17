@@ -22,5 +22,6 @@ enum OnceInterval: Int, IntervalProtocol {
             return "Occur once"
         }
     }
+
     case once = 11
 }

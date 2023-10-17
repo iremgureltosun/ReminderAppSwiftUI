@@ -10,7 +10,7 @@ import SwiftUI
 
 final class ListReminderViewModel: BasePersistentViewModel {
     @Published var list: [Reminder] = []
-    @Inject private var reminderReminderPersistenceManager: ReminderPersistenceManagerProtocol
+    @Inject private var reminderReminderPersistenceManager: ReminderManagerProtocol
 
     func loadItems() {
         do {

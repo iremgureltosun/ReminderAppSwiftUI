@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum PersistenceError: Error{
+enum PersistenceError: Error {
     case sectionNotSelected
     case itemNotSelected
     case unknownError
     case realmError
-    
-    var description: String{
+
+    var description: String {
         switch self {
         case .sectionNotSelected:
             "Please select a section."

@@ -7,11 +7,4 @@
 
 import Foundation
 
-protocol SchoolRealmManagerProtocol {
-    func save(_ model: School) throws
-    func fetch() throws -> [School]
-    func delete(_ model: School) throws
-}
-
-final class SchoolRealmManager: BaseRealmManager<SchoolRealmModel>, SchoolRealmManagerProtocol {
-}
+final class SchoolRealmManager: BaseRealmManager<SchoolRealmModel>, SchoolManagerProtocol {}

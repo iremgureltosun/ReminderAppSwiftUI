@@ -8,7 +8,7 @@
 import Foundation
 
 struct IntervalSection: Hashable {
-    var id: UUID = UUID()
+    var id: UUID = .init()
     var repeatInterval: RepeatIntervals
     var expanded: Bool
 }

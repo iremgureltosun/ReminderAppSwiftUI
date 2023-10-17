@@ -17,28 +17,24 @@ protocol ManagerProtocol {
 class BasePersistenceManager<T>: ManagerProtocol where T: StorageProtocol, T: PersistentModel, T.EntityType: CommonModelProtocol {
     typealias EntityType = T.EntityType
 
-    let context: ModelContext
+    let modelContainer = try! ModelContainer(for: ReminderPersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
 
     private var items: [EntityType] = []
 
-    init(context: ModelContext) {
-        self.context = context
-    }
-
     func save(_ model: EntityType) throws {
-        context.insert(T(model))
-        try context.save()
+        modelContainer.mainContext.insert(T(model))
+        try modelContainer.mainContext.save()
     }
 
     func fetch() throws -> [EntityType] {
         let descriptor = FetchDescriptor<T>() // (sortBy: [SortDescriptor(\.title)])
-        let dbitems = try context.fetch(descriptor)
+        let dbitems = try modelContainer.mainContext.fetch(descriptor)
         items = dbitems.map { $0.getModel() }
         return items
     }
 
     func delete(_ model: EntityType) throws {
-        context.delete(T(model))
-        try context.save()
+        modelContainer.mainContext.delete(T(model))
+        try modelContainer.mainContext.save()
     }
 }

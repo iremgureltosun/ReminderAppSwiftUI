@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EventError: Error{
+enum EventError: Error {
     case missingTime
     case missingIntervals
     case invalidRawValue

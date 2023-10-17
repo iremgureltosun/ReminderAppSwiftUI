@@ -13,19 +13,37 @@ import Swinject
 final class ContainerBuilder {
     static let shared = ContainerBuilder()
 
-    func buildContainer(context: ModelContext) -> Container {
+    func buildContainerForSwiftData() -> Container {
         let container = Container()
 
-        container.register(ReminderPersistenceManagerProtocol.self) { resolver in
-            ReminderPersistenceManager(context: context)
+        container.register(ReminderManagerProtocol.self) { _ in
+            ReminderPersistenceManager()
         }.inObjectScope(.container)
 
-        container.register(StudentPersistenceManagerProtocol.self) { _ in
-            StudentPersistenceManager(context: context)
+        container.register(StudentManagerProtocol.self) { _ in
+            StudentPersistenceManager()
         }.inObjectScope(.container)
 
-        container.register(SchoolPersistenceManagerProtocol.self) { _ in
-            SchoolPersistenceManager(context: context)
+        container.register(SchoolManagerProtocol.self) { _ in
+            SchoolPersistenceManager()
+        }.inObjectScope(.container)
+
+        return container
+    }
+
+    func buildContainerForRealm() -> Container {
+        let container = Container()
+
+        container.register(ReminderManagerProtocol.self) { _ in
+            ReminderRealmManager()
+        }.inObjectScope(.container)
+
+        container.register(StudentManagerProtocol.self) { _ in
+            StudentRealmManager()
+        }.inObjectScope(.container)
+
+        container.register(SchoolManagerProtocol.self) { _ in
+            SchoolRealmManager()
         }.inObjectScope(.container)
 
         return container

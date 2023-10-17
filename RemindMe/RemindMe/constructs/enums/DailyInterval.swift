@@ -9,14 +9,14 @@ import Foundation
 
 enum DailyInterval: Int, IntervalProtocol {
     var id: Int {
-        return self.rawValue
+        return rawValue
     }
 
     var repeatIntervalType: RepeatIntervals {
         return RepeatIntervals.daily
     }
-     
-    var title: String{
+
+    var title: String {
         switch self {
         case .monday:
             return "Monday"

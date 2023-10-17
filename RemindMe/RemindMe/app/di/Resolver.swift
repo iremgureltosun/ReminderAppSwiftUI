@@ -11,19 +11,14 @@ import Swinject
 
 @MainActor
 final class Resolver {
-    var context: ModelContext
-
     private var container: Container
-
     static let shared = Resolver()
 
     private init() {
-        let modelContainer = try! ModelContainer(for: ReminderPersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
-        context = modelContainer.mainContext
-        container = ContainerBuilder.shared.buildContainer(context: context)
+        container = ContainerBuilder.shared.buildContainerForSwiftData()
     }
 
-    func resolve<T>(_ type: T.Type) -> T {
+    func resolve<T>(_: T.Type) -> T {
         container.resolve(T.self)!
     }
 }

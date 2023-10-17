@@ -10,7 +10,7 @@ import SwiftUI
 
 final class ListStudentViewModel: BasePersistentViewModel {
     @Published var list: [Student] = []
-    @Inject var studentReminderPersistenceManager: StudentPersistenceManagerProtocol
+    @Inject var studentReminderPersistenceManager: StudentManagerProtocol
     @Published var studentToEdit: Student?
 
     func loadItems() {

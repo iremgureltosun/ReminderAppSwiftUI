@@ -6,15 +6,16 @@
 //
 
 import Foundation
-enum Constants{
-    enum Text{
+enum Constants {
+    enum Text {
         static let successTitle = "Well done!"
         static let successMessage = "Reminder saved successfully"
         static let okText = "Ok"
         static let errorTitle = "Ooops"
         static let saveText = "Save"
     }
-    enum Spacing{
+
+    enum Spacing {
         static let medium: CGFloat = 15
         static let large: CGFloat = 20
     }

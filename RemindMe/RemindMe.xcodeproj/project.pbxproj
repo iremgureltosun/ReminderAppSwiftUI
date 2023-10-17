@@ -26,6 +26,8 @@
 		4D1F0FA72AD6795700DA40E8 /* StudentRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */; };
 		4D1F0FA92AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */; };
 		4D1F0FAA2AD67ACC00DA40E8 /* ReminderRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */; };
+		4D210B3E2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */; };
+		4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */; };
 		4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */; };
 		4D2B206B2AD5276B0045760C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0262ACDCC4300C78561 /* Resolver.swift */; };
 		4D2B206C2AD5276F0045760C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0E9F2ACE876B002BF525 /* Inject.swift */; };
@@ -146,6 +148,7 @@
 		4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmManager.swift; sourceTree = "<group>"; };
 		4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmManager.swift; sourceTree = "<group>"; };
 		4D1F0FA82AD67ACC00DA40E8 /* ReminderRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRealmManager.swift; sourceTree = "<group>"; };
+		4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocols.swift; sourceTree = "<group>"; };
 		4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmModel.swift; sourceTree = "<group>"; };
 		4D2B208E2AD530770045760C /* SchoolRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmModel.swift; sourceTree = "<group>"; };
 		4D2B20912AD5312A0045760C /* ReminderRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRealmModel.swift; sourceTree = "<group>"; };
@@ -407,6 +410,7 @@
 				4D2B20962AD532100045760C /* models */,
 				4D33737D2ACD92F5009F1DB1 /* CommonModelProtocol.swift */,
 				4D2B20A02AD534850045760C /* StorageProtocol.swift */,
+				4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */,
 			);
 			path = commonStorage;
 			sourceTree = "<group>";
@@ -682,6 +686,7 @@
 				4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */,
 				4DBF52B52ACC1C1D00F0CADF /* IntervalProtocol.swift in Sources */,
 				4D0DC8892AD3E7E200DDC5EC /* UpdateStudentView.swift in Sources */,
+				4D210B3E2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
 				4D3373822ACD9C0E009F1DB1 /* ListReminderViewModel.swift in Sources */,
 				4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */,
 				4DBF52C62ACC2E3A00F0CADF /* IntervalSection.swift in Sources */,
@@ -768,6 +773,7 @@
 				4D2B209C2AD5322F0045760C /* Student.swift in Sources */,
 				4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */,
 				4D2B207E2AD528180045760C /* CommonModelProtocol.swift in Sources */,
+				4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
 				4D2B20902AD530770045760C /* SchoolRealmModel.swift in Sources */,
 				4D2B20772AD527B40045760C /* UpdateStudentViewModel.swift in Sources */,
 				4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */,

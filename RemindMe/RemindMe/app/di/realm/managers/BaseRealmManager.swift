@@ -15,8 +15,7 @@ class BaseRealmManager<T>: ManagerProtocol where T: StorageProtocol, T: Object, 
 
     private var items: [EntityType] = []
 
-    init() {
-    }
+    init() {}
 
     func save(_ model: EntityType) throws {
         guard let realm = Realm.safeInit() else {

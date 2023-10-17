@@ -11,11 +11,11 @@ import RealmSwift
 class ReminderRealmModel: Object, StorageProtocol {
     typealias EntityType = Reminder
 
-    @Persisted(primaryKey: true) var id: String 
+    @Persisted(primaryKey: true) var id: String
     @Persisted var title: String = ""
     @Persisted var body: String = ""
     @Persisted var repeatIntervalId: Int = 0
-    @Persisted var intervals: List<Int> = List<Int>()
+    @Persisted var intervals: List<Int> = .init()
     @Persisted var date: Date?
     @Persisted var time: Date?
 
@@ -50,7 +50,7 @@ class ReminderRealmModel: Object, StorageProtocol {
         time = entity.time
     }
 
-    func getModel()-> Reminder {
+    func getModel() -> Reminder {
         var list: [Int] = []
         for intValue in intervals {
             list.append(intValue)

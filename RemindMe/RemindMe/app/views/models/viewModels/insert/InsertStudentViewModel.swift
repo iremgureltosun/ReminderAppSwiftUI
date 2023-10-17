@@ -11,8 +11,8 @@ import SwiftUI
 final class InsertStudentViewModel: BasePersistentViewModel {
     @Published var name: String = ""
     @Published var surname: String = ""
-    @Inject private var studentPersistenceManager: StudentPersistenceManagerProtocol
-    @Inject private var schoolPersistenceManager: SchoolPersistenceManagerProtocol
+    @Inject private var studentPersistenceManager: StudentManagerProtocol
+    @Inject private var schoolPersistenceManager: SchoolManagerProtocol
     @Published var selectedSchool: School?
     @Published var schools: [School] = []
 

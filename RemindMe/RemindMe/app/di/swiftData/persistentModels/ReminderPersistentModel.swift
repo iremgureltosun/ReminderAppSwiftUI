@@ -11,7 +11,7 @@ import SwiftData
 @Model class ReminderPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = Reminder
 
-    @Attribute(.unique) public var id: String 
+    @Attribute(.unique) public var id: String
     public var title: String
     var body: String
     var repeatIntervalId: Int
@@ -39,7 +39,7 @@ import SwiftData
         self.time = time
     }
 
-    func getModel()-> Reminder{
-        return Reminder(id: self.id, title: self.title, body: self.body, repeatIntervalId: self.repeatIntervalId, intervals: self.intervals, date: self.date, time: self.time)
+    func getModel() -> Reminder {
+        return Reminder(id: id, title: title, body: body, repeatIntervalId: repeatIntervalId, intervals: intervals, date: date, time: time)
     }
 }

@@ -11,7 +11,7 @@ import RealmSwift
 class StudentRealmModel: Object, StorageProtocol {
     typealias EntityType = Student
 
-    @Persisted(primaryKey: true) var id: String 
+    @Persisted(primaryKey: true) var id: String
     @Persisted var name: String = ""
     @Persisted var surname: String = ""
     @Persisted var birthDate: Date?

@@ -62,5 +62,4 @@ struct ListReminderView: View {
 
 #Preview {
     ListReminderView()
-        
 }

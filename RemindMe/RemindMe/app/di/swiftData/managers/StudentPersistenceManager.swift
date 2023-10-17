@@ -7,11 +7,4 @@
 
 import Foundation
 
-protocol StudentPersistenceManagerProtocol {
-    func save(_ model: Student) throws
-    func fetch() throws -> [Student]
-    func delete(_ model: Student) throws
-}
-
-final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentPersistenceManagerProtocol {
-}
+final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentManagerProtocol {}

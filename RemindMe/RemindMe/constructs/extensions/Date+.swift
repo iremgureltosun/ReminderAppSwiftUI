@@ -13,15 +13,15 @@ public extension Date {
         let year = calendar.component(.year, from: self)
         return year
     }
-    
+
     var startOfDay: Date {
         Calendar.current.startOfDay(for: self)
     }
-    
+
     var startOfMonth: Date? {
         Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self))
     }
-    
+
     func adding(_ value: Int, to component: Calendar.Component) -> Date? {
         Calendar.current.date(byAdding: component, value: value, to: self)
     }
