@@ -16,8 +16,8 @@ final class ContainerBuilder {
     func buildContainerForSwiftData() -> Container {
         let container = Container()
 
-        container.register(ReminderManagerProtocol.self) { _ in
-            ReminderPersistenceManager()
+        container.register(LectureManagerProtocol.self) { _ in
+            LecturePersistenceManager()
         }.inObjectScope(.container)
 
         container.register(StudentManagerProtocol.self) { _ in
@@ -34,8 +34,8 @@ final class ContainerBuilder {
     func buildContainerForRealm() -> Container {
         let container = Container()
 
-        container.register(ReminderManagerProtocol.self) { _ in
-            ReminderRealmManager()
+        container.register(LectureManagerProtocol.self) { _ in
+            LectureRealmManager()
         }.inObjectScope(.container)
 
         container.register(StudentManagerProtocol.self) { _ in

@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            ListReminderView()
-                .tabItem {
-                    Label("Reminders", systemImage: "calendar")
-                }
+//            ListReminderView()
+//                .tabItem {
+//                    Label("Reminders", systemImage: "calendar")
+//                }
 
             ListStudentView()
                 .tabItem {

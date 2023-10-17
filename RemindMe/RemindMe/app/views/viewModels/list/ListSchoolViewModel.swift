@@ -20,10 +20,7 @@ final class ListSchoolViewModel: BasePersistentViewModel {
         }
     }
 
-    func delete(indexSet: IndexSet) throws {
-        try indexSet.forEach { index in
-            let item = list[index]
-            try schoolPersistenceManager.delete(item)
-        }
+    func delete(item: School) throws {
+        try schoolPersistenceManager.delete(item)
     }
 }

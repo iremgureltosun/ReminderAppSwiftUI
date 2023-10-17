@@ -17,7 +17,7 @@ protocol ManagerProtocol {
 class BasePersistenceManager<T>: ManagerProtocol where T: StorageProtocol, T: PersistentModel, T.EntityType: CommonModelProtocol {
     typealias EntityType = T.EntityType
 
-    let modelContainer = try! ModelContainer(for: ReminderPersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+    let modelContainer = try! ModelContainer(for: LecturePersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
 
     private var items: [EntityType] = []
 

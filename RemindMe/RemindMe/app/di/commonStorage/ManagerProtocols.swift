@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol ReminderManagerProtocol {
-    func save(_ model: Reminder) throws
-    func fetch() throws -> [Reminder]
-    func delete(_ model: Reminder) throws
+protocol LectureManagerProtocol {
+    func save(_ model: Lecture) throws
+    func fetch() throws -> [Lecture]
+    func delete(_ model: Lecture) throws
 }
 
 protocol StudentManagerProtocol {

@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class ReminderRealmManager: BaseRealmManager<ReminderRealmModel>, ReminderManagerProtocol {}
+final class LectureRealmManager: BaseRealmManager<LectureRealmModel>, LectureManagerProtocol {}

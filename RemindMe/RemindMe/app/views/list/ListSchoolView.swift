@@ -47,15 +47,27 @@ struct ListSchoolView: View {
                 HStack {
                     Text(item.title)
                         .foregroundColor(.blue)
+
+                    Spacer()
+                    
+                    Button(action: {
+                        do {
+                            try viewModel.delete(item: item)
+                        } catch {
+                            debugPrint(error)
+                        }
+                    }, label: {
+                        Text("Delete")
+                    })
                 }
             }
-            .onDelete { index in
-                do {
-                    try viewModel.delete(indexSet: index)
-                } catch {
-                    debugPrint(error)
-                }
-            }
+//            .onDelete { index in
+//                do {
+//                    try viewModel.delete(indexSet: index)
+//                } catch {
+//                    debugPrint(error)
+//                }
+//            }
         }
     }
 }

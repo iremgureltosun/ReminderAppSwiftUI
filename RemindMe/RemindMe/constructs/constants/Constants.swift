@@ -9,7 +9,7 @@ import Foundation
 enum Constants {
     enum Text {
         static let successTitle = "Well done!"
-        static let successMessage = "Reminder saved successfully"
+        static let successMessage = "Record saved successfully"
         static let okText = "Ok"
         static let errorTitle = "Ooops"
         static let saveText = "Save"
