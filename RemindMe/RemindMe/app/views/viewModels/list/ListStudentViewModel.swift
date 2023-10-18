@@ -21,10 +21,7 @@ final class ListStudentViewModel: BasePersistentViewModel {
         }
     }
 
-    func delete(indexSet: IndexSet) throws {
-        try indexSet.forEach { index in
-            let item = list[index]
-            try storageManager.delete(item)
-        }
+    func delete(_ item: Student) throws {
+        try storageManager.delete(item)
     }
 }

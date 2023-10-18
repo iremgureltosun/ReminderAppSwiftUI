@@ -13,7 +13,7 @@ struct ListLectureView: View {
     var body: some View {
         NavigationView {
             VStack {
-                studentList
+                lectureList
                     .onAppear {
                         viewModel.loadItems()
                     }
@@ -34,27 +34,24 @@ struct ListLectureView: View {
         }
     }
 
-    @ViewBuilder private var studentList: some View {
+    @ViewBuilder private var lectureList: some View {
         List {
-            ForEach(viewModel.list, id: \.id) { student in
-                getLectureCell(student)
-                    .contentShape(Rectangle())
-                   
-            }
-            .onDelete { index in
-                do {
-                    try viewModel.delete(indexSet: index)
-                } catch {
-                    debugPrint(error)
+            ForEach(viewModel.list, id: \.id) { lecture in
+                HStack {
+                    Text(lecture.title)
+                        .foregroundColor(.blue)
+                }
+                .contentShape(Rectangle())
+                .swipeActions {
+                    Button("Delete", systemImage: "trash", role: .destructive) {
+                        do {
+                            try viewModel.delete(lecture)
+                        } catch {
+                            debugPrint(error)
+                        }
+                    }
                 }
             }
-        }
-    }
-
-    @ViewBuilder private func getLectureCell(_ lecture: Lecture) -> some View {
-        HStack {
-            Text(lecture.title)
-                .foregroundColor(.blue)
         }
     }
 }

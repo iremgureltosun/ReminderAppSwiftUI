@@ -21,10 +21,7 @@ final class ListLectureViewModel: BasePersistentViewModel {
         }
     }
 
-    func delete(indexSet: IndexSet) throws {
-        try indexSet.forEach { index in
-            let item = list[index]
-            try storageManager.delete(item)
-        }
+    func delete(_ item: Lecture) throws {
+        try storageManager.delete(item)
     }
 }

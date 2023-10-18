@@ -51,14 +51,17 @@ struct ListStudentView: View {
                     .onTapGesture {
                         viewModel.studentToEdit = student
                     }
+                    .swipeActions {
+                        Button("Delete", systemImage: "trash", role: .destructive) {
+                            do {
+                                try viewModel.delete(student)
+                            } catch {
+                                debugPrint(error)
+                            }
+                        }
+                    }
             }
-            .onDelete { index in
-                do {
-                    try viewModel.delete(indexSet: index)
-                } catch {
-                    debugPrint(error)
-                }
-            }
+            
         }
     }
 

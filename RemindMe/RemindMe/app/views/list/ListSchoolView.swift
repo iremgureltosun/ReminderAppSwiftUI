@@ -48,14 +48,17 @@ struct ListSchoolView: View {
                     Text(item.title)
                         .foregroundColor(.blue)
                 }
-            }
-            .onDelete { index in
-                do {
-                    try viewModel.delete(indexSet: index)
-                } catch {
-                    debugPrint(error)
+                .swipeActions {
+                    Button("Delete", systemImage: "trash", role: .destructive) {
+                        do {
+                            try viewModel.delete(item)
+                        } catch {
+                            debugPrint(error)
+                        }
+                    }
                 }
             }
+           
         }
     }
 }
