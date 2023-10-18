@@ -1,16 +1,17 @@
-//
-//  SchoolViewModel.swift
-//  RemindMe
-//
-//  Created by Tosun, Irem on 5.10.2023.
-//
+////
+////  StoredRemindersListView.swift
+////  RemindMe
+////
+////  Created by Tosun, Irem on 4.10.2023.
+////
 
 import Foundation
 import SwiftUI
 
-final class ListSchoolViewModel: BasePersistentViewModel {
-    @Published var list: [School] = []
-    @Inject var storageManager: SchoolStorageProtocol
+final class ListLectureViewModel: BasePersistentViewModel {
+    @Published var list: [Lecture] = []
+    @Inject var storageManager: LectureStorageProtocol
+    @Published var itemToEdit: Lecture?
 
     func loadItems() {
         do {

@@ -10,12 +10,12 @@ import SwiftUI
 
 final class ListStudentViewModel: BasePersistentViewModel {
     @Published var list: [Student] = []
-    @Inject var studentReminderPersistenceManager: StudentManagerProtocol
+    @Inject var storageManager: StudentStorageProtocol
     @Published var studentToEdit: Student?
 
     func loadItems() {
         do {
-            list = try studentReminderPersistenceManager.fetch()
+            list = try storageManager.fetch()
         } catch {
             list = []
         }
@@ -24,7 +24,7 @@ final class ListStudentViewModel: BasePersistentViewModel {
     func delete(indexSet: IndexSet) throws {
         try indexSet.forEach { index in
             let item = list[index]
-            try studentReminderPersistenceManager.delete(item)
+            try storageManager.delete(item)
         }
     }
 }

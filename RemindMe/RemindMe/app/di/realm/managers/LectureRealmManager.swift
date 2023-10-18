@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class LectureRealmManager: BaseRealmManager<LectureRealmModel>, LectureManagerProtocol {}
+final class LectureRealmManager: BaseRealmManager<LectureRealmModel>, LectureStorageProtocol {}

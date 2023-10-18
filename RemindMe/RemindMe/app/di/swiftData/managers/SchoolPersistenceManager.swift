@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class SchoolPersistenceManager: BasePersistenceManager<SchoolPersistentModel>, SchoolManagerProtocol {}
+final class SchoolPersistenceManager: BasePersistenceManager<SchoolPersistentModel>, SchoolStorageProtocol {}

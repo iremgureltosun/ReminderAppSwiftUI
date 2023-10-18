@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class StudentRealmManager: BaseRealmManager<StudentRealmModel>, StudentManagerProtocol {}
+final class StudentRealmManager: BaseRealmManager<StudentRealmModel>, StudentStorageProtocol {}

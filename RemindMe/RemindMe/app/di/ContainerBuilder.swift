@@ -13,19 +13,26 @@ import Swinject
 final class ContainerBuilder {
     static let shared = ContainerBuilder()
 
+    var context: ModelContext
+
+    private init() {
+        let modelContainer = try! ModelContainer(for: LecturePersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+        context = modelContainer.mainContext
+    }
+
     func buildContainerForSwiftData() -> Container {
         let container = Container()
 
-        container.register(LectureManagerProtocol.self) { _ in
-            LecturePersistenceManager()
+        container.register(LectureStorageProtocol.self) { _ in
+            LecturePersistenceManager(context: self.context)
         }.inObjectScope(.container)
 
-        container.register(StudentManagerProtocol.self) { _ in
-            StudentPersistenceManager()
+        container.register(StudentStorageProtocol.self) { _ in
+            StudentPersistenceManager(context: self.context)
         }.inObjectScope(.container)
 
-        container.register(SchoolManagerProtocol.self) { _ in
-            SchoolPersistenceManager()
+        container.register(SchoolStorageProtocol.self) { _ in
+            SchoolPersistenceManager(context: self.context)
         }.inObjectScope(.container)
 
         return container
@@ -34,15 +41,15 @@ final class ContainerBuilder {
     func buildContainerForRealm() -> Container {
         let container = Container()
 
-        container.register(LectureManagerProtocol.self) { _ in
+        container.register(LectureStorageProtocol.self) { _ in
             LectureRealmManager()
         }.inObjectScope(.container)
 
-        container.register(StudentManagerProtocol.self) { _ in
+        container.register(StudentStorageProtocol.self) { _ in
             StudentRealmManager()
         }.inObjectScope(.container)
 
-        container.register(SchoolManagerProtocol.self) { _ in
+        container.register(SchoolStorageProtocol.self) { _ in
             SchoolRealmManager()
         }.inObjectScope(.container)
 

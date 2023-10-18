@@ -19,7 +19,7 @@ import SwiftData
     var schoolName: String = ""
     var schoolCategoryId: Int?
     var schoolDescription: String = ""
-    @Relationship(deleteRule: .cascade, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]?
+    @Relationship(deleteRule: .noAction, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]?
 
     required init(_ entity: School) {
         id = entity.id

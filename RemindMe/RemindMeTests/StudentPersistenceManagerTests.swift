@@ -12,7 +12,7 @@ final class StudentPersistenceManagerTests: XCTestCase {
     @Inject var studentManager: StudentManagerProtocol
 
     func testInsert() {
-        let school = School(id: UUID().uuidString, schoolName: "Ted College", schoolDescription: "Primary school", students:[])
+        let school = School(id: UUID().uuidString, schoolName: "Ted College", schoolDescription: "Primary school", students: [])
         let student = Student(id: UUID().uuidString, name: "Irem", surname: "Tosun", school: school)
         do {
             try studentManager.save(student)

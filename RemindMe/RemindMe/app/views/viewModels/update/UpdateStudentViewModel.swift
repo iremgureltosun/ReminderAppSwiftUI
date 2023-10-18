@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 final class UpdateStudentViewModel: BasePersistentViewModel {
-    @Inject private var studentPersistenceManager: StudentManagerProtocol
-    @Inject private var schoolPersistenceManager: SchoolManagerProtocol
+    @Inject private var schoolStorage: SchoolStorageProtocol
     @Published var schools: [School] = []
     @ObservedObject var studentToEdit: Student
 
@@ -20,7 +19,7 @@ final class UpdateStudentViewModel: BasePersistentViewModel {
 
     func loadSchools() {
         do {
-            schools = try schoolPersistenceManager.fetch()
+            schools = try schoolStorage.fetch()
         } catch {
             schools = []
         }

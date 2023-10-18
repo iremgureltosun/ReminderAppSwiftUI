@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class LecturePersistenceManager: BasePersistenceManager<LecturePersistentModel>, LectureManagerProtocol {}
+final class LecturePersistenceManager: BasePersistenceManager<LecturePersistentModel>, LectureStorageProtocol {}

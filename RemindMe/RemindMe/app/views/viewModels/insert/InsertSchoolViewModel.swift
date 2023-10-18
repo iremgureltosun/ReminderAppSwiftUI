@@ -11,12 +11,12 @@ import SwiftUI
 final class InsertSchoolViewModel: BasePersistentViewModel {
     @Published var schoolName: String = ""
     @Published var description: String = ""
-    @Inject var schoolReminderPersistenceManager: SchoolManagerProtocol
+    @Inject var storageManager: SchoolStorageProtocol
 
     func save() {
         do {
             let school = School(id: UUID().uuidString, schoolName: schoolName, schoolCategoryId: nil, schoolDescription: description, students: nil)
-            try schoolReminderPersistenceManager.save(school)
+            try storageManager.save(school)
             showSuccess = true
         } catch {
             showAlert = true

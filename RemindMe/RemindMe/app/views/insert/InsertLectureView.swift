@@ -1,34 +1,34 @@
 //
-//  InsertSchoolView.swift
+//  ReminderListView.swift
 //  RemindMe
 //
-//  Created by Tosun, Irem on 6.10.2023.
+//  Created by Tosun, Irem on 3.10.2023.
 //
 
 import SwiftUI
 
-struct InsertSchoolView: View {
-    @StateObject var viewModel: InsertSchoolViewModel
+struct InsertLectureView: View {
+    @StateObject var viewModel: InsertLectureViewModel
     @Environment(\.dismiss) private var dismiss
 
     private var isFormValid: Bool {
-        !viewModel.schoolName.isEmptyOrWhiteSpace
+        !viewModel.title.isEmptyOrWhiteSpace
     }
 
     init() {
-        let viewModel = InsertSchoolViewModel()
+        let viewModel = InsertLectureViewModel()
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
         NavigationView {
             Form {
-                TextField("School name", text: $viewModel.schoolName)
+                TextField("Lecture name", text: $viewModel.title)
 
-                TextField("Description", text: $viewModel.description)
+                TextField("Description", text: $viewModel.subtitle)
             }
             .background(.red)
-            .navigationTitle("Add School")
+            .navigationTitle("Add Lecture")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Close") {
@@ -61,5 +61,4 @@ struct InsertSchoolView: View {
         }
     }
 }
-
 
