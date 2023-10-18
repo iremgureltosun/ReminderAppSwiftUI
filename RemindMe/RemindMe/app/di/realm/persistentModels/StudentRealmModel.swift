@@ -39,6 +39,8 @@ class StudentRealmModel: Object, StorageProtocol {
         id = entity.id
         name = entity.name
         surname = entity.surname
+        birthDate = entity.birthDate
+        sexId = entity.sexId
         if let entitySchool = entity.school {
             school = SchoolRealmModel(entitySchool)
         } else {

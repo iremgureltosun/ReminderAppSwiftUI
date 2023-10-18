@@ -14,7 +14,11 @@ final class Resolver {
     static let shared = Resolver()
 
     private init() {
-        container = ContainerBuilder.shared.buildContainerForSwiftData()
+        if #available(iOS 17.0, *) {
+            container = SwiftDataContainerBuilder.shared.buildContainer()
+        } else {
+            container = RealmContainerBuilder.shared.buildContainer()
+        }
     }
 
     func resolve<T>(_: T.Type) -> T {

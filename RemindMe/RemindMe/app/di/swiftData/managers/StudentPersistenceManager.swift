@@ -7,12 +7,6 @@
 
 import Foundation
 
+@available(iOS 17, *)
 final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentStorageProtocol {
-    
-//    override func save(_ model: Student) throws {
-//        model.school?.students.append(model)
-//        try super.save(model)
-//        
-//    }
-    
 }

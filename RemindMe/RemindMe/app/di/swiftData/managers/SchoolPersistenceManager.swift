@@ -7,4 +7,5 @@
 
 import Foundation
 
+@available(iOS 17, *)
 final class SchoolPersistenceManager: BasePersistenceManager<SchoolPersistentModel>, SchoolStorageProtocol {}

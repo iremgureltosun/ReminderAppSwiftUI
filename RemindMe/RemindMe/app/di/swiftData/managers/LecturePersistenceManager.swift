@@ -7,4 +7,5 @@
 
 import Foundation
 
+@available(iOS 17, *)
 final class LecturePersistenceManager: BasePersistenceManager<LecturePersistentModel>, LectureStorageProtocol {}

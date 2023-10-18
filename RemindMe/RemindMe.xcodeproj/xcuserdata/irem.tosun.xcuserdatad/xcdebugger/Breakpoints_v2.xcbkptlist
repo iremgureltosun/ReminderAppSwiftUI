@@ -14,9 +14,57 @@
             filePath = "RemindMe/app/di/swiftData/managers/BasePersistenceManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "save(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FED7E97C-3A59-4406-AC44-5C52F94955EB - b1e45c6b15eb6e80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.BasePersistenceManager.save(&#x3c4;_0_0.RemindMe.StorageProtocol.EntityType) throws -&gt; ()"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/di/swiftData/managers/BasePersistenceManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "FED7E97C-3A59-4406-AC44-5C52F94955EB - b1e45c6b15eb6ea7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RemindMe.BasePersistenceManager.save(&#x3c4;_0_0.RemindMe.StorageProtocol.EntityType) throws -&gt; ()"
+                  moduleName = "RemindMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irem.tosun/Documents/1/ReminderApp/RemindMe/RemindMe/app/di/swiftData/managers/BasePersistenceManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BBEB0A4-6A52-4A1F-8A9C-12DAFB09EC39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RemindMe/app/di/Resolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

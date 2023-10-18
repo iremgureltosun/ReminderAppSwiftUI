@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+@available(iOS 17, *)
 @Model class StudentPersistentModel: Identifiable, Hashable, StorageProtocol {
     typealias EntityType = Student
 

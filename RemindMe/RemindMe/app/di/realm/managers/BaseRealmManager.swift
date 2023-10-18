@@ -18,27 +18,20 @@ class BaseRealmManager<T>: ManagerProtocol where T: StorageProtocol, T: Object, 
     init() {}
 
     func save(_ model: EntityType) throws {
-        guard let realm = Realm.safeInit() else {
-            throw PersistenceError.realmError
-        }
-
-        try realm.safeWrite {
+        let realm = try Realm()
+        try realm.write {
             realm.add(T(model))
         }
     }
 
     func fetch() throws -> [EntityType] {
-        guard let realm = Realm.safeInit() else {
-            return []
-        }
+        let realm = try Realm()
         let objects = realm.objects(T.self)
         return objects.map { $0.getModel() }
     }
 
     func delete(_ model: EntityType) throws {
-        guard let realm = Realm.safeInit() else {
-            throw PersistenceError.realmError
-        }
+        let realm = try Realm()
 
         guard let modelObject = model as? Object else {
             throw PersistenceError.realmError
@@ -54,26 +47,6 @@ class BaseRealmManager<T>: ManagerProtocol where T: StorageProtocol, T: Object, 
             }
         } catch {
             throw PersistenceError.realmError
-        }
-    }
-}
-
-extension Realm {
-    static func safeInit() -> Realm? {
-        do {
-            let realm = try Realm()
-            return realm
-        } catch {
-            print("safe init \(error)")
-        }
-        return nil
-    }
-
-    public func safeWrite(_ block: () throws -> Void) throws {
-        if isInWriteTransaction {
-            try block()
-        } else {
-            try write(block)
         }
     }
 }

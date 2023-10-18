@@ -13,6 +13,7 @@ protocol ManagerProtocol {
     associatedtype EntityType: CommonModelProtocol
 }
 
+@available(iOS 17, *)
 @MainActor
 class BasePersistenceManager<T>: ManagerProtocol where T: StorageProtocol, T: PersistentModel, T.EntityType: CommonModelProtocol {
     typealias EntityType = T.EntityType

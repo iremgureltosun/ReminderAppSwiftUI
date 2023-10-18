@@ -9,9 +9,10 @@ import Foundation
 import SwiftData
 import Swinject
 
+@available(iOS 17, *)
 @MainActor
-final class ContainerBuilder {
-    static let shared = ContainerBuilder()
+final class SwiftDataContainerBuilder {
+    static let shared = SwiftDataContainerBuilder()
 
     
     private var modelContainer: ModelContainer
@@ -24,7 +25,7 @@ final class ContainerBuilder {
         return modelContainer.mainContext
     }()
 
-    func buildContainerForSwiftData() -> Container {
+    func buildContainer() -> Container {
         let container = Container()
 
         container.register(LectureStorageProtocol.self) { _ in
@@ -37,24 +38,6 @@ final class ContainerBuilder {
 
         container.register(SchoolStorageProtocol.self) { _ in
             SchoolPersistenceManager(context: self.context)
-        }.inObjectScope(.container)
-
-        return container
-    }
-
-    func buildContainerForRealm() -> Container {
-        let container = Container()
-
-        container.register(LectureStorageProtocol.self) { _ in
-            LectureRealmManager()
-        }.inObjectScope(.container)
-
-        container.register(StudentStorageProtocol.self) { _ in
-            StudentRealmManager()
-        }.inObjectScope(.container)
-
-        container.register(SchoolStorageProtocol.self) { _ in
-            SchoolRealmManager()
         }.inObjectScope(.container)
 
         return container

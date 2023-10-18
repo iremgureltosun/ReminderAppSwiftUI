@@ -27,7 +27,7 @@
 		4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */; };
 		4D210B412ADEBE8B00103AE2 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B402ADEBE8B00103AE2 /* Lecture.swift */; };
 		4D210B422ADEBE8B00103AE2 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B402ADEBE8B00103AE2 /* Lecture.swift */; };
-		4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */; };
+		4D2B206A2AD527670045760C /* SwiftDataContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */; };
 		4D2B206B2AD5276B0045760C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0262ACDCC4300C78561 /* Resolver.swift */; };
 		4D2B206C2AD5276F0045760C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0E9F2ACE876B002BF525 /* Inject.swift */; };
 		4D2B206D2AD5278A0045760C /* LecturePersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* LecturePersistentModel.swift */; };
@@ -47,8 +47,6 @@
 		4D2B207D2AD527C90045760C /* ListSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A242ACEC57C00E0B99A /* ListSchoolViewModel.swift */; };
 		4D2B207E2AD528180045760C /* CommonModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33737D2ACD92F5009F1DB1 /* CommonModelProtocol.swift */; };
 		4D2B20812AD528490045760C /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3373772ACD5E94009F1DB1 /* PersistenceError.swift */; };
-		4D2B20882AD52F8D0045760C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20872AD52F8D0045760C /* Realm */; };
-		4D2B208A2AD52F8D0045760C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2B20892AD52F8D0045760C /* RealmSwift */; };
 		4D2B208C2AD52FFF0045760C /* StudentRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */; };
 		4D2B208D2AD52FFF0045760C /* StudentRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */; };
 		4D2B208F2AD530770045760C /* SchoolRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B208E2AD530770045760C /* SchoolRealmModel.swift */; };
@@ -78,12 +76,17 @@
 		4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDCA6CF2ACFDEE900FE9148 /* ListSchoolView.swift */; };
 		4DDCA6D22ACFDEFC00FE9148 /* InsertSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDCA6D12ACFDEFC00FE9148 /* InsertSchoolView.swift */; };
 		4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE30ED2ACFFA6C00198FE0 /* String+.swift */; };
+		4DF240612AE01AE400C6AB6F /* RealmContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */; };
+		4DF240622AE01AEB00C6AB6F /* RealmContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */; };
+		4DF2406A2AE0227500C6AB6F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF240692AE0227500C6AB6F /* Realm */; };
+		4DF2406C2AE0227500C6AB6F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF2406B2AE0227500C6AB6F /* RealmSwift */; };
+		4DF2406F2AE0228500C6AB6F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF2406E2AE0228500C6AB6F /* Swinject */; };
+		4DF240712AE0228500C6AB6F /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF240702AE0228500C6AB6F /* Swinject-Dynamic */; };
 		4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */; };
 		4DFAD0212ACDC75600C78561 /* LecturePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0202ACDC75600C78561 /* LecturePersistenceManager.swift */; };
-		4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */; };
+		4DFAD0252ACDCBED00C78561 /* SwiftDataContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */; };
 		4DFAD0272ACDCC4300C78561 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0262ACDCC4300C78561 /* Resolver.swift */; };
 		4DFE0EA02ACE876B002BF525 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0E9F2ACE876B002BF525 /* Inject.swift */; };
-		4DFE0EA22ACE8796002BF525 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFE0EA12ACE8796002BF525 /* Swinject */; };
 		4DFE0EA42ACEBE1C002BF525 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0EA32ACEBE1C002BF525 /* BaseViewModel.swift */; };
 		4DFE0EA62ACEBFE2002BF525 /* InsertStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0EA52ACEBFE2002BF525 /* InsertStudentView.swift */; };
 		4DFE0EA82ACEC031002BF525 /* InsertStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE0EA72ACEC031002BF525 /* InsertStudentViewModel.swift */; };
@@ -152,9 +155,10 @@
 		4DDCA6CF2ACFDEE900FE9148 /* ListSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchoolView.swift; sourceTree = "<group>"; };
 		4DDCA6D12ACFDEFC00FE9148 /* InsertSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSchoolView.swift; sourceTree = "<group>"; };
 		4DDE30ED2ACFFA6C00198FE0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmContainerBuilder.swift; sourceTree = "<group>"; };
 		4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePersistenceManager.swift; sourceTree = "<group>"; };
 		4DFAD0202ACDC75600C78561 /* LecturePersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturePersistenceManager.swift; sourceTree = "<group>"; };
-		4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBuilder.swift; sourceTree = "<group>"; };
+		4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContainerBuilder.swift; sourceTree = "<group>"; };
 		4DFAD0262ACDCC4300C78561 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		4DFE0E9F2ACE876B002BF525 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		4DFE0EA32ACEBE1C002BF525 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -172,9 +176,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D2B208A2AD52F8D0045760C /* RealmSwift in Frameworks */,
-				4D2B20882AD52F8D0045760C /* Realm in Frameworks */,
-				4DFE0EA22ACE8796002BF525 /* Swinject in Frameworks */,
+				4DF2406C2AE0227500C6AB6F /* RealmSwift in Frameworks */,
+				4DF240712AE0228500C6AB6F /* Swinject-Dynamic in Frameworks */,
+				4DF2406A2AE0227500C6AB6F /* Realm in Frameworks */,
+				4DF2406F2AE0228500C6AB6F /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +316,7 @@
 		4D0DC88D2AD3F5A300DDC5EC /* swiftData */ = {
 			isa = PBXGroup;
 			children = (
+				4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */,
 				4D09335A2ACD484F00539DA9 /* persistentModels */,
 				4DFAD01F2ACDC74900C78561 /* managers */,
 			);
@@ -331,6 +337,7 @@
 		4D2B20852AD52F1B0045760C /* realm */ = {
 			isa = PBXGroup;
 			children = (
+				4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */,
 				4D2B20942AD531B40045760C /* persistentModels */,
 				4D1F0FA02AD678B300DA40E8 /* managers */,
 			);
@@ -415,7 +422,6 @@
 				4D2B20952AD531C70045760C /* commonStorage */,
 				4D0DC88D2AD3F5A300DDC5EC /* swiftData */,
 				4D2B20852AD52F1B0045760C /* realm */,
-				4DFAD0242ACDCBED00C78561 /* ContainerBuilder.swift */,
 				4DFAD0262ACDCC4300C78561 /* Resolver.swift */,
 				4DFE0E9F2ACE876B002BF525 /* Inject.swift */,
 			);
@@ -487,9 +493,10 @@
 			);
 			name = RemindMe;
 			packageProductDependencies = (
-				4DFE0EA12ACE8796002BF525 /* Swinject */,
-				4D2B20872AD52F8D0045760C /* Realm */,
-				4D2B20892AD52F8D0045760C /* RealmSwift */,
+				4DF240692AE0227500C6AB6F /* Realm */,
+				4DF2406B2AE0227500C6AB6F /* RealmSwift */,
+				4DF2406E2AE0228500C6AB6F /* Swinject */,
+				4DF240702AE0228500C6AB6F /* Swinject-Dynamic */,
 			);
 			productName = RemindMe;
 			productReference = 4D02B2D52ABD69AA0032F011 /* RemindMe.app */;
@@ -564,8 +571,8 @@
 			);
 			mainGroup = 4D02B2CC2ABD69AA0032F011;
 			packageReferences = (
-				4DFAD0222ACDCBC700C78561 /* XCRemoteSwiftPackageReference "Swinject" */,
-				4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 4D02B2D62ABD69AA0032F011 /* Products */;
 			projectDirPath = "";
@@ -614,6 +621,7 @@
 				4DC153F12ACC0AA100DFC063 /* Color+.swift in Sources */,
 				4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */,
 				4D0DC8892AD3E7E200DDC5EC /* UpdateStudentView.swift in Sources */,
+				4DF240612AE01AE400C6AB6F /* RealmContainerBuilder.swift in Sources */,
 				4D210B3E2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
 				4D3373822ACD9C0E009F1DB1 /* ListLectureViewModel.swift in Sources */,
 				4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */,
@@ -630,7 +638,7 @@
 				4D2B208C2AD52FFF0045760C /* StudentRealmModel.swift in Sources */,
 				4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */,
 				4D02B2DB2ABD69AA0032F011 /* ContentView.swift in Sources */,
-				4DFAD0252ACDCBED00C78561 /* ContainerBuilder.swift in Sources */,
+				4DFAD0252ACDCBED00C78561 /* SwiftDataContainerBuilder.swift in Sources */,
 				4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */,
 				4D2B20A12AD534850045760C /* StorageProtocol.swift in Sources */,
 				4D1F0FA22AD678C500DA40E8 /* SchoolRealmManager.swift in Sources */,
@@ -684,6 +692,7 @@
 				4D1F0FAA2AD67ACC00DA40E8 /* LectureRealmManager.swift in Sources */,
 				4D2B207B2AD527C30045760C /* ListLectureViewModel.swift in Sources */,
 				4D2B20812AD528490045760C /* PersistenceError.swift in Sources */,
+				4DF240622AE01AEB00C6AB6F /* RealmContainerBuilder.swift in Sources */,
 				4D2B208D2AD52FFF0045760C /* StudentRealmModel.swift in Sources */,
 				4D2B209C2AD5322F0045760C /* Student.swift in Sources */,
 				4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */,
@@ -691,7 +700,7 @@
 				4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
 				4D2B20902AD530770045760C /* SchoolRealmModel.swift in Sources */,
 				4D2B20772AD527B40045760C /* UpdateStudentViewModel.swift in Sources */,
-				4D2B206A2AD527670045760C /* ContainerBuilder.swift in Sources */,
+				4D2B206A2AD527670045760C /* SwiftDataContainerBuilder.swift in Sources */,
 				4D2B20782AD527B80045760C /* InsertLectureViewModel.swift in Sources */,
 				4D2B20A22AD534850045760C /* StorageProtocol.swift in Sources */,
 			);
@@ -853,6 +862,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,6 +894,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -907,7 +918,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ET37P8CM79;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iremtosun.RemindMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -927,7 +938,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ET37P8CM79;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iremtosun.RemindMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1016,7 +1027,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -1024,7 +1035,7 @@
 				kind = branch;
 			};
 		};
-		4DFAD0222ACDCBC700C78561 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1035,20 +1046,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4D2B20872AD52F8D0045760C /* Realm */ = {
+		4DF240692AE0227500C6AB6F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		4D2B20892AD52F8D0045760C /* RealmSwift */ = {
+		4DF2406B2AE0227500C6AB6F /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D2B20862AD52F8D0045760C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
-		4DFE0EA12ACE8796002BF525 /* Swinject */ = {
+		4DF2406E2AE0228500C6AB6F /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4DFAD0222ACDCBC700C78561 /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		4DF240702AE0228500C6AB6F /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
