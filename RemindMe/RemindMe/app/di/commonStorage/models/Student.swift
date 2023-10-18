@@ -9,15 +9,16 @@ import Foundation
 
 class Student: CommonModelProtocol, ObservableObject, Identifiable, Hashable {
     var id: String
-    var name: String = ""
-    var surname: String = ""
+    var name: String
+    var surname: String 
     var birthDate: Date?
     var sexId: Int?
     var school: School?
 
-    init(id: String, name: String, surname _: String, school: School?) {
+    init(id: String, name: String, surname: String, school: School?) {
         self.id = id
         self.name = name
+        self.surname = surname
         self.school = school
     }
 

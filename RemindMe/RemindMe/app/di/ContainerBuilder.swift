@@ -13,12 +13,16 @@ import Swinject
 final class ContainerBuilder {
     static let shared = ContainerBuilder()
 
-    var context: ModelContext
+    
+    private var modelContainer: ModelContainer
 
     private init() {
-        let modelContainer = try! ModelContainer(for: LecturePersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
-        context = modelContainer.mainContext
+        modelContainer = try! ModelContainer(for: LecturePersistentModel.self, StudentPersistentModel.self, SchoolPersistentModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
     }
+
+    private lazy var context: ModelContext = {
+        return modelContainer.mainContext
+    }()
 
     func buildContainerForSwiftData() -> Container {
         let container = Container()

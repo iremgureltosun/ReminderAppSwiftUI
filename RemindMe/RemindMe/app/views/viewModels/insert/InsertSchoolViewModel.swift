@@ -15,7 +15,7 @@ final class InsertSchoolViewModel: BasePersistentViewModel {
 
     func save() {
         do {
-            let school = School(id: UUID().uuidString, schoolName: schoolName, schoolCategoryId: nil, schoolDescription: description, students: nil)
+            let school = School(id: UUID().uuidString, schoolName: schoolName, schoolCategoryId: nil, schoolDescription: description, students: [])
             try storageManager.save(school)
             showSuccess = true
         } catch {

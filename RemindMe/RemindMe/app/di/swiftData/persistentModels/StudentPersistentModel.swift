@@ -16,8 +16,8 @@ import SwiftData
         return "\(name) \(surname)"
     }
 
-    var name: String = ""
-    var surname: String = ""
+    var name: String
+    var surname: String
     var birthDate: Date?
     var sexId: Int?
     var school: SchoolPersistentModel?
@@ -26,6 +26,8 @@ import SwiftData
         id = entity.id
         name = entity.name
         surname = entity.surname
+        birthDate = entity.birthDate
+        sexId = entity.sexId
         if let sch = entity.school {
             school = SchoolPersistentModel(sch)
         } else {
@@ -33,17 +35,25 @@ import SwiftData
         }
     }
 
-    init(id: String, name: String, surname: String, school: SchoolPersistentModel?) {
+    init(id: String, title: String, name: String, surname: String, birthDate: Date?, sexId: Int?, school: SchoolPersistentModel?) {
         self.id = id
         self.name = name
         self.surname = surname
+        self.birthDate = birthDate
+        self.sexId = sexId
         self.school = school
     }
 
     func getModel() -> Student {
         var school: School?
         if let sch = self.school {
-            school = School(id: sch.id, schoolName: sch.schoolName, schoolDescription: sch.schoolDescription, students: nil)
+            var list: [Student] = []
+
+            for entity in sch.students {
+                list.append(Student(id: entity.id, name: entity.name, surname: entity.surname, school: nil))
+            }
+
+            school = School(id: sch.id, schoolName: sch.schoolName, schoolDescription: sch.schoolDescription, students: list)
         } else {
             school = nil
         }

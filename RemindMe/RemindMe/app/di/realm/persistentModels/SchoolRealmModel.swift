@@ -12,9 +12,9 @@ class SchoolRealmModel: Object, StorageProtocol {
     typealias EntityType = School
 
     @Persisted(primaryKey: true) var id: String
-    @Persisted var schoolName: String = ""
+    @Persisted var schoolName: String
     @Persisted var schoolCategoryId: Int?
-    @Persisted var schoolDescription: String = ""
+    @Persisted var schoolDescription: String?
     @Persisted var students: List<StudentRealmModel> = .init()
 
     convenience init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
@@ -38,6 +38,6 @@ class SchoolRealmModel: Object, StorageProtocol {
     }
 
     func getModel() -> School {
-        return School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: nil)
+        return School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: [])
     }
 }

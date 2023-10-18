@@ -16,26 +16,45 @@ import SwiftData
         return schoolName
     }
 
-    var schoolName: String = ""
+    var schoolName: String
     var schoolCategoryId: Int?
-    var schoolDescription: String = ""
-    @Relationship(deleteRule: .noAction, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]?
+    var schoolDescription: String?
+    @Relationship(deleteRule: .cascade, inverse: \StudentPersistentModel.school) var students: [StudentPersistentModel]
 
     required init(_ entity: School) {
         id = entity.id
         schoolName = entity.schoolName
         schoolCategoryId = entity.schoolCategoryId
         schoolDescription = entity.schoolDescription
+        var list: [StudentPersistentModel] = []
+        for student in entity.students {
+            list.append(StudentPersistentModel(student))
+        }
+
+        students = list
     }
 
-    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
+    init(id: String,
+         schoolName: String,
+         schoolCategoryId: Int?,
+         schoolDescription: String?,
+         students: [StudentPersistentModel]) {
         self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId
         self.schoolDescription = schoolDescription
+        self.students = students
     }
 
     func getModel() -> School {
-        return School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: nil)
+        let school = School(id: id, schoolName: schoolName, schoolDescription: schoolDescription, students: [])
+        var list: [Student] = []
+
+        for student in students {
+            list.append(student.getModel())
+        }
+
+        school.students = list
+        return school
     }
 }

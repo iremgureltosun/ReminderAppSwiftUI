@@ -7,4 +7,12 @@
 
 import Foundation
 
-final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentStorageProtocol {}
+final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentStorageProtocol {
+    
+//    override func save(_ model: Student) throws {
+//        model.school?.students.append(model)
+//        try super.save(model)
+//        
+//    }
+    
+}

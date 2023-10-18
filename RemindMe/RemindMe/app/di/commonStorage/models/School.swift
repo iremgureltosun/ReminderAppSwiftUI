@@ -9,12 +9,12 @@ import Foundation
 
 class School: CommonModelProtocol, ObservableObject, Identifiable, Hashable {
     var id: String
-    var schoolName: String = ""
+    var schoolName: String
     var schoolCategoryId: Int?
-    var schoolDescription: String = ""
-    var students: [Student]?
+    var schoolDescription: String?
+    var students: [Student]
 
-    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String, students: [Student]?) {
+    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String?,  students: [Student]) {
         self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId

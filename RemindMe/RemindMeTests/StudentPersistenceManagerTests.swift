@@ -9,7 +9,7 @@
 import XCTest
 
 final class StudentPersistenceManagerTests: XCTestCase {
-    @Inject var studentManager: StudentManagerProtocol
+    @Inject var studentManager: StudentStorageProtocol
 
     func testInsert() {
         let school = School(id: UUID().uuidString, schoolName: "Ted College", schoolDescription: "Primary school", students: [])

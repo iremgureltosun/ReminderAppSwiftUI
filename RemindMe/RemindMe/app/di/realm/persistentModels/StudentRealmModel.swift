@@ -49,8 +49,7 @@ class StudentRealmModel: Object, StorageProtocol {
     func getModel() -> Student {
         var school: School?
         if let schoolEntity = self.school {
-            // var students: []
-            school = School(id: schoolEntity.id, schoolName: schoolEntity.schoolName, schoolDescription: schoolEntity.schoolDescription, students: nil)
+            school = School(id: schoolEntity.id, schoolName: schoolEntity.schoolName, schoolDescription: schoolEntity.schoolDescription, students: [])
         }
 
         return Student(id: id, name: name, surname: surname, school: school)
