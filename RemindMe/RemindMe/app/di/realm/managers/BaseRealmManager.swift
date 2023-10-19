@@ -7,7 +7,6 @@
 
 import Foundation
 import RealmSwift
-import SwiftUI
 
 @MainActor
 class BaseRealmManager<T>: ManagerProtocol where T: StorageProtocol, T: Object, T.EntityType: CommonModelProtocol {

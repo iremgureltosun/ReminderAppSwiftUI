@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import SwiftUI
 
 @available(iOS 17, *)
 @MainActor

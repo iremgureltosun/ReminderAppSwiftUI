@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 public protocol CommonModelProtocol {
     var title: String { get }
