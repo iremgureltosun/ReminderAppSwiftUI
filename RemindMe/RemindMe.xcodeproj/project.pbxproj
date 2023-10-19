@@ -23,8 +23,8 @@
 		4D1F0FA72AD6795700DA40E8 /* StudentRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */; };
 		4D1F0FA92AD67ACC00DA40E8 /* LectureRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* LectureRealmManager.swift */; };
 		4D1F0FAA2AD67ACC00DA40E8 /* LectureRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0FA82AD67ACC00DA40E8 /* LectureRealmManager.swift */; };
-		4D210B3E2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */; };
-		4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */; };
+		4D210B3E2ADEACAF00103AE2 /* StorageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* StorageProtocols.swift */; };
+		4D210B3F2ADEACAF00103AE2 /* StorageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B3D2ADEACAF00103AE2 /* StorageProtocols.swift */; };
 		4D210B412ADEBE8B00103AE2 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B402ADEBE8B00103AE2 /* Lecture.swift */; };
 		4D210B422ADEBE8B00103AE2 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D210B402ADEBE8B00103AE2 /* Lecture.swift */; };
 		4D2B206A2AD527670045760C /* SwiftDataContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */; };
@@ -68,6 +68,7 @@
 		4D383A292ACEC63C00E0B99A /* InsertSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */; };
 		4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */; };
 		4D38532C2AD590F00081DBF1 /* BaseRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */; };
+		4D4794C12AE106A70039541B /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4794C02AE106A70039541B /* ManagerProtocol.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* LecturePersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* LecturePersistentModel.swift */; };
 		4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52BC2ACC208E00F0CADF /* Date+.swift */; };
 		4DBF52BF2ACC265600F0CADF /* InsertLectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52BE2ACC265600F0CADF /* InsertLectureView.swift */; };
@@ -130,7 +131,7 @@
 		4D1F0FA12AD678C500DA40E8 /* SchoolRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmManager.swift; sourceTree = "<group>"; };
 		4D1F0FA52AD6795700DA40E8 /* StudentRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmManager.swift; sourceTree = "<group>"; };
 		4D1F0FA82AD67ACC00DA40E8 /* LectureRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRealmManager.swift; sourceTree = "<group>"; };
-		4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocols.swift; sourceTree = "<group>"; };
+		4D210B3D2ADEACAF00103AE2 /* StorageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocols.swift; sourceTree = "<group>"; };
 		4D210B402ADEBE8B00103AE2 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		4D2B208B2AD52FFF0045760C /* StudentRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRealmModel.swift; sourceTree = "<group>"; };
 		4D2B208E2AD530770045760C /* SchoolRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRealmModel.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		4D383A282ACEC63C00E0B99A /* InsertSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSchoolViewModel.swift; sourceTree = "<group>"; };
 		4D383A2A2ACEC66C00E0B99A /* SchoolPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPersistenceManager.swift; sourceTree = "<group>"; };
 		4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmManager.swift; sourceTree = "<group>"; };
+		4D4794C02AE106A70039541B /* ManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
 		4D76E22D2ACBEFFE009BAC93 /* LecturePersistentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturePersistentModel.swift; sourceTree = "<group>"; };
 		4DBF52BC2ACC208E00F0CADF /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		4DBF52BE2ACC265600F0CADF /* InsertLectureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLectureView.swift; sourceTree = "<group>"; };
@@ -360,7 +362,8 @@
 				4D2B20962AD532100045760C /* models */,
 				4D33737D2ACD92F5009F1DB1 /* CommonModelProtocol.swift */,
 				4D2B20A02AD534850045760C /* StorageProtocol.swift */,
-				4D210B3D2ADEACAF00103AE2 /* ManagerProtocols.swift */,
+				4D210B3D2ADEACAF00103AE2 /* StorageProtocols.swift */,
+				4D4794C02AE106A70039541B /* ManagerProtocol.swift */,
 			);
 			path = commonStorage;
 			sourceTree = "<group>";
@@ -622,7 +625,7 @@
 				4DDCA6D02ACFDEE900FE9148 /* ListSchoolView.swift in Sources */,
 				4D0DC8892AD3E7E200DDC5EC /* UpdateStudentView.swift in Sources */,
 				4DF240612AE01AE400C6AB6F /* RealmContainerBuilder.swift in Sources */,
-				4D210B3E2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
+				4D210B3E2ADEACAF00103AE2 /* StorageProtocols.swift in Sources */,
 				4D3373822ACD9C0E009F1DB1 /* ListLectureViewModel.swift in Sources */,
 				4D383A2B2ACEC66C00E0B99A /* SchoolPersistenceManager.swift in Sources */,
 				4D3373782ACD5E94009F1DB1 /* PersistenceError.swift in Sources */,
@@ -649,6 +652,7 @@
 				4DFE0EAC2ACEC13E002BF525 /* StudentPersistenceManager.swift in Sources */,
 				4DFE0EA02ACE876B002BF525 /* Inject.swift in Sources */,
 				4D210B412ADEBE8B00103AE2 /* Lecture.swift in Sources */,
+				4D4794C12AE106A70039541B /* ManagerProtocol.swift in Sources */,
 				4D2B20922AD5312A0045760C /* LectureRealmModel.swift in Sources */,
 				4D0DC88B2AD3E82700DDC5EC /* UpdateStudentViewModel.swift in Sources */,
 				4D1F0FA92AD67ACC00DA40E8 /* LectureRealmManager.swift in Sources */,
@@ -697,7 +701,7 @@
 				4D2B209C2AD5322F0045760C /* Student.swift in Sources */,
 				4D02B2EA2ABD69AC0032F011 /* StudentPersistenceManagerTests.swift in Sources */,
 				4D2B207E2AD528180045760C /* CommonModelProtocol.swift in Sources */,
-				4D210B3F2ADEACAF00103AE2 /* ManagerProtocols.swift in Sources */,
+				4D210B3F2ADEACAF00103AE2 /* StorageProtocols.swift in Sources */,
 				4D2B20902AD530770045760C /* SchoolRealmModel.swift in Sources */,
 				4D2B20772AD527B40045760C /* UpdateStudentViewModel.swift in Sources */,
 				4D2B206A2AD527670045760C /* SwiftDataContainerBuilder.swift in Sources */,
