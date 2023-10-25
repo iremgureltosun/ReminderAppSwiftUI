@@ -22,6 +22,13 @@ class StudentRealmModel: Object, StorageProtocol {
         return "\(name) \(surname)"
     }
 
+    override init() {
+        super.init()
+        id = UUID().uuidString
+        name = ""
+        surname = ""
+    }
+
     convenience init(id: String, name: String, surname: String, school: SchoolRealmModel?) {
         self.init()
         self.id = id

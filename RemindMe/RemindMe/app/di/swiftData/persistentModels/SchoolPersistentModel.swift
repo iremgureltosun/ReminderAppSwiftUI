@@ -39,7 +39,8 @@ import SwiftData
          schoolName: String,
          schoolCategoryId: Int?,
          schoolDescription: String?,
-         students: [StudentPersistentModel]) {
+         students: [StudentPersistentModel])
+    {
         self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId

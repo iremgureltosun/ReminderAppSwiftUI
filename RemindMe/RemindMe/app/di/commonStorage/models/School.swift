@@ -14,7 +14,7 @@ class School: CommonModelProtocol, ObservableObject, Identifiable, Hashable {
     var schoolDescription: String?
     var students: [Student]
 
-    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String?,  students: [Student]) {
+    init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String?, students: [Student]) {
         self.id = id
         self.schoolName = schoolName
         self.schoolCategoryId = schoolCategoryId

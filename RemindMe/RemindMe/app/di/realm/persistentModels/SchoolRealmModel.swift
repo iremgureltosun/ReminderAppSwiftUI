@@ -15,7 +15,13 @@ class SchoolRealmModel: Object, StorageProtocol {
     @Persisted var schoolName: String
     @Persisted var schoolCategoryId: Int?
     @Persisted var schoolDescription: String?
-    //@Persisted var students: List<StudentRealmModel> = .init()
+    // @Persisted var students: List<StudentRealmModel> = .init()
+
+    override init() {
+        super.init()
+        id = UUID().uuidString
+        schoolName = ""
+    }
 
     convenience init(id: String, schoolName: String, schoolCategoryId: Int? = nil, schoolDescription: String) {
         self.init()

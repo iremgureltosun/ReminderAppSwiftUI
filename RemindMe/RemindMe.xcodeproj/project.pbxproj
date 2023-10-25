@@ -70,6 +70,10 @@
 		4D38532C2AD590F00081DBF1 /* BaseRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38532B2AD590F00081DBF1 /* BaseRealmManager.swift */; };
 		4D4794C12AE106A70039541B /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4794C02AE106A70039541B /* ManagerProtocol.swift */; };
 		4D76E22E2ACBEFFE009BAC93 /* LecturePersistentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76E22D2ACBEFFE009BAC93 /* LecturePersistentModel.swift */; };
+		4DBC3C882AE8EE1F0030E989 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBC3C872AE8EE1F0030E989 /* Swinject */; };
+		4DBC3C8A2AE8EE1F0030E989 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBC3C892AE8EE1F0030E989 /* Swinject-Dynamic */; };
+		4DBC3C8D2AE8EE410030E989 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBC3C8C2AE8EE410030E989 /* Realm */; };
+		4DBC3C8F2AE8EE410030E989 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBC3C8E2AE8EE410030E989 /* RealmSwift */; };
 		4DBF52BD2ACC208E00F0CADF /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52BC2ACC208E00F0CADF /* Date+.swift */; };
 		4DBF52BF2ACC265600F0CADF /* InsertLectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52BE2ACC265600F0CADF /* InsertLectureView.swift */; };
 		4DBF52C42ACC297500F0CADF /* InsertLectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF52C32ACC297500F0CADF /* InsertLectureViewModel.swift */; };
@@ -79,10 +83,6 @@
 		4DDE30EE2ACFFA6C00198FE0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE30ED2ACFFA6C00198FE0 /* String+.swift */; };
 		4DF240612AE01AE400C6AB6F /* RealmContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */; };
 		4DF240622AE01AEB00C6AB6F /* RealmContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF240602AE01AE400C6AB6F /* RealmContainerBuilder.swift */; };
-		4DF2406A2AE0227500C6AB6F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF240692AE0227500C6AB6F /* Realm */; };
-		4DF2406C2AE0227500C6AB6F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF2406B2AE0227500C6AB6F /* RealmSwift */; };
-		4DF2406F2AE0228500C6AB6F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF2406E2AE0228500C6AB6F /* Swinject */; };
-		4DF240712AE0228500C6AB6F /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DF240702AE0228500C6AB6F /* Swinject-Dynamic */; };
 		4DFAD01E2ACDC23700C78561 /* BasePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD01D2ACDC23700C78561 /* BasePersistenceManager.swift */; };
 		4DFAD0212ACDC75600C78561 /* LecturePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0202ACDC75600C78561 /* LecturePersistenceManager.swift */; };
 		4DFAD0252ACDCBED00C78561 /* SwiftDataContainerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD0242ACDCBED00C78561 /* SwiftDataContainerBuilder.swift */; };
@@ -178,10 +178,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DF2406C2AE0227500C6AB6F /* RealmSwift in Frameworks */,
-				4DF240712AE0228500C6AB6F /* Swinject-Dynamic in Frameworks */,
-				4DF2406A2AE0227500C6AB6F /* Realm in Frameworks */,
-				4DF2406F2AE0228500C6AB6F /* Swinject in Frameworks */,
+				4DBC3C8F2AE8EE410030E989 /* RealmSwift in Frameworks */,
+				4DBC3C8D2AE8EE410030E989 /* Realm in Frameworks */,
+				4DBC3C882AE8EE1F0030E989 /* Swinject in Frameworks */,
+				4DBC3C8A2AE8EE1F0030E989 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,10 +496,10 @@
 			);
 			name = RemindMe;
 			packageProductDependencies = (
-				4DF240692AE0227500C6AB6F /* Realm */,
-				4DF2406B2AE0227500C6AB6F /* RealmSwift */,
-				4DF2406E2AE0228500C6AB6F /* Swinject */,
-				4DF240702AE0228500C6AB6F /* Swinject-Dynamic */,
+				4DBC3C872AE8EE1F0030E989 /* Swinject */,
+				4DBC3C892AE8EE1F0030E989 /* Swinject-Dynamic */,
+				4DBC3C8C2AE8EE410030E989 /* Realm */,
+				4DBC3C8E2AE8EE410030E989 /* RealmSwift */,
 			);
 			productName = RemindMe;
 			productReference = 4D02B2D52ABD69AA0032F011 /* RemindMe.app */;
@@ -574,8 +574,8 @@
 			);
 			mainGroup = 4D02B2CC2ABD69AA0032F011;
 			packageReferences = (
-				4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */,
-				4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */,
+				4DBC3C862AE8EE1F0030E989 /* XCRemoteSwiftPackageReference "Swinject" */,
+				4DBC3C8B2AE8EE410030E989 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 4D02B2D62ABD69AA0032F011 /* Products */;
 			projectDirPath = "";
@@ -785,7 +785,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -839,7 +839,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1031,15 +1031,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		4DBC3C862AE8EE1F0030E989 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1047,28 +1039,36 @@
 				minimumVersion = 2.8.4;
 			};
 		};
+		4DBC3C8B2AE8EE410030E989 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4DF240692AE0227500C6AB6F /* Realm */ = {
+		4DBC3C872AE8EE1F0030E989 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		4DF2406B2AE0227500C6AB6F /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DF240682AE0227500C6AB6F /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		4DF2406E2AE0228500C6AB6F /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 4DBC3C862AE8EE1F0030E989 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		4DF240702AE0228500C6AB6F /* Swinject-Dynamic */ = {
+		4DBC3C892AE8EE1F0030E989 /* Swinject-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4DF2406D2AE0228500C6AB6F /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 4DBC3C862AE8EE1F0030E989 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = "Swinject-Dynamic";
+		};
+		4DBC3C8C2AE8EE410030E989 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DBC3C8B2AE8EE410030E989 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4DBC3C8E2AE8EE410030E989 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DBC3C8B2AE8EE410030E989 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

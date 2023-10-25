@@ -10,7 +10,7 @@ import Foundation
 class Student: CommonModelProtocol, ObservableObject, Identifiable, Hashable {
     var id: String
     var name: String
-    var surname: String 
+    var surname: String
     var birthDate: Date?
     var sexId: Int?
     var school: School?

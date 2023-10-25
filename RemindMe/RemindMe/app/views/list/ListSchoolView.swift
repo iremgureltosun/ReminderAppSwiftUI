@@ -58,7 +58,6 @@ struct ListSchoolView: View {
                     }
                 }
             }
-           
         }
     }
 }

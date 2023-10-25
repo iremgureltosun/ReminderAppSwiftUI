@@ -8,5 +8,4 @@
 import Foundation
 
 @available(iOS 17, *)
-final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentStorageProtocol {
-}
+final class StudentPersistenceManager: BasePersistenceManager<StudentPersistentModel>, StudentStorageProtocol {}

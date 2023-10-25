@@ -19,6 +19,13 @@ class LectureRealmModel: Object, StorageProtocol {
         return "id"
     }
 
+    override init() {
+        super.init()
+        id = UUID().uuidString
+        title = ""
+        subtitle = ""
+    }
+
     convenience init(id: String, title: String, subtitle: String) {
         self.init()
         self.id = id

@@ -36,7 +36,7 @@ import SwiftData
         }
     }
 
-    init(id: String, title: String, name: String, surname: String, birthDate: Date?, sexId: Int?, school: SchoolPersistentModel?) {
+    init(id: String, title _: String, name: String, surname: String, birthDate: Date?, sexId: Int?, school: SchoolPersistentModel?) {
         self.id = id
         self.name = name
         self.surname = surname
